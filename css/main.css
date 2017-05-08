@@ -2,8 +2,7 @@ body
 {
 	background-image: url(https://www.nasa.gov/sites/default/files/images/696969main_ExoUpClose-full_full.jpg);
 	background-size: cover;
-	background-color: "#000000AA";
-	color: white;
+	color: rgb(200, 200, 200);
 	font-family: Calibri;
 	text-align: center;
 	height: 100%;
@@ -29,18 +28,21 @@ html
 	-moz-box-shadow: 0px 0px 80px 100px rgba(0,0,0,0.8);
 	-webkit-box-shadow: 0px 0px 80px 100px rgba(0,0,0,0.8);
 	box-shadow: 0px 0px 80px 100px rgba(0,0,0,0.8);
+	position: initial;
 }
 
 #header
 {
 	padding-top: 50px;
+	overflow: auto;
 }
 
 .left
 {
 	width: 50%;
 	float: left;
-	text-align: left
+	text-align: left;
+	display: block;
 }
 
 .right
@@ -48,11 +50,13 @@ html
 	width: 50%;
 	float: right;
 	text-align: right;
+	display: block;
 }
 
 #name
 {
 	font-size: 30pt;
+	color: white;
 }
 
 #subname
@@ -67,4 +71,14 @@ html
 	color: rgb(200, 200, 200);
 	text-decoration: none;
 	margin-left: 20px;
+}
+
+#main
+{
+	margin-top: 50px;
+}
+
+p
+{
+	margin-bottom: 25px;;
 }
