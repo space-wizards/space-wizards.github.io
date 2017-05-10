@@ -1,6 +1,6 @@
 body
 {
-	background-image: url(https://www.nasa.gov/sites/default/files/images/696969main_ExoUpClose-full_full.jpg);
+	background-image: url("/css/background.jpg");
 	background-size: cover;
 	color: rgb(200, 200, 200);
 	font-family: 'Roboto', sans-serif;
