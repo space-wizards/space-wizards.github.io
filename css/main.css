@@ -1,18 +1,25 @@
 body
 {
-	background-image: url("/images/background.jpg");
-	background-size: cover;
 	color: rgb(200, 200, 200);
 	font-family: 'Roboto', sans-serif;
 	text-align: center;
 	height: 100%;
 	margin: 0;
+}
+
+#background
+{
+	background: url("/images/background.jpg") black;
+	background-size: cover;
 	background-attachment: fixed;
+	height: 100%;
+	width: 100%;
+	position: fixed;
 }
 
 html
 {
-	background-color: black;
+	
 	height: 100%;
 }
 
