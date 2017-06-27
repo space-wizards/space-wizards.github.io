@@ -41,15 +41,15 @@
 
 
 <article>
-	<h2 class="articleheader">Progress Report #1: New Website</h2>
+	<h2 class="articleheader">Progress Report #1: Revive</h2>
 	<span class="articlemeta">Monday June 26, 2017 by PJB3005</span>
 	<p>You&rsquo;re reading this on the new website for SS14! After <a href="https://i.imgur.com/Q3cUg29.gif">lots of hard work with CSS</a>, the website is ready to recieve progress reports and other news.</p>
 
 <p></p>
 
-<p>The website is hosted entirely from GitHub pages, which means it&rsquo;s fast, reliable <!--Citation Needed--> and secure, with zero cost to us (except for designing and writing it). It&rsquo;s completely static server side, and generated with <a href="https://gohugo.io">Hugo</a>, an excellent tool for making static sites like this. Adding a page is as simple as making a new markdown file with title, and date and building it. Easy as that!</p>
+<p>The website is hosted entirely from GitHub pages, which means it&rsquo;s fast, reliable <!--Citation Needed, GitHub goes down more than I'd like to. --> and secure, with zero cost to us (except for designing and writing it). It&rsquo;s completely static server side, and generated with <a href="https://gohugo.io">Hugo</a>, an excellent tool for making static sites like this. Adding a page is as simple as making a new markdown file with title, and date and building it. Easy as that!</p>
 
-<p>The code for the website can be found <a href="https://github.com/space-wizards/space-wizards.github.io-content">here</a>, temporarily until Silver wakes up and I move the repo.</p>
+<p>The code for the website can be found <a href="https://github.com/space-wizards/space-wizards.github.io-content">here</a>. Which is also where commits will go for new blog posts.</p>
 
 <h2 id="progress">Progress!</h2>
 
@@ -59,58 +59,9 @@
 
 <p>We&rsquo;re retargeting the main repo to be a more &ldquo;bare engine&rdquo; sort of deal. There will not be a lot of content in it (excluding debug content). All of this content will be loaded from an external set of files that can be loaded on a per server basis, thus ensuring that players only need one client for every server. We&rsquo;ve made a repo for a &ldquo;base&rdquo; set of content that other repos can branch off <a href="https://github.com/space-wizards/space-station-14-content">here</a>. In general most of the work is focused on getting this functional so we can start hitting clowns with toolboxes.</p>
 
-<p>Work on the new rendering engine is progressing by Silvertorch. Lots of assorted refactors that touch the entire project have been made to allow us to pave the way for a more easy development environment, content <em>and</em> main engine. For example, the entity template system has been replaced with a generic &ldquo;prototype&rdquo; system, and the entity prototype for a toolbox currently looks like this:</p>
+<p>Lots of assorted refactors that touch the entire project have been made to allow us to pave the way for a more easy development environment, content <em>and</em> main engine. The repo was pretty bad organizational a few weeks ago, but a couple large refactors later and it&rsquo;s already lots more manageable, and we can actually start putting in serious work now.</p>
 
-- type: entity
-  id: Toolbox
-  name: Toolbox
-  components:
-  - type: Transform
-  - type: Velocity
-  - type: Clickable
-  - type: Direction
-  - type: WearableAnimatedSprite
-    sprite: player_toolbox
-
-  - type: BasicInteractable
-  - type: BasicMover
-  - type: BasicItem
-  - type: Physics
-    mass: 5
-
-  - type: BasicItem
-
-
-<p>Compared to this:</p>
-<?xml version="1.0" encoding="utf-8"?>
-
-<EntityTemplates>
-  <EntityTemplate name="Toolbox">
-    <Components>
-      <Component name="TransformComponent"></Component>
-      <Component name="VelocityComponent"></Component>
-      <Component name="DirectionComponent"></Component>
-      <Component name="ClickableComponent"></Component>
-      <Component name="WearableAnimatedSpriteComponent">
-        <Parameters>
-          <Parameter name="sprite" type="string" value="player_toolbox" />
-        </Parameters>
-      </Component>
-      <Component name="BasicInteractableComponent"></Component>
-      <Component name="BasicMoverComponent"></Component>
-      <Component name="PhysicsComponent">
-        <Parameters>
-          <Parameter name="Mass" type="float" value="5" />
-        </Parameters>
-      </Component>
-      <Component name="BasicItemComponent" />
-    </Components>
-  </EntityTemplate>
-</EntityTemplates>
-
-<p>I&rsquo;ll let you be the judge but I think it&rsquo;s pretty obvious which is nicer.</p>
-
-<p>On the more &ldquo;engine&rdquo; side of things however, the project has moved to a far more sane structure. Previously the project was laid out like this:</p>
+<p>For example, previously the project was a giant mess that didn&rsquo;t even conform to the same programming paradigms, this:</p>
 
 <ul>
 <li><code>SS14.Client</code></li>
@@ -131,31 +82,33 @@
 
 <ul>
 <li><code>SS14.Client</code></li>
-<li><code>SS14.Client.Graphics</code></li>
+<li><code>SS14.Client.Graphics</code>, but Silver is in the process of removing this one too.</li>
 <li><code>SS14.Server</code></li>
 <li><code>SS14.Shared</code></li>
 </ul>
 
 <p>Hooray for clean up!</p>
 
-<p>And that&rsquo;s just the biggest elephant in the room! We&rsquo;re fixing systems, discussing design targets, documented the code that&rsquo;s undocumented. We&rsquo;re working on setting up a proper project management board to allow us to easily delegate tasks and go &ldquo;here&rsquo;s a list of things we can work on right now. Pick something you like!&rdquo;. This is still a bit off, but when it&rsquo;s done it&rsquo;ll be in the next progress report I guarantee you.</p>
+<p>And that&rsquo;s just the biggest elephant in the room! We&rsquo;re fixing systems, discussing design targets, documented the code that&rsquo;s undocumented. We&rsquo;re working on setting up a proper project management board to allow us to easily delegate tasks and go &ldquo;here&rsquo;s a list of things we can work on right now. Pick something you like!&rdquo;. This is still a bit off, but when it&rsquo;s done it&rsquo;ll be in the next progress report I guarantee you. This project management board will be extremely helpful to allow us to make these progress reports more easily in the future, too!</p>
 
 <p>So for more stuff to report:</p>
 
 <ul>
 <li>Sood has been working on IPv6 networking and updating the years out of date version of Lidgren.Network in our code. Sadly Lidgren isn&rsquo;t being updated anymore, but it&rsquo;s still highly reliable. We are talking about moving to an alternative, LiteNetLib, as a very long term goal, because of obvious maintenance issues with Lidgren (IPv6 support is through an unmerged old PR on the Lidgren repo.)</li>
-<li>Sood helped redo all the EOLs to be LF (UNIX). I know have the most line changes of any single person on the repo and I don&rsquo;t deserve it.</li>
+<li>Sood helped redo all the EOLs to be LF (UNIX). I now have the most line changes of any single person on the repo and I don&rsquo;t deserve it.</li>
 <li>Silvertorch5 continues working on RobustEngine, the name we debubbed for the rendering engine that will be powering the client. As much as it is demotivating, SFML was a giant terrible mistake, a BYOND level mistake, but giving up isn&rsquo;t the solution, shit happens.</li>
 <li>A fancy splash screen, a joint project between me, Silver and PsyKzz. <a href="/images/splash.png">Check it out</a></li>
 <li>All around performance improvements.</li>
-<li>Tons of UI fixes.</li>
+<li>Tons of general bug fixes for things that get in the way even when you&rsquo;re developing the engine.</li>
 <li>Set up automatic code anlysis to catch bugs and yell at us.</li>
 <li>Better support for non-Windows operating systems all around.</li>
+<li>Acruid is moving the config system to TOML, a proper config file format, instead of XML.</li>
+<li>On the front end &ldquo;developer experience&rdquo; side of things, we&rsquo;ve decided on a new YAML prototyping system for entities. Code will still be in C# (but dynamically loaded). The result is it&rsquo;ll still be extremely fast, type safe, and easy to develop on both client and server. See <a href="https://github.com/space-wizards/space-station-14/blob/939f14eba7e49c207b9de46037f8717e20bf76cc/SS14.Server/Prototypes/Containers.yml">this file</a> for an example of what it looks like now.</li>
 </ul>
 
 <p>However picking a fine line between these and other PRs is kind of hard, so if you want to see every PR merged recently, <a href="https://github.com/space-wizards/space-station-14/issues?utf8=%E2%9C%93&amp;q=is%3Amerged%20">here you go</a>.</p>
 
-<p>I can assure you: SS14 is not dead. And we&rsquo;re gonna finish this.</p>
+<p><strong>I can assure you: SS14 is not dead. And we&rsquo;re gonna finish this.</strong></p>
 
 	
 </article>

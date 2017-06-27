@@ -13,35 +13,13 @@
   </url>
   
   <url>
-    <loc>https://space-wizards.github.io/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://space-wizards.github.io/post/</loc>
     <lastmod>2017-06-26T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://space-wizards.github.io/categories/progress-report/</loc>
-    <lastmod>2017-06-26T00:00:00+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://space-wizards.github.io/</loc>
-    <lastmod>2017-06-26T00:00:00+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://space-wizards.github.io/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://space-wizards.github.io/tags/website/</loc>
     <lastmod>2017-06-26T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
