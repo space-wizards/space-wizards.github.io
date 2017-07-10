@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<meta name="X-UA-Compatible" content="IE=Edge"/>
+
+
+		<base href="" />
+		<title>Space Station 14</title>
+		<link rel="canonical" href="" />
+		
+
+		<link rel="stylesheet" type="text/css" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" href="/fonts/animal_silence/stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="/fonts/fira_code/fira_code.css" />
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+<script src="/js/main.js"></script>
+
+	</head>
+	<body lang="en">
+		<div id="background"> </div>
+		<div id="centercolumn">
+			<nav id="header">
+				<header class="left">
+					<a href="/", id="name">
+						Space Station 14
+					</a>
+					<br>
+					<span id="subname">
+						
+						<br>
+					</span>
+				</header>
+				<div class="right">
+					<a class="navlink" href="/about/">About</a>
+					
+				</div>
+			</nav>
+			<main>
+
+
+<article>
+	<h2 class="articleheader">Progress report #2: Refactor Hell</h2>
+	<span class="articlemeta">Monday July 10, 2017 by PJB3005</span>
+	<p>The progress report took a bit to get here, because I uploaded #1 two days too late, and not a lot of substance for a report happened between then and when #2 should&rsquo;ve happened. Not the case anymore though, got plenty to write about this time!</p>
+
+<p></p>
+
+<p>Not all work on a project like SS14 is direct coding. Sure it&rsquo;s the most important, but we still have to organize the project, make contributions easy, write these reports and discuss how we&rsquo;re gonna discuss things lest we turn into BYOND.</p>
+
+<h2 id="organization">Organization</h2>
+
+<p>On the organizational side of things, I&rsquo;ve organized the <a href="https://waffle.io/space-wizards/space-station-14">Waffle board</a>. I&rsquo;ll explain how it works and how we&rsquo;re using it:</p>
+
+<p>The board is organized into a few columns. Each column can have issues on GitHub in it. That&rsquo;s the general gist of it. The system we&rsquo;re using is simple. We have 5 columns:</p>
+
+<ul>
+<li>Backlog: for new issues that cannot be worked on, yet.</li>
+<li>Design and Discussion: for things that we&rsquo;re discussing before going &ldquo;this is ready to be implemented&rdquo;.</li>
+<li>Ready: issues that can be worked on, but nobody is yet. Generally if you&rsquo;re wondering &ldquo;how can I help&rdquo;, you can pick an issue from this list and work on it. Be sure to tell us when you do so we can assign it as &hellip;</li>
+<li>Work in Progress: All issues that somebody is working on are moved here.</li>
+<li>Done: things that are done. We keep this list around so we can review what was done since last progress report, and then flush it when the report is written.</li>
+</ul>
+
+<p>Hopefully this&rsquo;ll make it more clear what we&rsquo;re working on, and if you ever need something to work on we have a &ldquo;what can I work on&rdquo; column right there. It also makes my job (or maybe somebody else&rsquo;s) with the progress reports much easier.</p>
+
+<h2 id="discussions">Discussions</h2>
+
+<p>I&rsquo;m not expecting most of you to watch GitHub closely, so I&rsquo;m gonna make a summary of some important discussions that were had or are going on and <em>you</em> might want to chip into. Don&rsquo;t be shy! Constructive criticism&rsquo;s always welcome!</p>
+
+<ul>
+<li><a href="https://github.com/space-wizards/space-station-14/issues/248"><code>#248</code>: Establishing a good API for content</a>. Being able to write content on at least a simple level is the big target for us to enter the &ldquo;alpha&rdquo; phase. We&rsquo;re working on establishing a good API for things, such as common functions and types that are needed to write game logic.</li>
+<li><a href="https://github.com/space-wizards/space-station-14/issues/261"><code>#261</code>: Tooling scripting language &amp; build dependency</a>. Being a complicated project makes it hard to just go &ldquo;download project and hit compile&rdquo;. We need scripts and alike to automate some build tasks. We nominated Python 3 for this seeing it&rsquo;s cross platform and not exactly hard to install.</li>
+<li><a href="https://github.com/space-wizards/space-station-14/issues/254"><code>#254</code>: Client / server replication</a>. BYOND&rsquo;s a thin client which is nice because being able to ignore netcode is nice. Problem is it&rsquo;s also impratical because then you get a poorly responsive game like SS13. We need a well designed way to interact with the network that&rsquo;s not too difficult or punishing.</li>
+<li><a href="https://github.com/space-wizards/space-station-14/issues/256"><code>#256</code>: Our own DMI format</a>. BYOND&rsquo;s DMI format is surprisingly comfortable. It&rsquo;s also proprietary and designed by a monkey, so is our own take on the concept a good idea?</li>
+</ul>
+
+<h2 id="the-alpha-target">The Alpha Target</h2>
+
+<p>The current target for alpha is as follows: <strong>a decent base we can build content on, like interaction, combat and other such basic SS13 features</strong>. We&rsquo;ve set the end of July as the target for this. For this we&rsquo;ve made a tracking milestone on GitHub <a href="https://github.com/space-wizards/space-station-14/milestone/1">here</a>. A short list of a few important things we need to do for this:</p>
+
+<ul>
+<li><a href="https://github.com/space-wizards/space-station-14/issues/254"><code>#254</code>: Client / server replication</a>. See above.</li>
+<li><a href="https://github.com/space-wizards/space-station-14/issues/251"><code>#251</code>: Replace SFML</a>. Replace SFML and replace it with a custom rendering library. I can&rsquo;t even start the client because it crashes by simply corrupting the process memory.</li>
+<li><a href="https://github.com/space-wizards/space-station-14/issues/248"><code>#248</code>: Establishing a good API for content</a>. See above.</li>
+<li><a href="https://github.com/space-wizards/space-station-14/issues/74"><code>#74</code>: Strip all traces of game content code from the engine</a>. It&rsquo;s just a maintenance hell and it&rsquo;ll be moved into the content repo.</li>
+<li><a href="https://github.com/space-wizards/space-station-14/issues/90"><code>#90</code>: Contribution guide</a>. We want it to be easy to write content for new people, because the content isn&rsquo;t writing itself.</li>
+<li><a href="https://github.com/space-wizards/space-station-14/issues/194"><code>#194</code>: Map format</a>. Having an actually nice station to shoot eachother in is a must.</li>
+<li><a href="https://github.com/space-wizards/space-station-14/issues/150"><code>#150</code>: A decentralized grid system</a>. Basically 2D space engineers, have every station and ship be an independent, free floating grid (that can totally be rammed into eachother. Now that&rsquo;s one way to steal the disk.)</li>
+</ul>
+
+<h2 id="code-progress">Code Progress</h2>
+
+<p>And finally we get to the most important bit of the report, what we <em>actually</em> did. I can bore you enough with what we <em>want</em> to do, but dreams aren&rsquo;t exactly useful if we can&rsquo;t put the work in. But we&rsquo;re trying to prove we can!</p>
+
+<ul>
+<li><a href="https://github.com/space-wizards/space-station-14/pull/204"><code>#204</code>: Lidgren update, IPv6</a>. The age old version of the networking library we were using has been updated and we now have IPv6 support!</li>
+<li>We&rsquo;ve refactored IoC another couple times, in steps. We&rsquo;re at the point where I feel it&rsquo;s pretty good for keeping the place organized. IoC is the very core of our project and it&rsquo;s allowing us to organize everything.</li>
+<li><a href="https://github.com/space-wizards/space-station-14/pull/253"><code>#253</code>: Unified config</a>. The config system has been reworked entirely and changed to use TOML, a config file format that can be described as &ldquo;a better INI&rdquo;.</li>
+<li><a href="https://github.com/space-wizards/space-station-14/pull/269"><code>#269</code>: Network System</a>. Acruid&rsquo;s been reworking the networking system, abstracting the network messages to make it so that the parsing and reading of network packets is in one place. This makes things much less error prone and easier to work with.</li>
+<li>Silver has been continuing work on RobustEngine. He gave himself a target for the end of the month for when we should be able to integrate it, which is nice.</li>
+<li><del><a href="https://github.com/space-wizards/space-station-14/pull/271"><code>#271</code>: Fixes the license</a>. Not sure whether we should be proud or not of the infamous goofball trying to shitpost on our repo already.</del></li>
+</ul>
+
+<p>That&rsquo;s all for this week. Stay tuned for next week at which point we&rsquo;ll probably have the content repo at least semi functional.</p>
+
+	
+</article>
+
+			</main>
+		</div>
+	</body>
+</html>
+

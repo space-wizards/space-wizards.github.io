@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Space Station 14</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Jun 2017 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 10 Jul 2017 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://space-wizards.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Progress report #2: Refactor Hell</title>
+      <link>https://space-wizards.github.io/post/17-07-10-progress-report-2-refactor-hell/</link>
+      <pubDate>Mon, 10 Jul 2017 00:00:00 +0200</pubDate>
+      
+      <guid>https://space-wizards.github.io/post/17-07-10-progress-report-2-refactor-hell/</guid>
+      <description>&lt;p&gt;The progress report took a bit to get here, because I uploaded #1 two days too late, and not a lot of substance for a report happened between then and when #2 should&amp;rsquo;ve happened. Not the case anymore though, got plenty to write about this time!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Progress Report #1: Revive</title>
