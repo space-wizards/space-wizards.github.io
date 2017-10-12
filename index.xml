@@ -6,10 +6,32 @@
     <description>Recent content on Space Station 14</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Jul 2017 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 17 Aug 2017 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://space-wizards.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Progress Report #4: Robust Content Framework</title>
+      <link>https://space-wizards.github.io/post/17_08_17-progress-report-4-robust-content-framework/</link>
+      <pubDate>Thu, 17 Aug 2017 00:00:00 +0200</pubDate>
+      
+      <guid>https://space-wizards.github.io/post/17_08_17-progress-report-4-robust-content-framework/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s been a couple weeks since the last progress report, and lots has happened since then. Refactors, setting up the content repo, and more!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Progress Report #3: Ending the pre-alpha</title>
+      <link>https://space-wizards.github.io/post/17-07-25-progress-report-3-ending-pre-alpha/</link>
+      <pubDate>Tue, 25 Jul 2017 00:00:00 +0200</pubDate>
+      
+      <guid>https://space-wizards.github.io/post/17-07-25-progress-report-3-ending-pre-alpha/</guid>
+      <description>&lt;p&gt;So stuff&amp;rsquo;s been quiet for the past 14 days. I can give you an annoying excuse or I can just accept that weekly progress reports aren&amp;rsquo;t working &lt;em&gt;yet&lt;/em&gt;. As such &lt;strong&gt;progress reports will no longer be scheduled and done whenever we feel there&amp;rsquo;s something big to report&lt;/strong&gt;, like today!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Progress report #2: Refactor Hell</title>

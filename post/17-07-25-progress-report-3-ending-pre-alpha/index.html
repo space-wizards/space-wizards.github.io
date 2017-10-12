@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<meta name="X-UA-Compatible" content="IE=Edge"/>
+
+
+		<base href="https://space-wizards.github.io" />
+		<title>Progress Report #3: Ending the pre-alpha - Space Station 14</title>
+		<link rel="canonical" href="https://space-wizards.github.io/post/17-07-25-progress-report-3-ending-pre-alpha/" />
+		
+
+		<link rel="stylesheet" type="text/css" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" href="/fonts/animal_silence/stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="/fonts/fira_code/fira_code.css" />
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+<script src="/js/main.js"></script>
+
+	</head>
+	<body lang="en">
+		<div id="background"> </div>
+		<div id="centercolumn">
+			<nav id="header">
+				<header class="left">
+					<a href="/", id="name">
+						Space Station 14
+					</a>
+					<br>
+					<span id="subname">
+						
+						<br>
+					</span>
+				</header>
+				<div class="right">
+					<a class="navlink" href="/about/">About</a>
+					
+				</div>
+			</nav>
+			<main>
+
+
+<article>
+	<h2 class="articleheader">Progress Report #3: Ending the pre-alpha</h2>
+	<span class="articlemeta">
+		<time datetime="2017-07-25T00:00:00&#43;0200">
+			Tuesday July 25, 2017
+		</time>
+		by
+		<span class="author">PJB3005</span>
+	</span>
+	<p>So stuff&rsquo;s been quiet for the past 14 days. I can give you an annoying excuse or I can just accept that weekly progress reports aren&rsquo;t working <em>yet</em>. As such <strong>progress reports will no longer be scheduled and done whenever we feel there&rsquo;s something big to report</strong>, like today!</p>
+
+<p></p>
+
+<p>Pressuring ourselves to show progress is hard, especially when you&rsquo;re taking ages on giant refactors that are boring but necessary.</p>
+
+<p>So what actually happened for progress?</p>
+
+<h2 id="the-end-of-pre-alpha">The end of pre-alpha</h2>
+
+<p>The <code>ComponentFamily</code> system was killed yesterday, this was the one final refactor that had to be done before we could get rolling on making a content assembly.
+The system was used to reference components in an entity. Each &ldquo;type&rdquo; of component had its family, and two components with colliding family cannot be on an entity at the same time.
+The primary problem was that you can&rsquo;t extend an enum as far as I know, so it flat out prevented things from adding more components. It also made the entire components API a pain to use.
+Both of those issues are from the past now.</p>
+
+<p>We also removed most remaining &ldquo;game&rdquo; components like health systems. These will be moved to the content assembly once that&rsquo;s up and running. This refactor ended up cutting out around 8,000 lines of code.</p>
+
+<p>As for the systems loading the content assembly: Acruid&rsquo;s working on that and he already reworked part of the resource manager so we can bundle things easily. Once this refactor is done the flood gate should be open to content, and the next few reports should be a lot more interesting to say the least.</p>
+
+<p>And as always work on everything else has been continuing.</p>
+
+	
+	<hr />
+	<footer>
+		 <a href="https://www.reddit.com/r/ss14/comments/6pf7yj/progress_report_3_ending_the_prealpha/">Join the discussion on Reddit!</a>
+	</footer>
+	
+</article>
+
+			</main>
+			<footer class="bottom-links">
+				<ul>
+					<li><a href="https://github.com/space-wizards">GitHub</a></li>
+					<li><a href="/index.xml">RSS</a></li>
+				</ul>
+			</footer>
+		</div>
+	</body>
+</html>
+
