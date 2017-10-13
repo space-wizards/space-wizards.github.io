@@ -23,7 +23,7 @@
 		<div id="centercolumn">
 			<nav id="header">
 				<header class="left">
-					<a href="/", id="name">
+					<a href="/" id="name">
 						Space Station 14
 					</a>
 					<br>
@@ -40,8 +40,12 @@
 			<main>
 
 
+<nav class="go-back-link">
+	<a href="/">← Go Back</a>
+</nav>
+
 <article>
-	<h2 class="articleheader">Progress Report #4: Robust Content Framework</h2>
+	<h1 class="articleheader first-header">Progress Report #4: Robust Content Framework</h2>
 	<span class="articlemeta">
 		<time datetime="2017-08-17T00:00:00&#43;0200">
 			Thursday August 17, 2017
@@ -63,7 +67,7 @@ those, and we realized that.</p>
 <p>We&rsquo;re trying to get the best of both worlds here. The ease of programming simple things and keeping codebases possible, while keeping it simple and secure for the end user. No having to install different clients for specific servers.
 How do we pull this off? Glad you asked!</p>
 
-<h1 id="the-content-repo">The Content Repo</h1>
+<h2 id="the-content-repo">The Content Repo</h2>
 
 <p>Ever since we &ldquo;inherited&rdquo; the project, <a href="https://github.com/space-wizards/space-station-14/issues/74">this has been in the back of our heads</a>. The plan is to have the base SS14 repo (<a href="https://github.com/space-wizards/space-station-14"><code>space-wizards/space-station-14</code></a>) be the &ldquo;engine&rdquo;. This is the common program that most players and server hosts will be installing. Event loop, rendering, collision, asset management, entity management, the basic things you want no matter what. Along with that goes a second repo, the &ldquo;content&rdquo; repo: <a href="https://github.com/space-wizards/space-station-14-content"><code>space-wizards/space-station-14-content</code></a>. What is in this repo? Well&hellip; a couple <code>// TODO:</code> entry points, a test prototype and a few python scripts. Exciting!</p>
 
@@ -107,29 +111,29 @@ How do we pull this off? Glad you asked!</p>
 
 <span class="k">namespace</span> <span class="nn">Content.Client.Prototypes</span>
 <span class="p">{</span>
-    <span class="k">public</span> <span class="k">class</span> <span class="nc">DiscoBall</span> <span class="p">:</span> <span class="n">Entity</span>
-    <span class="p">{</span>
-        <span class="k">private</span> <span class="kt">float</span> <span class="n">hue</span><span class="p">;</span>
-        <span class="k">private</span> <span class="n">PointLightComponent</span> <span class="n">light</span><span class="p">;</span>
+	<span class="k">public</span> <span class="k">class</span> <span class="nc">DiscoBall</span> <span class="p">:</span> <span class="n">Entity</span>
+	<span class="p">{</span>
+		<span class="k">private</span> <span class="kt">float</span> <span class="n">hue</span><span class="p">;</span>
+		<span class="k">private</span> <span class="n">PointLightComponent</span> <span class="n">light</span><span class="p">;</span>
 
-        <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">Initialize</span><span class="p">()</span>
-        <span class="p">{</span>
-            <span class="c1">// Fetch our light ahead of time to improve performance and make the code more readable.</span>
-            <span class="n">light</span> <span class="p">=</span> <span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">PointLightComponent</span><span class="p">&gt;();</span>
-        <span class="p">}</span>
+		<span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">Initialize</span><span class="p">()</span>
+		<span class="p">{</span>
+			<span class="c1">// Fetch our light ahead of time to improve performance and make the code more readable.</span>
+			<span class="n">light</span> <span class="p">=</span> <span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">PointLightComponent</span><span class="p">&gt;();</span>
+		<span class="p">}</span>
 
-        <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">Update</span><span class="p">(</span><span class="kt">float</span> <span class="n">frameTime</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">hue</span> <span class="p">+=</span> <span class="n">frameTime</span> <span class="p">/</span> <span class="m">10</span><span class="p">;</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">hue</span> <span class="p">&gt;</span> <span class="m">1</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="n">hue</span> <span class="p">-=</span> <span class="m">1</span><span class="p">;</span>
-            <span class="p">}</span>
+		<span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">Update</span><span class="p">(</span><span class="kt">float</span> <span class="n">frameTime</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">hue</span> <span class="p">+=</span> <span class="n">frameTime</span> <span class="p">/</span> <span class="m">10</span><span class="p">;</span>
+			<span class="k">if</span> <span class="p">(</span><span class="n">hue</span> <span class="p">&gt;</span> <span class="m">1</span><span class="p">)</span>
+			<span class="p">{</span>
+				<span class="n">hue</span> <span class="p">-=</span> <span class="m">1</span><span class="p">;</span>
+			<span class="p">}</span>
 
-            <span class="kt">var</span> <span class="n">color</span> <span class="p">=</span> <span class="n">Color4</span><span class="p">.</span><span class="n">FromHsl</span><span class="p">(</span><span class="k">new</span> <span class="n">Vector4</span><span class="p">(</span><span class="n">hue</span><span class="p">,</span> <span class="m">0.5</span><span class="p">,</span> <span class="m">0.5</span><span class="p">,</span> <span class="m">1.0</span><span class="p">));</span>
-            <span class="n">light</span><span class="p">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
+			<span class="kt">var</span> <span class="n">color</span> <span class="p">=</span> <span class="n">Color4</span><span class="p">.</span><span class="n">FromHsl</span><span class="p">(</span><span class="k">new</span> <span class="n">Vector4</span><span class="p">(</span><span class="n">hue</span><span class="p">,</span> <span class="m">0.5</span><span class="p">,</span> <span class="m">0.5</span><span class="p">,</span> <span class="m">1.0</span><span class="p">));</span>
+			<span class="n">light</span><span class="p">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 
@@ -139,7 +143,7 @@ How do we pull this off? Glad you asked!</p>
 
 <p>Oh and by the way, servers like Goon and CM do not have to fear. We&rsquo;ll do the best we can to ensure that the content repo server side can remain closed source. So have at it with that solarium!</p>
 
-<h1 id="2d-or-not-2d">2D or not 2D</h1>
+<h2 id="2d-or-not-2d">2D or not 2D</h2>
 
 <p>So as you may know from the old project, SS14 uses prerendered 3D sprites for humans.
 This means that we have a 3D model, but the client never touches it.
@@ -166,7 +170,7 @@ Oh it&rsquo;s <strong>impossible</strong>.</p>
 
 <p>We&rsquo;re still experimenting with the practicality of making 3D models, art style, tooling, etc&hellip; <strong>The game will stay top down</strong>, this is only a visual change. Seriously don&rsquo;t freak out I know this is a big decision and highly controversial. If it seriously doesn&rsquo;t work we&rsquo;ll revert to 2D and have our scaling artifacts instead.</p>
 
-<h1 id="robusting-the-sfml">Robusting the SFML</h1>
+<h2 id="robusting-the-sfml">Robusting the SFML</h2>
 
 <p>As you may know if you read the previous reports, SFML is&hellip; <a href="/images/post/17_08_17-sfml-macos-segfault.png">yeah&hellip; about that&hellip;</a></p>
 
@@ -175,14 +179,14 @@ However, that&rsquo;s not the point of this (relatively too small) section of th
 
 <p>The point is, there is hope, and SS14 mostly works cross platform right now (to our knowledge). At the very least all the fundamentals to make writing content possible is there.</p>
 
-<h1 id="designing-the-game-not-the-engine">Designing the Game, not the Engine</h1>
+<h2 id="designing-the-game-not-the-engine">Designing the Game, not the Engine</h2>
 
 <p>As stated before, the goal of SS14 is not only to rid ourselves of BYOND, but also to fix the actual game design tainted by BYOND.
 While there is something to be said about bikeshedding here, our game designer Urist McDorf (yes, that&rsquo;s his online name) doesn&rsquo;t have anything better to do anyways, so he decided to design some systems like power and interaction, which we&rsquo;re gonna need sooner rather than later now that the content repo is set up.</p>
 
 <p>If you want to read the design docs he&rsquo;s written, they can be found <a href="https://goo.gl/bnk4qo">here</a>. Discussion is welcome, but note that <strong>these are not final</strong>. It&rsquo;s his design, it does not necessarily reflect the way SS14 will be going.</p>
 
-<h1 id="automatic-nightly-builds">Automatic Nightly Builds</h1>
+<h2 id="automatic-nightly-builds">Automatic Nightly Builds</h2>
 
 <p>Because we have the content repo set up now, we&rsquo;ll soon be writing actual content. To make progress more obvious for the average Joe who doesn&rsquo;t want to read these damn reports (by the way this one is <em>really</em> long), we will set up automatic builds of the client and server for download. Just download the client and server, start both and hit connect and you&rsquo;ll have your poorly lit room where you can hopefully do more than just bumping into the walls and that table. We have the build scripts for this written down, and the builds work on both MacOS and Windows (Linux client untested), but we&rsquo;re still working on hosting them automatically somewhere. We&rsquo;ll make an independent announcement when it&rsquo;s done in the next couple days.</p>
 
