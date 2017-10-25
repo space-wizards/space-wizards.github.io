@@ -6,10 +6,21 @@
     <description>Recent content on Space Station 14</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Oct 2017 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 25 Oct 2017 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://space-wizards.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Nightly Builds Up (Properly!)</title>
+      <link>https://space-wizards.github.io/post/17_10_25-nightly-builds-up-properly/</link>
+      <pubDate>Wed, 25 Oct 2017 00:00:00 +0200</pubDate>
+      
+      <guid>https://space-wizards.github.io/post/17_10_25-nightly-builds-up-properly/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://ss14.silvertorch5.io/jenkins/job/SS14%20Content%20Build/&#34;&gt;Get your Windows, MacOS and Linux builds here!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Nightly Builds Up!</title>
@@ -17,7 +28,7 @@
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0200</pubDate>
       
       <guid>https://space-wizards.github.io/post/17_10_21-nightly-builds-up-sorta/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://84.195.252.227/static/SS14_build/&#34;&gt;Nightly Windows &amp;amp; Linux builds here!&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://ss14.silvertorch5.io/jenkins/job/SS14%20Content%20Build/&#34;&gt;Nightly Windows &amp;amp; Linux builds here!&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
