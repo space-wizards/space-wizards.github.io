@@ -84,26 +84,28 @@ How do we pull this off? Glad you asked!</p>
 <p>What you are seeing here (other than my mouse cursor, apologies) is the first example of the content repo in use. It&rsquo;s a crude &ldquo;disco ball&rdquo;, the color just changing with a hue shift over time. The code was terrible because I was in a hurry and there were various limitations in the engine that I&rsquo;ve since fixed (couldn&rsquo;t even load sprites from content, joy!), but here&rsquo;s a more cleaned up version of the code. Note that the engine isn&rsquo;t there <em>yet</em>, there&rsquo;s still a bunch of refactors ahead, but this is generally what we want to have:</p>
 
 <p>YAML entity prototype:</p>
-<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># This is an entity prototype.</span><span class="w">
-</span><span class="w"></span>-<span class="w"> </span>type<span class="p">:</span><span class="w"> </span>entity<span class="w">
-</span><span class="w">  </span>id<span class="p">:</span><span class="w"> </span>discoball<span class="w">
-</span><span class="w">  </span>name<span class="p">:</span><span class="w"> </span>Disco<span class="w"> </span>Ball<span class="w">
-</span><span class="w">  </span><span class="c"># Declare which C# class the entity will be.</span><span class="w">
-</span><span class="w">  </span><span class="c"># This contains the logic in the next snippet.</span><span class="w">
-</span><span class="w">  </span>class<span class="p">:</span><span class="w"> </span>Content.Client.Prototypes.DiscoBall<span class="w">
-</span><span class="w">  </span><span class="c"># Declare components: what the entity can do.</span><span class="w">
-</span><span class="w">  </span>components<span class="p">:</span><span class="w">
-</span><span class="w">  </span>-<span class="w"> </span>type<span class="p">:</span><span class="w"> </span>Transform<span class="w">
-</span><span class="w">  </span>-<span class="w"> </span>type<span class="p">:</span><span class="w"> </span>Clickable<span class="w">
-</span><span class="w">  </span>-<span class="w"> </span>type<span class="p">:</span><span class="w"> </span>Sprite<span class="w">
-</span><span class="w">    </span>sprites<span class="p">:</span><span class="w">
-</span><span class="w">    </span>-<span class="w"> </span>discoball<span class="w">
-</span><span class="w">
-</span><span class="w">    </span><span class="c"># This entity has a light.</span><span class="w">
-</span><span class="w">    </span><span class="c"># The color is changed by the C# code.</span><span class="w">
-</span><span class="w">  </span>-<span class="w"> </span>type<span class="p">:</span><span class="w"> </span>PointLight</code></pre></div>
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span></span><span class="c1"># This is an entity prototype.</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">entity</span>
+  <span class="l l-Scalar l-Scalar-Plain">id</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">discoball</span>
+  <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Disco Ball</span>
+  <span class="c1"># Declare which C# class the entity will be.</span>
+  <span class="c1"># This contains the logic in the next snippet.</span>
+  <span class="l l-Scalar l-Scalar-Plain">class</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Content.Client.Prototypes.DiscoBall</span>
+  <span class="c1"># Declare components: what the entity can do.</span>
+  <span class="l l-Scalar l-Scalar-Plain">components</span><span class="p p-Indicator">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Transform</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Clickable</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Sprite</span>
+    <span class="l l-Scalar l-Scalar-Plain">sprites</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">discoball</span>
+
+    <span class="c1"># This entity has a light.</span>
+    <span class="c1"># The color is changed by the C# code.</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">PointLight</span>
+</code></pre></div>
+
 <p>And for the C# code:</p>
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">using</span> <span class="nn">OpenTK</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-csharp" data-lang="csharp"><span></span><span class="k">using</span> <span class="nn">OpenTK</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">SS14.Client.GameObjects</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">SS14.Shared.GameObjects</span><span class="p">;</span>
 
@@ -114,13 +116,13 @@ How do we pull this off? Glad you asked!</p>
 		<span class="k">private</span> <span class="kt">float</span> <span class="n">hue</span><span class="p">;</span>
 		<span class="k">private</span> <span class="n">PointLightComponent</span> <span class="n">light</span><span class="p">;</span>
 
-		<span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="n">Initialize</span><span class="p">()</span>
+		<span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">Initialize</span><span class="p">()</span>
 		<span class="p">{</span>
-			<span class="c1">// Fetch our light ahead of time to improve performance and make the code more readable.
-</span><span class="c1"></span>			<span class="n">light</span> <span class="p">=</span> <span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">PointLightComponent</span><span class="p">&gt;();</span>
+			<span class="c1">// Fetch our light ahead of time to improve performance and make the code more readable.</span>
+			<span class="n">light</span> <span class="p">=</span> <span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">PointLightComponent</span><span class="p">&gt;();</span>
 		<span class="p">}</span>
 
-		<span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="n">Update</span><span class="p">(</span><span class="kt">float</span> <span class="n">frameTime</span><span class="p">)</span>
+		<span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">Update</span><span class="p">(</span><span class="kt">float</span> <span class="n">frameTime</span><span class="p">)</span>
 		<span class="p">{</span>
 			<span class="n">hue</span> <span class="p">+=</span> <span class="n">frameTime</span> <span class="p">/</span> <span class="m">10</span><span class="p">;</span>
 			<span class="k">if</span> <span class="p">(</span><span class="n">hue</span> <span class="p">&gt;</span> <span class="m">1</span><span class="p">)</span>
@@ -128,11 +130,13 @@ How do we pull this off? Glad you asked!</p>
 				<span class="n">hue</span> <span class="p">-=</span> <span class="m">1</span><span class="p">;</span>
 			<span class="p">}</span>
 
-			<span class="kt">var</span> <span class="n">color</span> <span class="p">=</span> <span class="nc">Color4</span><span class="p">.</span><span class="n">FromHsl</span><span class="p">(</span><span class="k">new</span> <span class="n">Vector4</span><span class="p">(</span><span class="n">hue</span><span class="p">,</span> <span class="m">0.5</span><span class="p">,</span> <span class="m">0.5</span><span class="p">,</span> <span class="m">1.0</span><span class="p">));</span>
-			<span class="nc">light</span><span class="p">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="p">);</span>
+			<span class="kt">var</span> <span class="n">color</span> <span class="p">=</span> <span class="n">Color4</span><span class="p">.</span><span class="n">FromHsl</span><span class="p">(</span><span class="k">new</span> <span class="n">Vector4</span><span class="p">(</span><span class="n">hue</span><span class="p">,</span> <span class="m">0.5</span><span class="p">,</span> <span class="m">0.5</span><span class="p">,</span> <span class="m">1.0</span><span class="p">));</span>
+			<span class="n">light</span><span class="p">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="p">);</span>
 		<span class="p">}</span>
 	<span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span>
+</code></pre></div>
+
 <p>Yes, it&rsquo;s a little verbose, but it&rsquo;s for the better. And if you want to go back and use Python instead, you can!</p>
 
 <p>In the next few days we&rsquo;ll probably start writing some simple content like maybe power in there, as it should be mostly possible already. We&rsquo;ll finally get onto some exciting stuff that isn&rsquo;t just &ldquo;look what we refactored this week!&rdquo;</p>
