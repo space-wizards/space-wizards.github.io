@@ -28,7 +28,7 @@ function initgtag() {
 }
 
 function gtag(...args: any[]) {
-	window.dataLayer.push(args);
+	window.dataLayer.push(arguments);
 }
 
 interface Window {

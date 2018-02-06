@@ -22,7 +22,7 @@ function gtag() {
     for (var _i = 0; _i < arguments.length; _i++) {
         args[_i] = arguments[_i];
     }
-    window.dataLayer.push(args);
+    window.dataLayer.push(arguments);
 }
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("subname").innerHTML = pick([
