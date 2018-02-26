@@ -6,10 +6,23 @@
     <description>Recent content on Space Station 14</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Oct 2017 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 26 Feb 2018 00:00:00 +0100</lastBuildDate>
     
 	<atom:link href="https://space-wizards.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Progress Report #5: Waiting for Godot</title>
+      <link>https://space-wizards.github.io/post/18_02_26_progress-report-5-waiting_for_godot/</link>
+      <pubDate>Mon, 26 Feb 2018 00:00:00 +0100</pubDate>
+      
+      <guid>https://space-wizards.github.io/post/18_02_26_progress-report-5-waiting_for_godot/</guid>
+      <description>&lt;p&gt;So when was the last progress report made? November right?&lt;/p&gt;
+
+&lt;p&gt;Oh jeez.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Nightly Builds Up (Properly!)</title>
