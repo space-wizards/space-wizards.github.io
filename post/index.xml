@@ -2,34 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Space Station 14</title>
-    <link>https://space-wizards.github.io/post/</link>
+    <link>https://spacestation14.io/post/</link>
     <description>Recent content in Posts on Space Station 14</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Feb 2018 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 25 Oct 2017 00:00:00 +0200</lastBuildDate>
     
-	<atom:link href="https://space-wizards.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://spacestation14.io/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Progress Report #5: Waiting for Godot</title>
-      <link>https://space-wizards.github.io/post/18_02_26_progress-report-5-waiting_for_godot/</link>
-      <pubDate>Mon, 26 Feb 2018 00:00:00 +0100</pubDate>
-      
-      <guid>https://space-wizards.github.io/post/18_02_26_progress-report-5-waiting_for_godot/</guid>
-      <description>&lt;p&gt;So when was the last progress report made? November right?&lt;/p&gt;
-
-&lt;p&gt;Oh jeez.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>Nightly Builds Up (Properly!)</title>
-      <link>https://space-wizards.github.io/post/17_10_25-nightly-builds-up-properly/</link>
+      <link>https://spacestation14.io/post/17_10_25-nightly-builds-up-properly/</link>
       <pubDate>Wed, 25 Oct 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://space-wizards.github.io/post/17_10_25-nightly-builds-up-properly/</guid>
+      <guid>https://spacestation14.io/post/17_10_25-nightly-builds-up-properly/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://ss14.silvertorch5.io/jenkins/job/SS14%20Content%20Build/&#34;&gt;Get your Windows, MacOS and Linux builds here!&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -37,10 +24,10 @@
     
     <item>
       <title>Nightly Builds Up!</title>
-      <link>https://space-wizards.github.io/post/17_10_21-nightly-builds-up-sorta/</link>
+      <link>https://spacestation14.io/post/17_10_21-nightly-builds-up-sorta/</link>
       <pubDate>Sat, 21 Oct 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://space-wizards.github.io/post/17_10_21-nightly-builds-up-sorta/</guid>
+      <guid>https://spacestation14.io/post/17_10_21-nightly-builds-up-sorta/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://ss14.silvertorch5.io/jenkins/job/SS14%20Content%20Build/&#34;&gt;Nightly Windows &amp;amp; Linux builds here!&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -48,10 +35,10 @@
     
     <item>
       <title>Progress Report #4: Robust Content Framework</title>
-      <link>https://space-wizards.github.io/post/17_08_17-progress-report-4-robust-content-framework/</link>
+      <link>https://spacestation14.io/post/17_08_17-progress-report-4-robust-content-framework/</link>
       <pubDate>Thu, 17 Aug 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://space-wizards.github.io/post/17_08_17-progress-report-4-robust-content-framework/</guid>
+      <guid>https://spacestation14.io/post/17_08_17-progress-report-4-robust-content-framework/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s been a couple weeks since the last progress report, and lots has happened since then. Refactors, setting up the content repo, and more!&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -59,10 +46,10 @@
     
     <item>
       <title>Progress Report #3: Ending the pre-alpha</title>
-      <link>https://space-wizards.github.io/post/17-07-25-progress-report-3-ending-pre-alpha/</link>
+      <link>https://spacestation14.io/post/17-07-25-progress-report-3-ending-pre-alpha/</link>
       <pubDate>Tue, 25 Jul 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://space-wizards.github.io/post/17-07-25-progress-report-3-ending-pre-alpha/</guid>
+      <guid>https://spacestation14.io/post/17-07-25-progress-report-3-ending-pre-alpha/</guid>
       <description>&lt;p&gt;So stuff&amp;rsquo;s been quiet for the past 14 days. I can give you an annoying excuse or I can just accept that weekly progress reports aren&amp;rsquo;t working &lt;em&gt;yet&lt;/em&gt;. As such &lt;strong&gt;progress reports will no longer be scheduled and done whenever we feel there&amp;rsquo;s something big to report&lt;/strong&gt;, like today!&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -70,10 +57,10 @@
     
     <item>
       <title>Progress report #2: Refactor Hell</title>
-      <link>https://space-wizards.github.io/post/17-07-10-progress-report-2-refactor-hell/</link>
+      <link>https://spacestation14.io/post/17-07-10-progress-report-2-refactor-hell/</link>
       <pubDate>Mon, 10 Jul 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://space-wizards.github.io/post/17-07-10-progress-report-2-refactor-hell/</guid>
+      <guid>https://spacestation14.io/post/17-07-10-progress-report-2-refactor-hell/</guid>
       <description>&lt;p&gt;The progress report took a bit to get here, because I uploaded #1 two days too late, and not a lot of substance for a report happened between then and when #2 should&amp;rsquo;ve happened. Not the case anymore though, got plenty to write about this time!&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -81,10 +68,10 @@
     
     <item>
       <title>Progress Report #1: Revive</title>
-      <link>https://space-wizards.github.io/post/17-06-26-new-website-and-progress/</link>
+      <link>https://spacestation14.io/post/17-06-26-new-website-and-progress/</link>
       <pubDate>Mon, 26 Jun 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://space-wizards.github.io/post/17-06-26-new-website-and-progress/</guid>
+      <guid>https://spacestation14.io/post/17-06-26-new-website-and-progress/</guid>
       <description>&lt;p&gt;You&amp;rsquo;re reading this on the new website for SS14! After &lt;a href=&#34;https://i.imgur.com/Q3cUg29.gif&#34;&gt;lots of hard work with CSS&lt;/a&gt;, the website is ready to recieve progress reports and other news.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>

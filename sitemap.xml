@@ -1,56 +1,51 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="https://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://space-wizards.github.io/post/18_02_26_progress-report-5-waiting_for_godot/</loc>
-    <lastmod>2018-02-26T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://space-wizards.github.io/post/17_10_25-nightly-builds-up-properly/</loc>
+    <loc>https://spacestation14.io/post/17_10_25-nightly-builds-up-properly/</loc>
     <lastmod>2017-10-25T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://space-wizards.github.io/post/17_10_21-nightly-builds-up-sorta/</loc>
+    <loc>https://spacestation14.io/post/17_10_21-nightly-builds-up-sorta/</loc>
     <lastmod>2017-10-21T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://space-wizards.github.io/post/17_08_17-progress-report-4-robust-content-framework/</loc>
+    <loc>https://spacestation14.io/post/17_08_17-progress-report-4-robust-content-framework/</loc>
     <lastmod>2017-08-17T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://space-wizards.github.io/post/17-07-25-progress-report-3-ending-pre-alpha/</loc>
+    <loc>https://spacestation14.io/post/17-07-25-progress-report-3-ending-pre-alpha/</loc>
     <lastmod>2017-07-25T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://space-wizards.github.io/post/17-07-10-progress-report-2-refactor-hell/</loc>
+    <loc>https://spacestation14.io/post/17-07-10-progress-report-2-refactor-hell/</loc>
     <lastmod>2017-07-10T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://space-wizards.github.io/post/17-06-26-new-website-and-progress/</loc>
+    <loc>https://spacestation14.io/post/17-06-26-new-website-and-progress/</loc>
     <lastmod>2017-06-26T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://space-wizards.github.io/about/</loc>
+    <loc>https://spacestation14.io/about/</loc>
     <lastmod>2017-06-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://space-wizards.github.io/post/</loc>
-    <lastmod>2018-02-26T00:00:00+01:00</lastmod>
+    <loc>https://spacestation14.io/post/</loc>
+    <lastmod>2017-10-25T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://space-wizards.github.io/</loc>
-    <lastmod>2018-02-26T00:00:00+01:00</lastmod>
+    <loc>https://spacestation14.io/</loc>
+    <lastmod>2017-10-25T00:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
