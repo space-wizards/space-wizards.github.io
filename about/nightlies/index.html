@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<meta name="X-UA-Compatible" content="IE=Edge"/>
+
+
+		<base href="https://spacestation14.io/" />
+		<title>How to Run Space Station 14 TODAY - Space Station 14</title>
+		<link rel="canonical" href="https://spacestation14.io/about/nightlies/" />
+		
+			<link href="https://spacestation14.io/about/nightlies/index.xml" rel="alternate" type="application/rss+xml" title="Space Station 14" />
+			<link href="https://spacestation14.io/about/nightlies/index.xml" rel="feed" type="application/rss+xml" title="Space Station 14" />
+		
+
+		<link rel="stylesheet" type="text/css" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" href="/fonts/animal_silence/stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="/fonts/fira_code/fira_code.css" />
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+<script src="/js/main.js"></script>
+
+	</head>
+	<body lang="en">
+		<div id="background"> </div>
+		<div id="centercolumn">
+			<nav id="header">
+				<header class="left">
+					<a href="/" id="name">
+						Space Station 14
+					</a>
+					<br>
+					<span id="subname">
+						
+						<br>
+					</span>
+				</header>
+				<div class="right">
+					<a class="navlink" href="/about/">About</a>
+					
+				</div>
+			</nav>
+			<main>
+
+
+<nav class="go-back-link">
+	<a href="/">← Go Back</a>
+</nav>
+<article>
+	
+
+<p>This page&rsquo;ll be updated regularly to tell you how to run the automatically updated builds (nightlies). As soon as we push something it&rsquo;s automatically built and can be downloaded after like, 5 minutes (fast huh).</p>
+
+<p>First of all, <a href="https://builds.spacestation14.io/jenkins/job/SS14%20Content%20Build/">here are the downloads.</a></p>
+
+<p>SS14 is in active development so yada yada won&rsquo;t be stable we&rsquo;re not responsible if your computer and/or sanity blows up.</p>
+
+<h2 id="windows">Windows</h2>
+
+<p>Download both the client and server and unzip it somewhere sane. For the client you should run <code>spess.bat</code>, and for the server you can just run <code>SS14.Server.exe</code> and hit connect in the client. It should all <em>work</em>.</p>
+
+<h2 id="linux">Linux</h2>
+
+<p>Client builds for Linux aren&rsquo;t <em>currently</em> made because I (PJB) don&rsquo;t have anybody to test them.</p>
+
+<p>Server builds are enabled however! You&rsquo;ll need to install <a href="https://www.mono-project.com/">mono</a> to run them, but that should be everything. To run the server you need to run <code>mono SS14.Server.exe</code> (yes it looks like a Windows exe, that&rsquo;s normal).</p>
+
+<h2 id="macos">MacOS</h2>
+
+<p>MacOS builds are currently completely disabled. We could theoretically do the server ones but&hellip; who the hell is gonna use MacOS as a server?</p>
+
+<p>If there&rsquo;s demand we&rsquo;ll turn the server builds on (or when we set up client builds, either works).</p>
+
+<h2 id="faq">FAQ</h2>
+
+<p><strong>The code is C#, can&rsquo;t I run the builds cross-platform?</strong></p>
+
+<p>No, while the main code is .NET, the builds will not start cross-platform. Two reasons:</p>
+
+<ul>
+<li>We decided to use conditional compilation instead of runtime detection for some platform-specific functions.</li>
+<li>We are currently using a native Rust library for parts of netcode which does not work cross-platform.</li>
+<li>Godot is a native program too, good luck running that cross-platform.</li>
+</ul>
+
+<p>While we could theoretically solve both of these, we won&rsquo;t. It&rsquo;s not worth the hassle.</p>
+
+<p><strong>What about supporting other CPU architectures (x86/i686, ARM, &hellip;)?</strong></p>
+
+<p>Right now we only support x64.</p>
+
+<ul>
+<li>x86/i686: Not happening. While we totally <em>could</em> do this, there is no reason to still drag x86 behind us. If you can&rsquo;t run an x64 program in 2018, you ought to get off Windows XP. CPUs that aren&rsquo;t x64 are too slow to run SS14 anyways. It complicates the build tools for no reason.</li>
+<li>ARM/ARM64: Could/probably will happen if somebody codes it, Godot and Mono both support it.</li>
+</ul>
+
+</article>
+
+			</main>
+			<footer class="bottom-links">
+				<ul>
+					<li><a href="https://discord.gg/t2jac3p">Discord</a></li>
+					<li><a href="https://github.com/space-wizards">GitHub</a></li>
+					<li><a href="/about/nightlies">Automatic Builds</a></li>
+					<li><a href="https://reddit.com/r/ss14">Subreddit</a></li>
+					<li><a href="/index.xml">RSS</a></li>
+				</ul>
+			</footer>
+		</div>
+	</body>
+</html>
+
