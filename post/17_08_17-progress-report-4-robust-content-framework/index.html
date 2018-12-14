@@ -55,8 +55,6 @@
 	</span>
 	<p>It&rsquo;s been a couple weeks since the last progress report, and lots has happened since then. Refactors, setting up the content repo, and more!</p>
 
-<p></p>
-
 <p>So here&rsquo;s a fun bit of trivia, when we started the project to revive SS14, the project was at 45,000 lines of code. That was the middle of May. We&rsquo;re now a few months later, and the we&rsquo;re at 37,000 lines! <a href="https://sonarcloud.io/project/activity?custom_metrics=ncloc&amp;graph=custom&amp;id=ss14">Here&rsquo;s a chart if you want to see it for yourself.</a></p>
 
 <p>The original developers did not have a very modular idea for the project. Everything in one big project and writing the game and engine as one. A workable approach to game development for most projects. Sadly, SS13 is not one of
@@ -111,29 +109,29 @@ How do we pull this off? Glad you asked!</p>
 
 <span class="k">namespace</span> <span class="nn">Content.Client.Prototypes</span>
 <span class="p">{</span>
-    <span class="k">public</span> <span class="k">class</span> <span class="nc">DiscoBall</span> <span class="p">:</span> <span class="n">Entity</span>
-    <span class="p">{</span>
-        <span class="k">private</span> <span class="kt">float</span> <span class="n">hue</span><span class="p">;</span>
-        <span class="k">private</span> <span class="n">PointLightComponent</span> <span class="n">light</span><span class="p">;</span>
+	<span class="k">public</span> <span class="k">class</span> <span class="nc">DiscoBall</span> <span class="p">:</span> <span class="n">Entity</span>
+	<span class="p">{</span>
+		<span class="k">private</span> <span class="kt">float</span> <span class="n">hue</span><span class="p">;</span>
+		<span class="k">private</span> <span class="n">PointLightComponent</span> <span class="n">light</span><span class="p">;</span>
 
-        <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">Initialize</span><span class="p">()</span>
-        <span class="p">{</span>
-            <span class="c1">// Fetch our light ahead of time to improve performance and make the code more readable.</span>
-            <span class="n">light</span> <span class="p">=</span> <span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">PointLightComponent</span><span class="p">&gt;();</span>
-        <span class="p">}</span>
+		<span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">Initialize</span><span class="p">()</span>
+		<span class="p">{</span>
+			<span class="c1">// Fetch our light ahead of time to improve performance and make the code more readable.</span>
+			<span class="n">light</span> <span class="p">=</span> <span class="n">GetComponent</span><span class="p">&lt;</span><span class="n">PointLightComponent</span><span class="p">&gt;();</span>
+		<span class="p">}</span>
 
-        <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">Update</span><span class="p">(</span><span class="kt">float</span> <span class="n">frameTime</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">hue</span> <span class="p">+=</span> <span class="n">frameTime</span> <span class="p">/</span> <span class="m">10</span><span class="p">;</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">hue</span> <span class="p">&gt;</span> <span class="m">1</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="n">hue</span> <span class="p">-=</span> <span class="m">1</span><span class="p">;</span>
-            <span class="p">}</span>
+		<span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">Update</span><span class="p">(</span><span class="kt">float</span> <span class="n">frameTime</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">hue</span> <span class="p">+=</span> <span class="n">frameTime</span> <span class="p">/</span> <span class="m">10</span><span class="p">;</span>
+			<span class="k">if</span> <span class="p">(</span><span class="n">hue</span> <span class="p">&gt;</span> <span class="m">1</span><span class="p">)</span>
+			<span class="p">{</span>
+				<span class="n">hue</span> <span class="p">-=</span> <span class="m">1</span><span class="p">;</span>
+			<span class="p">}</span>
 
-            <span class="kt">var</span> <span class="n">color</span> <span class="p">=</span> <span class="n">Color4</span><span class="p">.</span><span class="n">FromHsl</span><span class="p">(</span><span class="k">new</span> <span class="n">Vector4</span><span class="p">(</span><span class="n">hue</span><span class="p">,</span> <span class="m">0.5</span><span class="p">,</span> <span class="m">0.5</span><span class="p">,</span> <span class="m">1.0</span><span class="p">));</span>
-            <span class="n">light</span><span class="p">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
+			<span class="kt">var</span> <span class="n">color</span> <span class="p">=</span> <span class="n">Color4</span><span class="p">.</span><span class="n">FromHsl</span><span class="p">(</span><span class="k">new</span> <span class="n">Vector4</span><span class="p">(</span><span class="n">hue</span><span class="p">,</span> <span class="m">0.5</span><span class="p">,</span> <span class="m">0.5</span><span class="p">,</span> <span class="m">1.0</span><span class="p">));</span>
+			<span class="n">light</span><span class="p">.</span><span class="n">SetColor</span><span class="p">(</span><span class="n">color</span><span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 
