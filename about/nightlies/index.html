@@ -46,6 +46,7 @@
 				</header>
 				<div class="right">
 					<a class="navlink" href="/about/">About</a>
+					<a class="navlink" href="/about/nightlies/">Download</a>
 					
 				</div>
 			</nav>
@@ -65,6 +66,8 @@
 <p>SS14 is in active development so yada yada won&rsquo;t be stable we&rsquo;re not responsible if your computer and/or sanity blows up.
 It probably won&rsquo;t though. At least not your computer.</p>
 
+<p>Bug reports appreciated!</p>
+
 <h2 id="windows">Windows</h2>
 
 <p>Download both the client and server and unzip it somewhere sane.
@@ -75,8 +78,10 @@ Then hit connect inside the client and it should all work.</p>
 
 <p>Download both the client and server and unzip them somewhere sane.
 You will need to have <a href="https://www.mono-project.com/">Mono</a> installed on your system. Pretty much any distro runs it though it&rsquo;s pretty easy to install.
-For the client you will want to run <code>mono SS14.Client.exe</code> with a terminal, and <code>mono SS14.Server.exe</code> for a server.
-Once that is done you can hit connect and it&rsquo;ll all work.</p>
+For the client you will want to run &ldquo;<code>mono SS14.Client.exe</code>&rdquo; with a terminal, and &ldquo;<code>mono SS14.Server.exe</code>&rdquo; for the server.
+Once that is done you can hit connect in the client and it&rsquo;ll all work.</p>
+
+<p>Quick note, the client needs OpenAL and Freetype to be installed on your system. If there are actually people who don&rsquo;t have these installed on their system already the client is probably not gonna start. In which case tell us so we can bundle them.</p>
 
 <h2 id="macos">MacOS</h2>
 
@@ -84,7 +89,8 @@ Once that is done you can hit connect and it&rsquo;ll all work.</p>
 You will need to have <a href="https://www.mono-project.com/">Mono</a> installed on your system.
 For the client you can just run the app directly, <em>dismiss the popup telling you the app is not from a verified developer and thus you can&rsquo;t open it because Apple treats you like <del>the</del> sheep <del>you are for buying their products</del>, open security preferences and hit &ldquo;Open Anyways&rdquo;.</em></p>
 
-<p>To run the server just run <code>mono SS14.Server.exe</code> with a terminal.</p>
+<p>To run the server just run &ldquo;<code>mono SS14.Server.exe</code>&rdquo; with a terminal.
+Once that is done you can hit connect in the client and it&rsquo;ll all work.</p>
 
 <h2 id="faq">FAQ</h2>
 
@@ -107,6 +113,10 @@ For the client you can just run the app directly, <em>dismiss the popup telling 
 <li>x86/i686: Not happening. While we totally <em>could</em> do this, there is no reason to still drag x86 behind us. If you can&rsquo;t run an x64 program in 2018, you ought to get off Windows XP. CPUs that aren&rsquo;t x64 are too slow to run SS14 anyways. (actually this might not be true but it&rsquo;s still not worth supporting) It complicates the build tools for no reason.</li>
 <li>ARM/ARM64: Could/probably will happen if somebody codes it, but it&rsquo;s not a priority. Mono does support it.</li>
 </ul>
+
+<p><strong>Is this malware?</strong></p>
+
+<p>No. If you&rsquo;re paranoid you can download the code yourself and build from source though.</p>
 
 </article>
 
