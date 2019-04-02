@@ -6,10 +6,19 @@
     <description>Recent content on Space Station 14</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Mar 2019 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 02 Apr 2019 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://spacestation14.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Progress Report #13: Permanent Public Server.</title>
+      <link>https://spacestation14.io/post/19_04_02_progress-report-13/</link>
+      <pubDate>Tue, 02 Apr 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://spacestation14.io/post/19_04_02_progress-report-13/</guid>
+      <description>&lt;p&gt;Working on a massive project like this can be quite daunting. &amp;ldquo;Remake SS13&amp;rdquo; is quite a clear goal but far from concrete. Having intermediate goals to work towards is important. So for now, my goal at least is to get a permanent public server running.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Progress Report #12: Suddenly, Progress!</title>

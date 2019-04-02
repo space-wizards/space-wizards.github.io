@@ -60,38 +60,74 @@
 <article>
 	
 
-<p>This page will be updated regularly to tell you how to run the automatically updated builds (nightlies). As soon as we push something it&rsquo;s automatically built and can be downloaded after like, 3 minutes (fast huh).</p>
+<p>Through rigorous effort on our part, you too can play SS14 <em>TODAY!</em> This page will list all the details necessary to launching and trying the game.</p>
 
-<p>First of all, <a href="https://builds.spacestation14.io/jenkins/job/SS14%20Content/">here are the downloads.</a></p>
+<h2 id="updates">Updates</h2>
 
-<p>SS14 is in active development so yada yada won&rsquo;t be stable we&rsquo;re not responsible if your computer and/or sanity blows up.
-It probably won&rsquo;t though. At least not your computer.</p>
+<p>The game is still in constant development. As soon as something is pushed to master it will be automatically built for all platforms and can be downloaded within like 3 minutes.</p>
+
+<p>If you want to follow this process, it&rsquo;s done <a href="https://builds.spacestation14.io/jenkins/job/SS14%20Content/">right here on Jankins</a></p>
+
+<p>SS14 is in active development so yada yada won&rsquo;t be stable we&rsquo;re not responsible if your computer and/or sanity blows up. It probably won&rsquo;t though. At least not your computer.</p>
 
 <p>Bug reports appreciated!</p>
 
-<h2 id="windows">Windows</h2>
+<h2 id="the-launcher">The Launcher</h2>
 
-<p>Download both the client and server and unzip it somewhere sane.
-For the client you should run <code>SS14.Client.exe</code>, and for the server you should run <code>SS14.Server.exe</code>.
-Then hit connect inside the client and it should all work.</p>
+<p>The easiest way to get SS14 right now is to download the <a href="https://github.com/space-wizards/SS14.Launcher/releases/tag/v0.1.0">Launcher</a> for your platform and run it. It&rsquo;s <code>SS14.Launcher.exe</code> on Windows and <code>SS14.Launcher</code> on Linux (both native binaries you can run directly). macOS is untested and probably broken and you&rsquo;d need to launch it from a terminal too. For <strong>Linux and macOS</strong> you will also need to have <strong><a href="https://www.mono-project.com/">Mono</a> installed</strong> on your system.</p>
 
-<h2 id="linux">Linux</h2>
+<p>The launcher will automatically download and update the main client. From there you can connect to our public server with the convenient button in the main menu.</p>
 
-<p>Download both the client and server and unzip them somewhere sane.
-You will need to have <a href="https://www.mono-project.com/">Mono</a> installed on your system. Pretty much any distro runs it though it&rsquo;s pretty easy to install.
+<h2 id="manually">Manually</h2>
+
+<p>If you want to host a server on your own machine (or are running on macOS, sorry) you will want to download the client and server manually as zip files.</p>
+
+<p>You can get binaries of the client and server for your platform <a href="https://builds.spacestation14.io/jenkins/job/SS14%20Content/">right here</a>. You&rsquo;ll have to extract the files somewhere sane. Actually running it is pretty easy but check the sections down below for your platform.</p>
+
+<h3 id="windows">Windows</h3>
+
+<p>For the client you should run <code>SS14.Client.exe</code>, and for the server you should run <code>SS14.Server.exe</code>.
+Then hit &ldquo;Direct Connect&rdquo; inside the client and it should all work.</p>
+
+<h3 id="linux">Linux</h3>
+
+<p>You will need to have <a href="https://www.mono-project.com/">Mono</a> installed on your system. Pretty much any distro runs it though it&rsquo;s pretty easy to install.
 For the client you will want to run &ldquo;<code>mono SS14.Client.exe</code>&rdquo; with a terminal, and &ldquo;<code>mono SS14.Server.exe</code>&rdquo; for the server.
-Once that is done you can hit connect in the client and it&rsquo;ll all work.</p>
+Then hit &ldquo;Direct Connect&rdquo; inside the client and it should all work.</p>
 
-<p>Quick note, the client needs OpenAL and Freetype to be installed on your system. If there are actually people who don&rsquo;t have these installed on their system already the client is probably not gonna start. In which case tell us so we can bundle them.</p>
-
-<h2 id="macos">MacOS</h2>
+<h3 id="macos">MacOS</h3>
 
 <p>Download both the client and server and unzip them somewhere sane.
 You will need to have <a href="https://www.mono-project.com/">Mono</a> installed on your system.
 For the client you can just run the app directly, <em>dismiss the popup telling you the app is not from a verified developer and thus you can&rsquo;t open it because Apple treats you like <del>the</del> sheep <del>you are for buying their products</del>, open security preferences and hit &ldquo;Open Anyways&rdquo;.</em></p>
 
 <p>To run the server just run &ldquo;<code>mono SS14.Server.exe</code>&rdquo; with a terminal.
-Once that is done you can hit connect in the client and it&rsquo;ll all work.</p>
+rminal, and &ldquo;<code>mono SS14.Server.exe</code>&rdquo; for the server.</p>
+
+<h2 id="system-requirements">System Requirements</h2>
+
+<h3 id="every-platform">Every Platform:</h3>
+
+<ul>
+<li>64-bit OS (amd64)</li>
+<li>OpenGL 3.3</li>
+<li>250 MiB free memory should do it. (Client takes approx 100 MiB right now but that&rsquo;s probably gonna increase)</li>
+<li>Gonna need a decent CPU though because the code is poorly optimized right now.</li>
+</ul>
+
+<h3 id="linux-1">Linux:</h3>
+
+<ul>
+<li><a href="https://www.mono-project.com/">Mono</a></li>
+</ul>
+
+<p>Quick note, the client needs OpenAL and Freetype to be installed on your system. If you don&rsquo;t have both of these installed the client is definitely not gonna start, so tell us so we can bundle them!</p>
+
+<h3 id="macos-1">macOS:</h3>
+
+<ul>
+<li><a href="https://www.mono-project.com/">Mono</a></li>
+</ul>
 
 <h2 id="faq">FAQ</h2>
 
