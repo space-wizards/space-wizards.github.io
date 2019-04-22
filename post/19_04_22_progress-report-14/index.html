@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+
+		<meta name="X-UA-Compatible" content="IE=Edge"/>
+<meta property="og:title" content="Progress Report #14: Content &amp; More Server" />
+<meta property="og:url" content="https://spacestation14.io/post/19_04_22_progress-report-14/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="SS14" />
+<meta property="og:image" content="https://spacestation14.io/images/icon.png" />
+<meta property="og:image:width" content="135" />
+<meta property="og:image:height" content="135" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:alt" content="The SS14 icon." />
+
+
+		<base href="https://spacestation14.io/" />
+		<title>Progress Report #14: Content &amp; More Server - Space Station 14</title>
+		<link rel="canonical" href="https://spacestation14.io/post/19_04_22_progress-report-14/" />
+		
+
+		<link rel="stylesheet" type="text/css" href="/css/main.css" />
+<link rel="stylesheet" type="text/css" href="/fonts/animal_silence/stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="/fonts/fira_code/fira_code.css" />
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+<script async src="/js/main.js"></script>
+
+	</head>
+	<body lang="en">
+		<div id="background"> </div>
+		<div id="centercolumn">
+			<nav id="header">
+				<header class="left">
+					<a href="/" id="name">
+						Space Station 14
+					</a>
+					<br>
+					<span id="subname">
+						
+						<br>
+					</span>
+				</header>
+				<div class="right">
+					<a class="navlink" href="/about/">About</a>
+					<a class="navlink" href="/about/nightlies/">Download</a>
+					<a class="navlink" href="/about/faq/">FAQ</a>
+					
+				</div>
+			</nav>
+			<main>
+
+
+<nav class="go-back-link">
+	<a href="/">← Go Back</a>
+</nav>
+
+<article>
+	<h1 class="articleheader first-header">Progress Report #14: Content &amp; More Server</h2>
+	<span class="articlemeta">
+		<time datetime="2019-04-22T00:00:00&#43;0200">
+			Monday April 22, 2019
+		</time>
+		by
+		<span class="author">PJB3005</span>
+	</span>
+	<p>This time on SS14: neat features and neat server features.</p>
+
+<h2 id="locker-stuff-contributed-by-prplegoo">Locker Stuff (contributed by PrPleGoo)</h2>
+
+<p>Pushing things in SS13 sucks. That&rsquo;s why we&rsquo;re making it better.</p>
+
+<p><video src="/video/19_04_22-locker-push.webm" autoplay loop></p>
+
+<p>Also you can now go into lockers.</p>
+
+<p><video src="/video/19_04_22-locker-enter.webm" autoplay loop></p>
+
+<p>We already did have lockers implemented, but they acted more like chests in other games like Minecraft than what you were used to in SS13. While the idea is neat, we did decide to go back to the old SS13 ways, since they&rsquo;re actually quite a neat bit of emergent behavior.</p>
+
+<h2 id="tooltip-examine">Tooltip Examine</h2>
+
+<p>I might&rsquo;ve already mentioned this before in these reports, but we want to remove the need for the chat window for most things. We do still want a chat log of course, but you shouldn&rsquo;t need to look at the chat for most things.</p>
+
+<p>Examining things is annoying. You click on something and the result is halfway across your monitor. God forbid having fast moving chat. Another problem is that it&rsquo;s often poorly structured. So for a lot of things it&rsquo;s flavor text, for a bunch of others it&rsquo;s VERY useful information that&rsquo;s hard to dig up from the text dump.</p>
+
+<p>We can smack two birds with one stone here. I&rsquo;ll just show you the screenshot:</p>
+
+<p><img src="/images/post/pr_14/examine_tooltip.png" alt="" /></p>
+
+<p>So first of all, examining is now done with a tooltip instead of dumping it into your chat log. This keeps the info right where your eyes already are. Second of all, information such as fuel is now sanely formatted so it&rsquo;s easy to tell at a glance. For reference, the examine message on TG is &ldquo;It contains 50 units of fuel out of 50.&rdquo; I&rsquo;d say our brief and colored &ldquo;Fuel: 49​/50&rdquo; is <em>much</em> better.</p>
+
+<p>To address some concerns people might have:</p>
+
+<ul>
+<li>We probably will eventually make it semi-transparent, though that&rsquo;s surprisingly <em>involved</em> to implement correctly so I held off on that for now.</li>
+<li>Somebody also raised the concern about no longer having a log. We will probably still provide an examine log in some tab on the chat box later, but again, only as a <em>log</em>, not as the only way of examining things. That said, I personally feel that the idea of not having any sort of permanent log could be quite an interesting concept to explore, but perhaps it&rsquo;s too exotic for now.</li>
+</ul>
+
+<h2 id="footsteps">Footsteps</h2>
+
+<p>You can now hear the gentle sound of your fat feet on the floor.</p>
+
+<p><video src="/video/19_04_22-footsteps.webm" controls loop></p>
+
+<p>They&rsquo;re definitely not very loud (not that they should be!) so you might have to turn your volume up a little to hear them.</p>
+
+<h2 id="discord-ooc-chat-relay">Discord-OOC Chat Relay</h2>
+
+<p>So I rewrote the chat system we use to be more flexible. At the moment there aren&rsquo;t a lot of visible changes, but it did make chat easier to expand on.</p>
+
+<p>One nice advantage of not being handicapped to a language that can&rsquo;t even do HTTP sanely is that interacting with the server via other things like the Discord bot is <em>much</em> easier. Something I&rsquo;ve always thought would be neat would be linking OOC to a Discord channel. After all, no real reason to separate the two, is there?</p>
+
+<p>The <code>#server</code> channel on Discord is now connected to OOC on the public server!</p>
+
+<p><img src="/images/post/pr_14/ooc_link.png" alt="" /></p>
+
+<p>I also plan to get round status messages in here (like &ldquo;the round has started&rdquo;) but we&rsquo;re not quite there yet.</p>
+
+<h2 id="light-tubes-contributed-by-zumorica">Light Tubes (Contributed by Zumorica)</h2>
+
+<p>You can now actually take lights from light tubes and put them back in. A little thing, but still neat.</p>
+
+<h2 id="discord-rich-presence-support-contributed-by-occune">Discord Rich Presence Support (Contributed by occune)</h2>
+
+<p>We got Discord Rich presence now, so people can fancily see that you&rsquo;re playing SS14 now.</p>
+
+<p><img src="/images/post/pr_14/rich_presence.png" alt="" /></p>
+
+<p>Clearly part of our viral marketing strategy.</p>
+
+<p>Also for those people worried about privacy or whatever: it is very easy to disable with a quick config file change. Most of us use Discord so I have no problem with adding support for it, but we do understand that people might want to turn it off for privacy concerns.</p>
+
+	
+</article>
+
+			</main>
+			<footer class="bottom-links">
+				<ul>
+					<li><a href="https://discord.gg/t2jac3p">Discord</a></li>
+					<li><a href="https://github.com/space-wizards">GitHub</a></li>
+					<li><a href="/about/nightlies">Automatic Builds</a></li>
+					<li><a href="https://reddit.com/r/ss14">Subreddit</a></li>
+					<li><a href="/index.xml">RSS</a></li>
+				</ul>
+			</footer>
+		</div>
+	</body>
+</html>
+
