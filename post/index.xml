@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Space Station 14</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 May 2019 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 07 Jun 2019 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://spacestation14.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Progress Report #16: Outline, Use, Kaboom</title>
+      <link>https://spacestation14.io/post/19_06_07_progress-report-16/</link>
+      <pubDate>Fri, 07 Jun 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://spacestation14.io/post/19_06_07_progress-report-16/</guid>
+      <description>&lt;p&gt;As it turns out, &lt;em&gt;re-imagining&lt;/em&gt; SS13 is a bit harder than simply &lt;em&gt;re-making&lt;/em&gt; it. Not that that deters us.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Progress Report #15: Bye Godot</title>
