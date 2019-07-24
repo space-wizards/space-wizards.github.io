@@ -6,10 +6,20 @@
     <description>Recent content on Space Station 14</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Jul 2019 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jul 2019 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://spacestation14.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Progress Report #17: Main UI Plans</title>
+      <link>https://spacestation14.io/post/19_07_24_progress-report-17/</link>
+      <pubDate>Wed, 24 Jul 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://spacestation14.io/post/19_07_24_progress-report-17/</guid>
+      <description>&lt;p&gt;One of the biggest things that scare people away from SS13 is, of course, the terrible user interface.
+So, let&amp;rsquo;s make sure that isn&amp;rsquo;t the case for SS14!&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Progress Report #16: Outline, Use, Kaboom</title>
