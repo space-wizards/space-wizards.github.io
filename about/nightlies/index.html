@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 
 		<meta name="X-UA-Compatible" content="IE=Edge"/>
-<meta property="og:title" content="How to Run Space Station 14 TODAY" />
+<meta property="og:title" content="Downloads" />
 <meta property="og:url" content="https://spacestation14.io/about/nightlies/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="SS14" />
@@ -16,7 +16,7 @@
 
 
 		<base href="https://spacestation14.io/" />
-		<title>How to Run Space Station 14 TODAY - Space Station 14</title>
+		<title>Downloads - Space Station 14</title>
 		<link rel="canonical" href="https://spacestation14.io/about/nightlies/" />
 		
 			<link href="https://spacestation14.io/about/nightlies/index.xml" rel="alternate" type="application/rss+xml" title="Space Station 14" />
@@ -25,10 +25,11 @@
 
 		
 
-<link rel="stylesheet" type="text/css" href="/css/main.min.css" />
-<link rel="stylesheet" type="text/css" href="/fonts/animal_silence/stylesheet.css" />
-<link rel="stylesheet" type="text/css" href="/fonts/fira_code/fira_code.css" />
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="/css/all.min.css" />
 <script async src="/js/main.min.js"></script>
 
 	</head>
@@ -62,78 +63,74 @@
 <article>
 	
 
-<p>Through rigorous effort on our part, you too can play SS14 <em>TODAY!</em> This page will list all the details necessary to launching and trying the game.</p>
+<div id="download-container">
+    <div class="download">
+        <a href="https://github.com/space-wizards/space-station-14/releases/download/v0.2.0/SS14.Launcher_Windows_x64.zip"><img src="/images/Windows_logo_2012.svg" class="download-image"/></a>
+        <small>Windows 64-bit</small>
+        <a class="download-link" href="https://github.com/space-wizards/space-station-14/releases/download/v0.2.0/SS14.Launcher_Windows_x64.zip">Download launcher</a>
+        <small><strong>Needs <a href="https://aka.ms/vs/16/release/vc_redist.x64.exe">VC++ 2015 Redist</a></strong></small>
+    </div>
+    <div class="download">
+        <a href="https://github.com/space-wizards/space-station-14/releases/download/v0.2.0/SS14.Launcher_Windows_x64.zip"><img src="/images/tux.svg" class="download-image"/></a>
+        <small>Linux 64-bit</small>
+        <a class="download-link" href="https://github.com/space-wizards/space-station-14/releases/download/v0.2.0/SS14.Launcher_Linux_x64.zip">Download launcher</a>
+        <small><strong>Needs <a href="https://www.mono-project.com/download/stable/">Mono</a></strong></small>
+    </div>
+    <div class="download">
+        <a href="https://github.com/space-wizards/space-station-14/releases/download/v0.2.0/SS14.Launcher_macOS_x64.zip"><img src="/images/Apple_logo.svg" class="download-image"/></a>
+        <small>macOS 64-bit</small>
+        <a class="download-link" href="https://github.com/space-wizards/space-station-14/releases/download/v0.2.0/SS14.Launcher_macOS_x64.zip">Download launcher</a>
+        <small><strong>Needs <a href="https://www.mono-project.com/download/stable/">Mono</a></strong></small>
+    </div>
+</div>
 
-<h2 id="updates">Updates</h2>
-
-<p>The game is still in constant development. As soon as something is pushed to master it will be automatically built for all platforms and can be downloaded within like 3 minutes.</p>
-
-<p>If you want to follow this process, it&rsquo;s done <a href="https://builds.spacestation14.io/jenkins/job/SS14%20Content/">right here on Jankins</a></p>
-
-<p>SS14 is in active development so yada yada won&rsquo;t be stable we&rsquo;re not responsible if your computer and/or sanity blows up. It probably won&rsquo;t though. At least not your computer.</p>
-
-<p>Bug reports appreciated!</p>
-
-<h2 id="the-launcher">The Launcher</h2>
-
-<p>The easiest way to get SS14 right now is to download the <a href="https://github.com/space-wizards/SS14.Launcher/releases/tag/v0.1.3">Launcher</a> for your platform and run it. Run <code>SS14.Launcher.exe</code> on Windows, run <code>SS14.Launcher</code> on Linux and run the app on macOS. For <strong>Linux and macOS</strong> you will also need to have <strong><a href="https://www.mono-project.com/">Mono</a> installed</strong> on your system.</p>
-
-<p>The launcher will automatically download and update the main client. From there you can connect to our public server with the convenient button in the main menu. <strong>Note:</strong> the launcher doesn&rsquo;t have an interface of its own yet, so also no progress bar for the actual download. It can take a bit to start depending on your internet connection.</p>
-
-<h2 id="manually">Manually</h2>
-
-<p>If you want to host a server on your own machine (or are running on macOS, sorry) you will want to download the client and server manually as zip files.</p>
-
-<p>You can get binaries of the client and server for your platform <a href="https://builds.spacestation14.io/jenkins/job/SS14%20Content/">right here</a>. You&rsquo;ll have to extract the files somewhere sane. Actually running it is pretty easy but check the sections down below for your platform.</p>
-
-<h3 id="windows">Windows</h3>
-
-<p>For the client you should run <code>Robust.Client.exe</code>, and for the server you should run <code>Robust.Server.exe</code>.
-Then hit &ldquo;Direct Connect&rdquo; inside the client and it should all work.</p>
-
-<h3 id="linux">Linux</h3>
-
-<p>You will need to have <a href="https://www.mono-project.com/">Mono</a> installed on your system. Pretty much any distro runs it though it&rsquo;s pretty easy to install.
-For the client you will want to run &ldquo;<code>mono Robust.Client.exe</code>&rdquo; with a terminal, and &ldquo;<code>mono Robust.Server.exe</code>&rdquo; for the server.
-Then hit &ldquo;Direct Connect&rdquo; inside the client and it should all work.</p>
-
-<h3 id="macos">MacOS</h3>
-
-<p>Download both the client and server and unzip them somewhere sane.
-You will need to have <a href="https://www.mono-project.com/">Mono</a> installed on your system.
-For the client you can just run the app directly, <em>dismiss the popup telling you the app is not from a verified developer and thus you can&rsquo;t open it because Apple treats you like <del>the</del> sheep <del>you are for buying their products</del>, open security preferences and hit &ldquo;Open Anyways&rdquo;.</em></p>
-
-<p>To run the server just run &ldquo;<code>mono Robust.Server.exe</code>&rdquo; with a terminal.
-rminal, and &ldquo;<code>mono Robust.Server.exe</code>&rdquo; for the server.</p>
+<div id="download-sublinks">
+    <small><a href="/about/nightlies/#system-requirements">System requirements</a></small>
+    <small><a href="/about/nightlies/#standalone-downloads">Standalone downloads</a></small>
+</div>
 
 <h2 id="system-requirements">System Requirements</h2>
 
 <h3 id="every-platform">Every Platform:</h3>
 
 <ul>
-<li>64-bit OS (amd64)</li>
-<li>OpenGL 3.3 (as long as you have your video drivers installed and your GPU isn&rsquo;t 15 years old, you have this)</li>
-<li>250 MiB free memory should do it. (Client takes approx 100 MiB right now but that&rsquo;s probably gonna increase)</li>
-<li>Gonna need a decent CPU though because the code is poorly optimized right now.</li>
+<li>64-bit CPU &amp; OS</li>
+<li>OpenGL 3.3 (as long as you have your video drivers installed and your GPU isn&rsquo;t ancient, you have this)</li>
+<li>250 MiB free memory should do it</li>
+<li>50 MiB disk space</li>
 </ul>
 
-<h3 id="linux-1">Linux:</h3>
+<h3 id="windows">Windows:</h3>
+
+<ul>
+<li><a href="https://aka.ms/vs/16/release/vc_redist.x64.exe">VC++ 2015 Redistributable</a></li>
+</ul>
+
+<h3 id="linux">Linux:</h3>
+
+<ul>
+<li><a href="https://www.mono-project.com/">Mono</a></li>
+<li>OpenAL</li>
+<li>Freetype</li>
+</ul>
+
+<h3 id="macos">macOS:</h3>
 
 <ul>
 <li><a href="https://www.mono-project.com/">Mono</a></li>
 </ul>
 
-<p>Quick note, the client needs OpenAL and Freetype to be installed on your system. If you don&rsquo;t have both of these installed the client is definitely not gonna start, so tell us so we can bundle them!</p>
+<h2 id="standalone-downloads">Standalone Downloads</h2>
 
-<h3 id="macos-1">macOS:</h3>
+<p>You can also download the current client or server binaries directly. It won&rsquo;t auto update via the launcher, but hey.</p>
 
-<ul>
-<li><a href="https://www.mono-project.com/">Mono</a></li>
-</ul>
+<p>You can find the builds <a href="https://builds.spacestation14.io/jenkins/job/SS14%20Content/">right here on Jenkins</a></p>
+
+<p>To run them, just run <code>Robust.Client.exe</code> and <code>Robust.Server.exe</code>. On Linux/macOS, run them with <code>mono</code> via a terminal, not via Wine.</p>
 
 <h2 id="faq">FAQ</h2>
 
-<p><strong>The code is C#, can&rsquo;t I run the builds cross-platform?</strong></p>
+<h4 id="the-code-is-c-can-t-i-run-the-builds-cross-platform">The code is C#, can&rsquo;t I run the builds cross-platform?</h4>
 
 <p>No, while the main code is .NET, the builds will not start cross-platform. Two reasons:</p>
 
@@ -144,7 +141,7 @@ rminal, and &ldquo;<code>mono Robust.Server.exe</code>&rdquo; for the server.</p
 
 <p>While we could theoretically solve both of these, we won&rsquo;t. It&rsquo;s not worth the hassle.</p>
 
-<p><strong>What about supporting other CPU architectures (x86/i686, ARM, &hellip;)?</strong></p>
+<h4 id="what-about-supporting-other-cpu-architectures-x86-i686-arm">What about supporting other CPU architectures (x86/i686, ARM, &hellip;)?</h4>
 
 <p>Right now we only support x64.</p>
 
@@ -153,7 +150,7 @@ rminal, and &ldquo;<code>mono Robust.Server.exe</code>&rdquo; for the server.</p
 <li>ARM/ARM64: Could/probably will happen if somebody codes it, but it&rsquo;s not a priority. Mono does support it.</li>
 </ul>
 
-<p><strong>Is this malware?</strong></p>
+<h4 id="is-this-malware">Is this malware?</h4>
 
 <p>No. If you&rsquo;re paranoid you can download the code yourself and build from source though.</p>
 
