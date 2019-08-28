@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Space Station 14</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Jul 2019 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 28 Aug 2019 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://spacestation14.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Progress Report #18: Slightly Better Launcher</title>
+      <link>https://spacestation14.io/post/19_08_24_progress-report-18/</link>
+      <pubDate>Wed, 28 Aug 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://spacestation14.io/post/19_08_24_progress-report-18/</guid>
+      <description>&lt;p&gt;Writing these into sections is hard, did you know that?&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Progress Report #17: Main UI Plans</title>
