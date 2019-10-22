@@ -1,19 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>https://spacestation14.io/post/</loc>
-    <lastmod>2019-08-28T00:00:00+02:00</lastmod>
+    <lastmod>2019-10-22T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://spacestation14.io/post/19_08_24_progress-report-18/</loc>
-    <lastmod>2019-08-28T00:00:00+02:00</lastmod>
+    <loc>https://spacestation14.io/post/19_10_22_progress-report-19/</loc>
+    <lastmod>2019-10-22T00:00:00+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://spacestation14.io/</loc>
+    <lastmod>2019-10-22T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://spacestation14.io/post/19_08_24_progress-report-18/</loc>
     <lastmod>2019-08-28T00:00:00+02:00</lastmod>
   </url>
   

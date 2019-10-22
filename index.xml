@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Space Station 14</title>
@@ -6,10 +6,19 @@
     <description>Recent content on Space Station 14</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Aug 2019 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 22 Oct 2019 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://spacestation14.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Progress Report #19: 2x The Content, 4x The Quality</title>
+      <link>https://spacestation14.io/post/19_10_22_progress-report-19/</link>
+      <pubDate>Tue, 22 Oct 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://spacestation14.io/post/19_10_22_progress-report-19/</guid>
+      <description>&lt;p&gt;Kept you waiting, huh?&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Progress Report #18: Speech Bubbles &amp; Slightly Better Launcher</title>
