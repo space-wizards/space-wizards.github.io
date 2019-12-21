@@ -57,98 +57,61 @@
 	<a href="/">← Go Back</a>
 </nav>
 <article>
-	
-
-<div id="download-container">
-    <div class="download">
-        <a href="https://github.com/space-wizards/space-station-14/releases/download/v0.2.0/SS14.Launcher_Windows_x64.zip"><img src="/images/Windows_logo_2012.svg" class="download-image"/></a>
-        <small>Windows 64-bit</small>
-        <a class="download-link" href="https://github.com/space-wizards/space-station-14/releases/download/v0.2.0/SS14.Launcher_Windows_x64.zip">Download launcher</a>
-        <small><strong>Needs <a href="https://aka.ms/vs/16/release/vc_redist.x64.exe">VC++ 2015 Redist</a></strong></small>
-    </div>
-    <div class="download">
-        <a href="https://github.com/space-wizards/space-station-14/releases/download/v0.2.0/SS14.Launcher_Linux_x64.zip"><img src="/images/tux.svg" class="download-image"/></a>
-        <small>Linux 64-bit</small>
-        <a class="download-link" href="https://github.com/space-wizards/space-station-14/releases/download/v0.2.0/SS14.Launcher_Linux_x64.zip">Download launcher</a>
-        <small><strong>Needs <a href="https://www.mono-project.com/download/stable/">Mono</a></strong></small>
-    </div>
-    <div class="download">
-        <a href="https://github.com/space-wizards/space-station-14/releases/download/v0.2.0/SS14.Launcher_macOS_x64.zip"><img src="/images/Apple_logo.svg" class="download-image"/></a>
-        <small>macOS 64-bit</small>
-        <a class="download-link" href="https://github.com/space-wizards/space-station-14/releases/download/v0.2.0/SS14.Launcher_macOS_x64.zip">Download launcher</a>
-        <small><strong>Needs <a href="https://www.mono-project.com/download/stable/">Mono</a></strong></small>
-    </div>
+	<div id="download-container">
+	<div class="download">
+		<a href="https://github.com/space-wizards/SS14.Launcher/releases/download/v0.2.0/SS14.Launcher_Windows.zip"><img src="/images/Windows_logo_2012.svg" class="download-image"/></a>
+		<small>Windows 64-bit</small>
+		<a class="download-link" href="https://github.com/space-wizards/SS14.Launcher/releases/download/v0.2.0/SS14.Launcher_Windows.zip">Download launcher</a>
+		<small><strong>Needs <a href="https://aka.ms/vs/16/release/vc_redist.x64.exe">VC++ 2015 Redist</a></strong></small>
+	</div>
+	<div class="download">
+		<a href="https://github.com/space-wizards/SS14.Launcher/releases/download/v0.2.0/SS14.Launcher_Linux.zip"><img src="/images/tux.svg" class="download-image"/></a>
+		<small>Linux 64-bit</small>
+		<a class="download-link" href="https://github.com/space-wizards/SS14.Launcher/releases/download/v0.2.0/SS14.Launcher_Linux.zip">Download launcher</a>
+	</div>
+	<div class="download">
+		<a href="https://github.com/space-wizards/SS14.Launcher/releases/download/v0.2.0/SS14.Launcher_macOS.zip"><img src="/images/Apple_logo.svg" class="download-image"/></a>
+		<small>macOS 64-bit</small>
+		<a class="download-link" href="https://github.com/space-wizards/SS14.Launcher/releases/download/v0.2.0/SS14.Launcher_macOS.zip">Download launcher</a>
+		<small><strong>Currently untested, might not work.<br/>Complain on Discord if it doesn't!</strong></small>
+	</div>
 </div>
-
 <div id="download-sublinks">
-    <small><a href="/about/nightlies/#system-requirements">System requirements</a></small>
-    <small><a href="/about/nightlies/#standalone-downloads">Standalone downloads</a></small>
+	<small><a href="/about/nightlies/#system-requirements">System requirements</a></small>
+	<small><a href="/about/nightlies/#standalone-downloads">Standalone downloads</a></small>
 </div>
-
 <h2 id="system-requirements">System Requirements</h2>
-
 <h3 id="every-platform">Every Platform:</h3>
-
 <ul>
 <li>64-bit CPU &amp; OS</li>
-<li>OpenGL 3.3 (as long as you have your video drivers installed and your GPU isn&rsquo;t ancient, you have this)</li>
+<li>OpenGL 3.3 (as long as you have your video drivers installed and your GPU isn't ancient, you have this)</li>
 <li>250 MiB free memory should do it</li>
-<li>50 MiB disk space</li>
+<li>100 MiB disk space</li>
 </ul>
-
 <h3 id="windows">Windows:</h3>
-
 <ul>
 <li><a href="https://aka.ms/vs/16/release/vc_redist.x64.exe">VC++ 2015 Redistributable</a></li>
 </ul>
-
 <h3 id="linux">Linux:</h3>
-
 <ul>
-<li><a href="https://www.mono-project.com/">Mono</a></li>
 <li>OpenAL</li>
 <li>Freetype</li>
 </ul>
-
 <h3 id="macos">macOS:</h3>
-
-<ul>
-<li><a href="https://www.mono-project.com/">Mono</a></li>
-</ul>
-
+<p>Nothing special for now.</p>
 <h2 id="standalone-downloads">Standalone Downloads</h2>
-
-<p>You can also download the current client or server binaries directly. It won&rsquo;t auto update via the launcher, but hey.</p>
-
-<p>You can find the builds <a href="https://builds.spacestation14.io/jenkins/job/SS14%20Content/">right here on Jenkins</a></p>
-
-<p>To run them, just run <code>Robust.Client.exe</code> and <code>Robust.Server.exe</code>. On Linux/macOS, run them with <code>mono</code> via a terminal, not via Wine.</p>
-
+<p>You can also download the current client or server binaries directly. It won't auto update via the launcher, but hey.</p>
+<p>You can find the builds <a href="https://builds.spacestation14.io/jenkins/job/SS14%20Content/">right here on Jenkins</a>.</p>
+<p>These builds <strong>require</strong> a <a href="https://dotnet.microsoft.com/download">.NET Core 3 runtime</a> to be installed on your machine. The launcher does not need this (it's already included).</p>
 <h2 id="faq">FAQ</h2>
-
-<h4 id="the-code-is-c-can-t-i-run-the-builds-cross-platform">The code is C#, can&rsquo;t I run the builds cross-platform?</h4>
-
-<p>No, while the main code is .NET, the builds will not start cross-platform. Two reasons:</p>
-
-<ul>
-<li>We decided to use conditional compilation instead of runtime detection for some platform-specific functions.</li>
-<li>We are shipping multiple native libraries and it&rsquo;d be a massive waste to package those for each platform into the same download.</li>
-</ul>
-
-<p>While we could theoretically solve both of these, we won&rsquo;t. It&rsquo;s not worth the hassle.</p>
-
-<h4 id="what-about-supporting-other-cpu-architectures-x86-i686-arm">What about supporting other CPU architectures (x86/i686, ARM, &hellip;)?</h4>
-
+<h4 id="what-about-supporting-other-cpu-architectures-x86i686-arm-">What about supporting other CPU architectures (x86/i686, ARM, &hellip;)?</h4>
 <p>Right now we only support x64.</p>
-
 <ul>
-<li>x86/i686: Not happening. While we totally <em>could</em> do this, there is no reason to still drag x86 behind us. If you can&rsquo;t run an x64 program in 2018, you ought to get off Windows XP. CPUs that aren&rsquo;t x64 are too slow to run SS14 anyways. (actually this might not be true but it&rsquo;s still not worth supporting) It complicates the build tools for no reason.</li>
-<li>ARM/ARM64: Could/probably will happen if somebody codes it, but it&rsquo;s not a priority. Mono does support it.</li>
+<li>x86/i686: Not happening. While we totally <em>could</em> do this, there is no reason to still drag x86 behind us. If you can't run an x64 program in 2018, you ought to get off Windows XP. CPUs that aren't x64 are too slow to run SS14 anyways. (actually this might not be true but it's still not worth supporting) It complicates the build tools for no reason.</li>
+<li>ARM/ARM64: Could/probably will happen if somebody codes it, but it's not a priority. Mono does support it.</li>
 </ul>
-
 <h4 id="is-this-malware">Is this malware?</h4>
-
-<p>No. If you&rsquo;re paranoid you can download the code yourself and build from source though.</p>
+<p>No. If you're paranoid you can download the code yourself and build from source though.</p>
 
 </article>
 

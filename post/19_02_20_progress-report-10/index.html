@@ -64,65 +64,38 @@
 		<span class="author">PJB3005</span>
 	</span>
 	<p>Yeah I honestly have nothing to say for myself. You have the right to laugh.</p>
-
 <h2 id="another-rendering-engine-change">Another Rendering Engine Change</h2>
-
-<p>Hahahah. Yep it&rsquo;s happening. We&rsquo;re creating another rendering engine. Laugh all you want, you have the right to and I can&rsquo;t blame you at this point, but I&rsquo;m still going through with this and do believe this is the best way forward. To be clear, right now the code still works on Godot, the new renderer is optional.</p>
-
+<p>Hahahah. Yep it's happening. We're creating another rendering engine. Laugh all you want, you have the right to and I can't blame you at this point, but I'm still going through with this and do believe this is the best way forward. To be clear, right now the code still works on Godot, the new renderer is optional.</p>
 <p>So&hellip; you may wonder&hellip; why?</p>
-
-<p>Godot does have nice features and it&rsquo;s definitely convenient to work with, but it&rsquo;s getting more painful to work with by the day:</p>
-
+<p>Godot does have nice features and it's definitely convenient to work with, but it's getting more painful to work with by the day:</p>
 <ul>
-<li>Crashes. Lots. At this point Godot keeps crashing constantly. I can&rsquo;t run the client for 5 minutes or it dies. I&rsquo;ve attempted to look into this myself but it&rsquo;s all over the place. A lot of these crashes (but not all) are related to Mono though so I won&rsquo;t hold it against Godot since it <em>is</em> marked as unstable.</li>
-<li>Painful to work with. Like any game engine, Godot wants you to do things <em>its</em> way. We&rsquo;re only using Godot as rendering, sound and GUI engine, so we want to do things <em>our</em> way. There&rsquo;s a problem here. Most of this was worked around with hacks and can be fixed with <em>more</em> hacks, but these hacks get to the point of &ldquo;time to distribute custom Godot binaries&rdquo;, which is a complete pain. Not to mention that I&rsquo;m really not experienced with C++.</li>
-<li>Performance. Holy crap Godot&rsquo;s performance is atrocious. I don&rsquo;t want to go complete hostile here, but that&rsquo;s just how it is. Read on:</li>
+<li>Crashes. Lots. At this point Godot keeps crashing constantly. I can't run the client for 5 minutes or it dies. I've attempted to look into this myself but it's all over the place. A lot of these crashes (but not all) are related to Mono though so I won't hold it against Godot since it <em>is</em> marked as unstable.</li>
+<li>Painful to work with. Like any game engine, Godot wants you to do things <em>its</em> way. We're only using Godot as rendering, sound and GUI engine, so we want to do things <em>our</em> way. There's a problem here. Most of this was worked around with hacks and can be fixed with <em>more</em> hacks, but these hacks get to the point of &ldquo;time to distribute custom Godot binaries&rdquo;, which is a complete pain. Not to mention that I'm really not experienced with C++.</li>
+<li>Performance. Holy crap Godot's performance is atrocious. I don't want to go complete hostile here, but that's just how it is. Read on:</li>
 </ul>
-
-<h3 id="godot-s-performance">Godot&rsquo;s performance</h3>
-
+<h3 id="godots-performance">Godot's performance</h3>
 <p>So to render a sprite on the screen, you generally need to draw two textured triangles (a &ldquo;quad&rdquo;) in a rectangle shape. Pretty simple stuff right.
-Now as it turns out, if you&rsquo;ve got a few thousand objects to render, GPU drivers <em>really</em> don&rsquo;t like it when you tell them to render those one by one. So basically any 2D game uses a technique called &ldquo;sprite batching&rdquo;, where the renderer does its best to make big &ldquo;batches&rdquo; of quads and render them all at once. Big performance improvements here.</p>
-
-<p>Godot doesn&rsquo;t do this.</p>
-
-<p>This is honestly mind boggling, and it <em>shows</em>. This isn&rsquo;t some &ldquo;oh a minor improvement&rdquo;, it&rsquo;s 100% standard in 2D renderers and a significant difference. Yes I&rsquo;ve done profiling, I&rsquo;m not talking out of my ass. There are some discussions about this on GitHub, it mostly boils down to &ldquo;3.1 GLES2 WILL do batching&rdquo; and presumably the 3.2 Vulkan renderer won&rsquo;t be terrible either, but even on the latest beta GLES2 performance is even worse than GLES3, and we shouldn&rsquo;t need Vulkan as that completely screws older hardware.</p>
-
+Now as it turns out, if you've got a few thousand objects to render, GPU drivers <em>really</em> don't like it when you tell them to render those one by one. So basically any 2D game uses a technique called &ldquo;sprite batching&rdquo;, where the renderer does its best to make big &ldquo;batches&rdquo; of quads and render them all at once. Big performance improvements here.</p>
+<p>Godot doesn't do this.</p>
+<p>This is honestly mind boggling, and it <em>shows</em>. This isn't some &ldquo;oh a minor improvement&rdquo;, it's 100% standard in 2D renderers and a significant difference. Yes I've done profiling, I'm not talking out of my ass. There are some discussions about this on GitHub, it mostly boils down to &ldquo;3.1 GLES2 WILL do batching&rdquo; and presumably the 3.2 Vulkan renderer won't be terrible either, but even on the latest beta GLES2 performance is even worse than GLES3, and we shouldn't need Vulkan as that completely screws older hardware.</p>
 <p>There are other issues here, like Godot using forward rendering for lights, very poor data structure choices, etc&hellip;</p>
-
-<p>For reference, I get barely 30 FPS on my laptop&rsquo;s integrated GPU (Intel UHD Graphics 630 on Linux, i7-8750H, not some ancient Sandy Bridge one) with Godot and lighting on, and we&rsquo;re not even rendering that much things yet. This is not acceptable, period. We could put effort into making our game more optimized for the renderer (by manually doing sprite batching), but that just becomes a giant mess of avoiding slow paths and reverse engineering the renderer. At that point it&rsquo;s better to make our own&hellip; so we are.</p>
-
+<p>For reference, I get barely 30 FPS on my laptop's integrated GPU (Intel UHD Graphics 630 on Linux, i7-8750H, not some ancient Sandy Bridge one) with Godot and lighting on, and we're not even rendering that much things yet. This is not acceptable, period. We could put effort into making our game more optimized for the renderer (by manually doing sprite batching), but that just becomes a giant mess of avoiding slow paths and reverse engineering the renderer. At that point it's better to make our own&hellip; so we are.</p>
 <h3 id="was-godot-a-mistake">Was Godot a mistake?</h3>
-
-<p>This is a tough question. One of the reasons we originally picked Godot in the first place is that none of us really were able to make an OpenGL renderer work properly. Even worse is that I was on an Apple computer at the time, and Apple has notoriously bad OpenGL drivers. We tried to get a cookie cutter example 3D renderer to work. It didn&rsquo;t. Even worse is that back then MoltenVK wasn&rsquo;t even open source so even if we wanted to go &ldquo;screw old hardware let&rsquo;s go Vulkan&rdquo;, we couldn&rsquo;t because of Apple. Nowadays I have a good Linux laptop which means developing with OpenGL is actually <em>sane</em>. I&rsquo;ve been using <a href="https://renderdoc.org/">RenderDoc</a> a lot to debug and such and I probably would&rsquo;ve lost my sanity trying to write this renderer without it. RenderDoc does not work on macOS.</p>
-
-<p>If you&rsquo;re wondering how we solved the &ldquo;Apple has terrible OpenGL support problem&rdquo; today. We didn&rsquo;t. The difference is now it isn&rsquo;t directly holding back development. Maybe we&rsquo;ll put effort into making sure it works on macOS later, which will be agony, but at the moment I&rsquo;m going with &ldquo;your mistake for buying from the walled garden company&rdquo;. Theoretically the current renderer should work on macOS provided there&rsquo;s no driver bugs. Theoretically. Maybe eventually we&rsquo;ll write a Vulkan renderer too and that&rsquo;ll work on macOS sanely with MoltenVK. Theoretically.</p>
-
-<p>So would I say Godot was a bad choice? No. We did get a lot of stuff done on it, but I feel like we&rsquo;re gonna run into more unsolvable problems if we continue with it as our only option.</p>
-
+<p>This is a tough question. One of the reasons we originally picked Godot in the first place is that none of us really were able to make an OpenGL renderer work properly. Even worse is that I was on an Apple computer at the time, and Apple has notoriously bad OpenGL drivers. We tried to get a cookie cutter example 3D renderer to work. It didn't. Even worse is that back then MoltenVK wasn't even open source so even if we wanted to go &ldquo;screw old hardware let's go Vulkan&rdquo;, we couldn't because of Apple. Nowadays I have a good Linux laptop which means developing with OpenGL is actually <em>sane</em>. I've been using <a href="https://renderdoc.org/">RenderDoc</a> a lot to debug and such and I probably would've lost my sanity trying to write this renderer without it. RenderDoc does not work on macOS.</p>
+<p>If you're wondering how we solved the &ldquo;Apple has terrible OpenGL support problem&rdquo; today. We didn't. The difference is now it isn't directly holding back development. Maybe we'll put effort into making sure it works on macOS later, which will be agony, but at the moment I'm going with &ldquo;your mistake for buying from the walled garden company&rdquo;. Theoretically the current renderer should work on macOS provided there's no driver bugs. Theoretically. Maybe eventually we'll write a Vulkan renderer too and that'll work on macOS sanely with MoltenVK. Theoretically.</p>
+<p>So would I say Godot was a bad choice? No. We did get a lot of stuff done on it, but I feel like we're gonna run into more unsolvable problems if we continue with it as our only option.</p>
 <h3 id="what-about-3d">What about 3D?</h3>
-
-<p>Godot will still be supported as a backend for the time being, so 3D has nothing to fear. I&rsquo;m not comfortable writing a 3D renderer in OpenGL because there&rsquo;s a LOT more to it.</p>
-
+<p>Godot will still be supported as a backend for the time being, so 3D has nothing to fear. I'm not comfortable writing a 3D renderer in OpenGL because there's a LOT more to it.</p>
 <h3 id="what-about-ui">What about UI?</h3>
-
-<p>We are using Godot&rsquo;s UI system at the moment. I will say that Godot&rsquo;s UI system is quite good, though I don&rsquo;t have much perspective with other UI systems. I basically re-implemented it on the non-Godot version and it&rsquo;s been smooth sailing.</p>
-
-<p>Not using Godot&rsquo;s UI also opens the door for tons of new fun things. For example Godot&rsquo;s UI theming is pretty weak. I implemented a new theming system using CSS (yes, CSS!) and I&rsquo;m implementing the new UI theme teased before in Progress Report 8. We&rsquo;re also looking into High DPI support, which Godot seemed to have pretty poor support for.</p>
-
+<p>We are using Godot's UI system at the moment. I will say that Godot's UI system is quite good, though I don't have much perspective with other UI systems. I basically re-implemented it on the non-Godot version and it's been smooth sailing.</p>
+<p>Not using Godot's UI also opens the door for tons of new fun things. For example Godot's UI theming is pretty weak. I implemented a new theming system using CSS (yes, CSS!) and I'm implementing the new UI theme teased before in Progress Report 8. We're also looking into High DPI support, which Godot seemed to have pretty poor support for.</p>
 <p>Furthermore, we should be able to re-implement our custom UI system on top of Godot when I feel like putting the effort in.</p>
-
 <h3 id="introducing-clyde">Introducing Clyde</h3>
-
-<p>Clyde is the name we (read: I) decided on for the new renderer. Currently targeting OpenGL 4.1 and heavily work in progress and bodged together. Targeting OpenGL 3.3 is probably doable (in fact I don&rsquo;t think we&rsquo;re using anything )</p>
-
+<p>Clyde is the name we (read: I) decided on for the new renderer. Currently targeting OpenGL 4.1 and heavily work in progress and bodged together. Targeting OpenGL 3.3 is probably doable (in fact I don't think we're using anything )</p>
 <p>As it turns out, you can get quite far by drawing purely quads.</p>
-
-<p>I mean, it works really. Performance is also already significantly better than Godot. I get about 2.5x FPS on iGPU comparing with unlit Godot. And there&rsquo;s already a lot of room for optimizations that I&rsquo;m too lazy to make currently.</p>
-
-<p>Of course I still have to implement things like lighting, but hey, it&rsquo;s getting there.</p>
-
-<p><img src="/images/post/pr_10/clyde_screenshot.png" alt="Here's a screenshot of Clyde" /></p>
+<p>I mean, it works really. Performance is also already significantly better than Godot. I get about 2.5x FPS on iGPU comparing with unlit Godot. And there's already a lot of room for optimizations that I'm too lazy to make currently.</p>
+<p>Of course I still have to implement things like lighting, but hey, it's getting there.</p>
+<p><img src="/images/post/pr_10/clyde_screenshot.png" alt="Here's a screenshot of Clyde"></p>
 
 	
 	<hr />

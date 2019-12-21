@@ -64,30 +64,18 @@
 		<span class="author">PJB3005</span>
 	</span>
 	<p>The wait is over.</p>
-
-<h2 id="godot-s-in">Godot&rsquo;s in</h2>
-
+<h2 id="godots-in">Godot's in</h2>
 <p>So yes, Godot is in. <a href="https://github.com/space-wizards/space-station-14/pull/545">I merged it 6 days ago</a>.</p>
-
 <p>Woo!</p>
-
 <p>You can try the new builds with Godot by downloading the latest nightlies. See <a href="/about/nightlies/">The this article for instructions</a>.</p>
-
 <p>But what does this bring?</p>
-
 <h2 id="the-new-stuff">The new stuff</h2>
-
 <p>First of all, Godot brougth all the changes mentioned in the previous progress report. <a href="/post/18_02_26_progress-report-5-waiting_for_godot/">You can read about those here</a>.</p>
-
-<p><a href="https://github.com/space-wizards/space-station-14-content/pull/48">Cluster has added weapons to the content repo.</a> Right now the tools act like melee weapons, there&rsquo;s a projectile weapon and a laser weapon. It&rsquo;s basic stuff right now. Sadly, melee weapons don&rsquo;t have any visualization yet, but guns do:</p>
-
-<p><center><video src="/video/18_04_13-godot-guns.webm" controls height=300></center></p>
-
-<p>(Yes we&rsquo;re aware the bullets aren&rsquo;t rotated)</p>
-
+<p><a href="https://github.com/space-wizards/space-station-14-content/pull/48">Cluster has added weapons to the content repo.</a> Right now the tools act like melee weapons, there's a projectile weapon and a laser weapon. It's basic stuff right now. Sadly, melee weapons don't have any visualization yet, but guns do:</p>
+<center><video src="/video/18_04_13-godot-guns.webm" controls height=300></center>
+<p>(Yes we're aware the bullets aren't rotated)</p>
 <p>Something else you might have heard is that we now have an <a href="https://github.com/space-wizards/space-station-14/pull/550">audio system!</a>. Before this PR there was literally 0 audio code in the game.</p>
-
-<p>To render the laser beams, <a href="https://github.com/space-wizards/space-station-14/pull/537">Cluster coded an effects system to draw things without entity</a>. I had to re-do the rendering code thanks to Godot, but it was easy because Godot&rsquo;s canvas renderer is quite powerful. The laser beams are actually rendered without lighting applied, which is one of many effects we will make <em>much</em> use of later.</p>
+<p>To render the laser beams, <a href="https://github.com/space-wizards/space-station-14/pull/537">Cluster coded an effects system to draw things without entity</a>. I had to re-do the rendering code thanks to Godot, but it was easy because Godot's canvas renderer is quite powerful. The laser beams are actually rendered without lighting applied, which is one of many effects we will make <em>much</em> use of later.</p>
 
 	
 </article>
