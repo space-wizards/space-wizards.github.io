@@ -67,16 +67,16 @@
 		<span class="author">PJB3005</span>
 	</span>
 	<p>Kept you waiting, huh?</p>
-<p>Yeah it probably would've been better to actually release a progress report in september. This one is absolutely huge now. Oops.</p>
+<p>Yeah it probably would&rsquo;ve been better to actually release a progress report in september. This one is absolutely huge now. Oops.</p>
 <h2 id="combat-work">Combat Work</h2>
 <h3 id="attack-animations">Attack Animations</h3>
 <p>So the flashiest thing: we have semi functional melee combat now!</p>
 <p><video src="/video/19_10_22-attack-animations.mp4" controls></video></p>
 <p>A core part of making a combat system fun is making sure the animations work well. Feedback to every party involved is incredibly important to make sense of what is going on in a fight, and to make the experience more enjoyable.</p>
-<p>I wanted to make sure the animations were short but still quite clear. Personally I'm not a fan of those slow hovering sprite animations you see on some servers. When you land a hit, it should be immediately obvious to you and everybody around you.</p>
-<p>You may also notice that we're definitely not using &ldquo;you have to click on the sprite&rdquo; combat like in BYOND. As much as I think <a href="https://www.youtube.com/watch?v=LRPBEC8hWhE">this</a> is a great meme, it just kinda sucked, and I think we can do better.</p>
+<p>I wanted to make sure the animations were short but still quite clear. Personally I&rsquo;m not a fan of those slow hovering sprite animations you see on some servers. When you land a hit, it should be immediately obvious to you and everybody around you.</p>
+<p>You may also notice that we&rsquo;re definitely not using &ldquo;you have to click on the sprite&rdquo; combat like in BYOND. As much as I think <a href="https://www.youtube.com/watch?v=LRPBEC8hWhE">this</a> is a great meme, it just kinda sucked, and I think we can do better.</p>
 <h3 id="combat-mode-aka-intents-v2">Combat Mode (AKA, Intents v2)</h3>
-<p>Intents are a core mechanic of SS13 combat. They're also basically not a mechanic outside of combat.
+<p>Intents are a core mechanic of SS13 combat. They&rsquo;re also basically not a mechanic outside of combat.
 Really, the most significant thing intents do is change the behavior for unarmed interactions. There are some odd interactions here and there but due to how rare they are, you never expect them and only learn about them when somebody tells you or you accidentally hit yourself.</p>
 <p>Our idea is this: <strong>There are only two intents</strong>, namely combat mode or not.</p>
 <p>Outside combat mode you can do anything you normally can, use tools, hug people, etc&hellip; You should not be able to directly do violent interactions outside combat mode. No more hitting yourself with your crowbar while prying up floors!</p>
@@ -87,27 +87,27 @@ Really, the most significant thing intents do is change the behavior for unarmed
 </picture>
 
 <p>Yeah I need to get around to updating the styling info on that targeting doll.</p>
-<p>One consequence of how combat mode is currently implemented is that you can't even pick up items. There are also issues like hitting <em>specific</em> objects. Fancy arcing weapons is cool and all but if you just want to smash a light on the wall it doesn't work nicely.</p>
-<p>Ideally, there would be a separate way to do &ldquo;targeted&rdquo; attacks that act more like BYOND SS13 combat. There's a few possibilities, such as wide arcing combat needing to be &ldquo;charged up&rdquo; for a split second. The other option is to make it a separate keybind like ctrl+click. <strong>Let me know what you think here</strong>.</p>
-<p>For now, toggling combat mode is bound to the &ldquo;1&rdquo; key on your number row. This was after it was bound to tab and I got annoyed by constantly triggering it when alt tabbing. I'm still not sure that's a great place for it, since we probably want to use the number row for action buttons later, so <strong>suggestions welcome</strong>.</p>
+<p>One consequence of how combat mode is currently implemented is that you can&rsquo;t even pick up items. There are also issues like hitting <em>specific</em> objects. Fancy arcing weapons is cool and all but if you just want to smash a light on the wall it doesn&rsquo;t work nicely.</p>
+<p>Ideally, there would be a separate way to do &ldquo;targeted&rdquo; attacks that act more like BYOND SS13 combat. There&rsquo;s a few possibilities, such as wide arcing combat needing to be &ldquo;charged up&rdquo; for a split second. The other option is to make it a separate keybind like ctrl+click. <strong>Let me know what you think here</strong>.</p>
+<p>For now, toggling combat mode is bound to the &ldquo;1&rdquo; key on your number row. This was after it was bound to tab and I got annoyed by constantly triggering it when alt tabbing. I&rsquo;m still not sure that&rsquo;s a great place for it, since we probably want to use the number row for action buttons later, so <strong>suggestions welcome</strong>.</p>
 <h2 id="hacking--access-contributed-by-damianx">Hacking &amp; Access (Contributed by DamianX)</h2>
 <p><video src="/video/19_10_21-hackerman.mp4" controls></video></p>
 <p>Both hacking and access is in! Our plans are to keep the systems mostly the same as in SS13.</p>
-<p>Hacking in SS13 is a really simple system and it strikes a great balance between &ldquo;it's not too hard to do&rdquo; and &ldquo;it's inconvenient enough to make you want to get a proper ID&rdquo;. We don't see much to change here except maybe in the interface and such.</p>
-<p>Access is in the same boat, here. I've read suggestions about having access be like controlled by a central server, but really, the beauty is in the simplicity here.</p>
-<p>We didn't make any of the airlocks on the map require access yet (because we haven't bothered) but the system is there. We also have an ID card computer!</p>
+<p>Hacking in SS13 is a really simple system and it strikes a great balance between &ldquo;it&rsquo;s not too hard to do&rdquo; and &ldquo;it&rsquo;s inconvenient enough to make you want to get a proper ID&rdquo;. We don&rsquo;t see much to change here except maybe in the interface and such.</p>
+<p>Access is in the same boat, here. I&rsquo;ve read suggestions about having access be like controlled by a central server, but really, the beauty is in the simplicity here.</p>
+<p>We didn&rsquo;t make any of the airlocks on the map require access yet (because we haven&rsquo;t bothered) but the system is there. We also have an ID card computer!</p>
 <picture>
 	<source type="image/webp" srcset="/images/post/pr_19/id_computer.webp" />
 	<img src="/images/post/pr_19/id_computer.png" />
 </picture>
 
-<p>Right now, the hacking interface is taken straight from SS13. Me (PJB) and Injazz designed a better one, but it hasn't been implemented yet.</p>
+<p>Right now, the hacking interface is taken straight from SS13. Me (PJB) and Injazz designed a better one, but it hasn&rsquo;t been implemented yet.</p>
 <picture>
 	<source type="image/webp" srcset="/images/post/pr_19/hacking_mockup.webp" />
 	<img src="/images/post/pr_19/hacking_mockup.png" />
 </picture>
 
-<p>This design is not exactly final, as it doesn't match the new theme we came up with. Read on about that.</p>
+<p>This design is not exactly final, as it doesn&rsquo;t match the new theme we came up with. Read on about that.</p>
 <h2 id="redesigned-ui-theme">Redesigned UI Theme</h2>
 <p>So the old UI theme was kind of ugly and generic. So I decided to fix that.</p>
 <picture>
@@ -127,17 +127,17 @@ Really, the most significant thing intents do is change the behavior for unarmed
 <li>Looking cool</li>
 <li>Immersion</li>
 </ol>
-<p>With the third point, I mean making the interfaces make logical sense in the context of the game. For example it's not unlikely NT would just use cheap, ugly &amp; functional LCD panels for the APC, making the UI pixelated and probably like 16 color or whatever.</p>
-<p>Personally, I think these kinds of designs go in hard against the first point. For something as simple as the APC the problem might not be <em>too</em> severe, but when you get into more complex interfaces like the air alarm, which would surely use the same kind of LCD, you're gonna be in for a world of pain.</p>
+<p>With the third point, I mean making the interfaces make logical sense in the context of the game. For example it&rsquo;s not unlikely NT would just use cheap, ugly &amp; functional LCD panels for the APC, making the UI pixelated and probably like 16 color or whatever.</p>
+<p>Personally, I think these kinds of designs go in hard against the first point. For something as simple as the APC the problem might not be <em>too</em> severe, but when you get into more complex interfaces like the air alarm, which would surely use the same kind of LCD, you&rsquo;re gonna be in for a world of pain.</p>
 <p>This does not rule out interfaces like the hacking interface mockup shown earlier, but it does rule out stuff like &ldquo;ugly 16 color pixelated displays&rdquo;. The hacking interface is something where, through heavy stylization &amp; layout, we get something that still feels sort of immersive (you can see obvious connections to the PCB and such) while not reducing usability.</p>
 <h2 id="basic-chemistry-contributed-by-moneyl--acruid">Basic Chemistry (Contributed by moneyl &amp; Acruid)</h2>
 <p>You can mix reagents, and cause explosions! Not much else though.</p>
 <p><video src="/video/19_10_21-chem-dispenser.mp4" controls></video></p>
-<p>Yeah, reagent metabolism isn't yet, or syringes, or drinking, you get the gist.</p>
+<p>Yeah, reagent metabolism isn&rsquo;t yet, or syringes, or drinking, you get the gist.</p>
 <h2 id="importing-sprites-from-ss13">Importing sprites from SS13.</h2>
-<p>You might think it's easy to import sprites from SS13. We even have a tool for it.</p>
-<p>We extensively make things that are logically &ldquo;lit&rdquo; on entities such as computer screens ignore the lighting layer. You've probably noticed this in earlier screenshots and such. This looks great! The problem is that half the sprites I get to import into SS14 literally weren't designed for this, so there's a TON of manually cutting up sprites into extra layers to get everything to look better than ever.</p>
-<p>Many SS13 sprites also don't seem to have explicit depowered variants of their sprites, and when they do they usually don't go far enough. Take the Eris airlock sprites we've been using for example. There are lights on the keypad and on the top of the door that change color when opening or flicking the deny animation. It makes sense to me that these are actually lights that are always powered, so we made them explicitly ignore lighting. There's no version of the airlock sprite that has this light completely greyed out though! Luckily making these version isn't hard with some saturation/lightness adjustment in an image editor, but it's still something that &ldquo;needs&rdquo; doing.</p>
+<p>You might think it&rsquo;s easy to import sprites from SS13. We even have a tool for it.</p>
+<p>We extensively make things that are logically &ldquo;lit&rdquo; on entities such as computer screens ignore the lighting layer. You&rsquo;ve probably noticed this in earlier screenshots and such. This looks great! The problem is that half the sprites I get to import into SS14 literally weren&rsquo;t designed for this, so there&rsquo;s a TON of manually cutting up sprites into extra layers to get everything to look better than ever.</p>
+<p>Many SS13 sprites also don&rsquo;t seem to have explicit depowered variants of their sprites, and when they do they usually don&rsquo;t go far enough. Take the Eris airlock sprites we&rsquo;ve been using for example. There are lights on the keypad and on the top of the door that change color when opening or flicking the deny animation. It makes sense to me that these are actually lights that are always powered, so we made them explicitly ignore lighting. There&rsquo;s no version of the airlock sprite that has this light completely greyed out though! Luckily making these version isn&rsquo;t hard with some saturation/lightness adjustment in an image editor, but it&rsquo;s still something that &ldquo;needs&rdquo; doing.</p>
 <p>The end results, however, are worth it:</p>
 <picture>
 	<source type="image/webp" srcset="/images/post/pr_19/depowered.webp" />
@@ -163,7 +163,7 @@ Really, the most significant thing intents do is change the behavior for unarmed
 	<img src="/images/post/pr_19/clothes.png" />
 </picture>
 
-<p>Oh yeah, this is just a fraction of them. It's getting to the point now where the entity spawn panel hangs for a bit when first opened because it has to load all the textures at once. We should probably organize that a bit more.</p>
+<p>Oh yeah, this is just a fraction of them. It&rsquo;s getting to the point now where the entity spawn panel hangs for a bit when first opened because it has to load all the textures at once. We should probably organize that a bit more.</p>
 <h2 id="map-extensions">Map Extensions</h2>
 <p>When we add new features, we like to put them on the map. As such, I mapped a basic science &amp; medical department. Moneyl also mapped a tool storage/construction kinda room to the left of engineering.</p>
 <picture>
@@ -181,9 +181,9 @@ Really, the most significant thing intents do is change the behavior for unarmed
 	<img src="/images/post/pr_19/tool_storage.png" />
 </picture>
 
-<p>Filling these places up can be a challenge with our lack of implement props, but I'm sure we'll improve the situation over time.</p>
+<p>Filling these places up can be a challenge with our lack of implement props, but I&rsquo;m sure we&rsquo;ll improve the situation over time.</p>
 <h2 id="more-effort-into-examine-tooltips">More Effort Into Examine Tooltips</h2>
-<p>Writing fancy examine tooltips used to be pretty annoying. They also weren't localizable correctly because it was just such a pain to write them. I put some effort into improving the workflow here by writing a simplistic BBCode-like parser.</p>
+<p>Writing fancy examine tooltips used to be pretty annoying. They also weren&rsquo;t localizable correctly because it was just such a pain to write them. I put some effort into improving the workflow here by writing a simplistic BBCode-like parser.</p>
 <p>What it used to look like:</p>
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="n">message</span><span class="p">.</span><span class="n">AddText</span><span class="p">(</span><span class="s">&#34;A dice with &#34;</span><span class="p">)</span><span class="p">;</span>
 <span class="n">message</span><span class="p">.</span><span class="n">PushColor</span><span class="p">(</span><span class="k">new</span> <span class="n">Color</span><span class="p">(</span><span class="m">1F</span><span class="p">,</span> <span class="m">0.75F</span><span class="p">,</span> <span class="m">0.75F</span><span class="p">)</span><span class="p">)</span><span class="p">;</span>
@@ -197,7 +197,7 @@ Really, the most significant thing intents do is change the behavior for unarmed
 </code></pre></div><p>What it looks like now:</p>
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="n">message</span><span class="p">.</span><span class="n">AddMarkup</span><span class="p">(</span><span class="n">loc</span><span class="p">.</span><span class="n">GetString</span><span class="p">(</span><span class="s">&#34;A dice with [color=lightgray]{0}[/color] sides.\n&#34;</span> <span class="p">+</span>
                                 <span class="s">&#34;It has landed on a [color=white]{1}[/color].&#34;</span><span class="p">,</span> <span class="n">_sides</span><span class="p">,</span> <span class="n">_currentSide</span><span class="p">)</span><span class="p">)</span><span class="p">;</span>
-</code></pre></div><p>Obviously, quite a bit easier to work with, especially if you're a Russian trying to translate the game.</p>
+</code></pre></div><p>Obviously, quite a bit easier to work with, especially if you&rsquo;re a Russian trying to translate the game.</p>
 <picture>
 	<source type="image/webp" srcset="/images/post/pr_19/examine_tooltips_airlock.webp" />
 	<img src="/images/post/pr_19/examine_tooltips_airlock.png" />
@@ -210,7 +210,7 @@ Really, the most significant thing intents do is change the behavior for unarmed
 
 <h2 id="some-fancy-ui-animations">Some Fancy UI Animations</h2>
 <p><video width="874" src="/video/19_10_22-animations.mp4" controls></video></p>
-<p>Fancy animations like this make UIs way nicer to use, so I figured I'd implement some.</p>
+<p>Fancy animations like this make UIs way nicer to use, so I figured I&rsquo;d implement some.</p>
 <p>Yes, these are better animations than some of the programs I use daily. Go figure.</p>
 <h2 id="wip-midi-input-contributed-by-zumorica">WiP: MIDI Input (Contributed by Zumorica)</h2>
 <p>Being in a proper programming language, we can do a lot more fun stuff than something like BYOND. This is known.</p>
@@ -222,14 +222,14 @@ Really, the most significant thing intents do is change the behavior for unarmed
 	<img src="/images/post/pr_19/instruments.png" />
 </picture>
 
-<p>Yes, this is apparently how we're painting the bikeshed. But hey, it's a fun feature and people can choose to contribute whatever they want.</p>
+<p>Yes, this is apparently how we&rsquo;re painting the bikeshed. But hey, it&rsquo;s a fun feature and people can choose to contribute whatever they want.</p>
 <p>This also means that now we have an API for streaming in audio samples, which paves the way to other features like text-to-speech or voice chat, if other servers want to implement those. We currently have no plans to implement these kinds of things ourselves, but the possibility is open for anybody wishing to contribute or fork the code.</p>
-<p>(Look, I personally also think text to speech is a cool idea but I'm afraid that if I dare touch TTS engines I'll get PTSD from trying to get them to work sanely &amp; cross platform, fluidsynth for MIDI was awful enough)</p>
+<p>(Look, I personally also think text to speech is a cool idea but I&rsquo;m afraid that if I dare touch TTS engines I&rsquo;ll get PTSD from trying to get them to work sanely &amp; cross platform, fluidsynth for MIDI was awful enough)</p>
 <h2 id="a-note-on-macos-support">A Note On MacOS Support.</h2>
-<p>You may have heard some noise on the internet about Apple hardening requirements to make software for macOS, and many indie game developers considering dropping macOS support. We are also getting burned here. While I'm not gonna drop macOS support officially any time soon, running the game may be harder and harder on macOS. <strong>This is not our fault, blame Apple for continually reinforcing their stupid walled garden.</strong></p>
+<p>You may have heard some noise on the internet about Apple hardening requirements to make software for macOS, and many indie game developers considering dropping macOS support. We are also getting burned here. While I&rsquo;m not gonna drop macOS support officially any time soon, running the game may be harder and harder on macOS. <strong>This is not our fault, blame Apple for continually reinforcing their stupid walled garden.</strong></p>
 <p>The short version is, <strong>Apple is gonna make it impossible for us to publish the game for macOS without paying them $100 a year.</strong></p>
 <p><strong>We are not paying Apple $100 a year.</strong> We can publish Windows and Linux versions with zero hassle from any operating system. <strong>Apple wants us to pay <em>them</em> for the privilege of developing for <em>their</em> platform.</strong> And also to do it on macOS, on their overpriced Apple hardware, with their tooling.</p>
-<p>Also, since I've seen some game devs complain about the 32 bit support drop: We literally don't care about that, we weren't supporting 32 bit in the first place.</p>
+<p>Also, since I&rsquo;ve seen some game devs complain about the 32 bit support drop: We literally don&rsquo;t care about that, we weren&rsquo;t supporting 32 bit in the first place.</p>
 
 	
 	<hr />

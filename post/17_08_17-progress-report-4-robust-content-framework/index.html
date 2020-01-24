@@ -66,40 +66,40 @@
 		by
 		<span class="author">PJB3005</span>
 	</span>
-	<p>It's been a couple weeks since the last progress report, and lots has happened since then. Refactors, setting up the content repo, and more!</p>
-<p>So here's a fun bit of trivia, when we started the project to revive SS14, the project was at 45,000 lines of code. That was the middle of May. We're now a few months later, and the we're at 37,000 lines! <a href="https://sonarcloud.io/project/activity?custom_metrics=ncloc&amp;graph=custom&amp;id=ss14">Here's a chart if you want to see it for yourself.</a></p>
+	<p>It&rsquo;s been a couple weeks since the last progress report, and lots has happened since then. Refactors, setting up the content repo, and more!</p>
+<p>So here&rsquo;s a fun bit of trivia, when we started the project to revive SS14, the project was at 45,000 lines of code. That was the middle of May. We&rsquo;re now a few months later, and the we&rsquo;re at 37,000 lines! <a href="https://sonarcloud.io/project/activity?custom_metrics=ncloc&amp;graph=custom&amp;id=ss14">Here&rsquo;s a chart if you want to see it for yourself.</a></p>
 <p>The original developers did not have a very modular idea for the project. Everything in one big project and writing the game and engine as one. A workable approach to game development for most projects. Sadly, SS13 is not one of
 those, and we realized that.</p>
-<p>The problem is something you might even forget about when you just play SS13 on a single server, or even multiple ones! Every server is different, and this is thanks to BYOND. You just hit connect and you don't care what the server is doing on their end, as long as you can beat up the clown with the server's most unique stylish weapons. The client has to download nothing but sprites, sounds and some other stuff, and the server handles everything. This has its pros and its cons. It ensures you're never spreading viruses, makes it possible for Bay, Goon, TG, etc&hellip; to all be very different, and makes it easy to program your favorite new meme of an item. on the other hand, good luck doing advanced mouse movement responsively over a 100ms connection, things like lighting are server side and are too damn heavy, and so on.</p>
-<p>We're trying to get the best of both worlds here. The ease of programming simple things and keeping codebases possible, while keeping it simple and secure for the end user. No having to install different clients for specific servers.
+<p>The problem is something you might even forget about when you just play SS13 on a single server, or even multiple ones! Every server is different, and this is thanks to BYOND. You just hit connect and you don&rsquo;t care what the server is doing on their end, as long as you can beat up the clown with the server&rsquo;s most unique stylish weapons. The client has to download nothing but sprites, sounds and some other stuff, and the server handles everything. This has its pros and its cons. It ensures you&rsquo;re never spreading viruses, makes it possible for Bay, Goon, TG, etc&hellip; to all be very different, and makes it easy to program your favorite new meme of an item. on the other hand, good luck doing advanced mouse movement responsively over a 100ms connection, things like lighting are server side and are too damn heavy, and so on.</p>
+<p>We&rsquo;re trying to get the best of both worlds here. The ease of programming simple things and keeping codebases possible, while keeping it simple and secure for the end user. No having to install different clients for specific servers.
 How do we pull this off? Glad you asked!</p>
 <h2 id="the-content-repo">The Content Repo</h2>
 <p>Ever since we &ldquo;inherited&rdquo; the project, <a href="https://github.com/space-wizards/space-station-14/issues/74">this has been in the back of our heads</a>. The plan is to have the base SS14 repo (<a href="https://github.com/space-wizards/space-station-14"><code>space-wizards/space-station-14</code></a>) be the &ldquo;engine&rdquo;. This is the common program that most players and server hosts will be installing. Event loop, rendering, collision, asset management, entity management, the basic things you want no matter what. Along with that goes a second repo, the &ldquo;content&rdquo; repo: <a href="https://github.com/space-wizards/space-station-14-content"><code>space-wizards/space-station-14-content</code></a>. What is in this repo? Well&hellip; a couple <code>// TODO:</code> entry points, a test prototype and a few python scripts. Exciting!</p>
 <p>Everything inside the content repo is something a codebase can change. Most stuff will eventually go in here, even fundamental things like item code, power and atmospherics! The content repo is, just like the main engine, written in C#, but due to the nature of .NET, other languages from <a href="http://ironpython.net/">Python</a> to <a href="http://i.imgur.com/HqH8ktx.png">F#</a> and theoretically most things on <a href="https://en.wikipedia.org/wiki/List_of_CLI_languages">this list</a> should be possible, provided the codebase in question is up for rewriting everything.</p>
 <p>The content repo is compiled into a .NET assembly (a block of code the game can load). This assembly gets loaded into the server on startup and client on connect, and as such you can swap server without having 20 clients installed.</p>
-<p>So the past few months, a lot of code that's more &ldquo;game&rdquo; level like gamemodes, jobs, items, &hellip; has been removed. That's a lot of the cut lines, the rest being tons of unrelated duplicate and dead code that was no good anyways. If we happen to need any of this old code we can just check the Git history, although most of it was pretty crappy to begin with so I doubt we'll miss it. Probably easier to write it from scratch.</p>
-<p>We've gone through a lot of effort to make this work, from asset loading to IoC refactors, and it's paying out, because it <em>works</em>:</p>
+<p>So the past few months, a lot of code that&rsquo;s more &ldquo;game&rdquo; level like gamemodes, jobs, items, &hellip; has been removed. That&rsquo;s a lot of the cut lines, the rest being tons of unrelated duplicate and dead code that was no good anyways. If we happen to need any of this old code we can just check the Git history, although most of it was pretty crappy to begin with so I doubt we&rsquo;ll miss it. Probably easier to write it from scratch.</p>
+<p>We&rsquo;ve gone through a lot of effort to make this work, from asset loading to IoC refactors, and it&rsquo;s paying out, because it <em>works</em>:</p>
 <center><video src="/video/17_08_17-disco-ball-prototype.webm" controls height=300></center>
-<p>What you are seeing here (other than my mouse cursor, apologies) is the first example of the content repo in use. It's a crude &ldquo;disco ball&rdquo;, the color just changing with a hue shift over time. The code was terrible because I was in a hurry and there were various limitations in the engine that I've since fixed (couldn't even load sprites from content, joy!), but here's a more cleaned up version of the code. Note that the engine isn't there <em>yet</em>, there's still a bunch of refactors ahead, but this is generally what we want to have:</p>
+<p>What you are seeing here (other than my mouse cursor, apologies) is the first example of the content repo in use. It&rsquo;s a crude &ldquo;disco ball&rdquo;, the color just changing with a hue shift over time. The code was terrible because I was in a hurry and there were various limitations in the engine that I&rsquo;ve since fixed (couldn&rsquo;t even load sprites from content, joy!), but here&rsquo;s a more cleaned up version of the code. Note that the engine isn&rsquo;t there <em>yet</em>, there&rsquo;s still a bunch of refactors ahead, but this is generally what we want to have:</p>
 <p>YAML entity prototype:</p>
 <div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># This is an entity prototype.</span><span class="w">
-</span><span class="w"></span>-<span class="w"> </span>type<span class="p">:</span><span class="w"> </span>entity<span class="w">
-</span><span class="w">  </span>id<span class="p">:</span><span class="w"> </span>discoball<span class="w">
-</span><span class="w">  </span>name<span class="p">:</span><span class="w"> </span>Disco<span class="w"> </span>Ball<span class="w">
+</span><span class="w"></span>- <span class="k">type</span><span class="p">:</span><span class="w"> </span>entity<span class="w">
+</span><span class="w">  </span><span class="k">id</span><span class="p">:</span><span class="w"> </span>discoball<span class="w">
+</span><span class="w">  </span><span class="k">name</span><span class="p">:</span><span class="w"> </span>Disco<span class="w"> </span>Ball<span class="w">
 </span><span class="w">  </span><span class="c"># Declare which C# class the entity will be.</span><span class="w">
 </span><span class="w">  </span><span class="c"># This contains the logic in the next snippet.</span><span class="w">
-</span><span class="w">  </span>class<span class="p">:</span><span class="w"> </span>Content.Client.Prototypes.DiscoBall<span class="w">
+</span><span class="w">  </span><span class="k">class</span><span class="p">:</span><span class="w"> </span>Content.Client.Prototypes.DiscoBall<span class="w">
 </span><span class="w">  </span><span class="c"># Declare components: what the entity can do.</span><span class="w">
-</span><span class="w">  </span>components<span class="p">:</span><span class="w">
-</span><span class="w">  </span>-<span class="w"> </span>type<span class="p">:</span><span class="w"> </span>Transform<span class="w">
-</span><span class="w">  </span>-<span class="w"> </span>type<span class="p">:</span><span class="w"> </span>Clickable<span class="w">
-</span><span class="w">  </span>-<span class="w"> </span>type<span class="p">:</span><span class="w"> </span>Sprite<span class="w">
-</span><span class="w">    </span>sprites<span class="p">:</span><span class="w">
-</span><span class="w">    </span>-<span class="w"> </span>discoball<span class="w">
+</span><span class="w">  </span><span class="k">components</span><span class="p">:</span><span class="w">
+</span><span class="w"></span><span class="w">  </span>- <span class="k">type</span><span class="p">:</span><span class="w"> </span>Transform<span class="w">
+</span><span class="w">  </span>- <span class="k">type</span><span class="p">:</span><span class="w"> </span>Clickable<span class="w">
+</span><span class="w">  </span>- <span class="k">type</span><span class="p">:</span><span class="w"> </span>Sprite<span class="w">
+</span><span class="w">    </span><span class="k">sprites</span><span class="p">:</span><span class="w">
+</span><span class="w"></span><span class="w">    </span>- discoball<span class="w">
 </span><span class="w">
 </span><span class="w">    </span><span class="c"># This entity has a light.</span><span class="w">
 </span><span class="w">    </span><span class="c"># The color is changed by the C# code.</span><span class="w">
-</span><span class="w">  </span>-<span class="w"> </span>type<span class="p">:</span><span class="w"> </span>PointLight<span class="w">
+</span><span class="w">  </span>- <span class="k">type</span><span class="p">:</span><span class="w"> </span>PointLight<span class="w">
 </span></code></pre></div><p>And for the C# code:</p>
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">using</span> <span class="nn">OpenTK</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">SS14.Client.GameObjects</span><span class="p">;</span>
@@ -131,39 +131,39 @@ How do we pull this off? Glad you asked!</p>
 		<span class="p">}</span>
 	<span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div><p>Yes, it's a little verbose, but it's for the better. And if you want to go back and use Python instead, you can!</p>
-<p>In the next few days we'll probably start writing some simple content like maybe power in there, as it should be mostly possible already. We'll finally get onto some exciting stuff that isn't just &ldquo;look what we refactored this week!&rdquo;</p>
-<p>Oh and by the way, servers like Goon and CM do not have to fear. We'll do the best we can to ensure that the content repo server side can remain closed source. So have at it with that solarium!</p>
+</code></pre></div><p>Yes, it&rsquo;s a little verbose, but it&rsquo;s for the better. And if you want to go back and use Python instead, you can!</p>
+<p>In the next few days we&rsquo;ll probably start writing some simple content like maybe power in there, as it should be mostly possible already. We&rsquo;ll finally get onto some exciting stuff that isn&rsquo;t just &ldquo;look what we refactored this week!&rdquo;</p>
+<p>Oh and by the way, servers like Goon and CM do not have to fear. We&rsquo;ll do the best we can to ensure that the content repo server side can remain closed source. So have at it with that solarium!</p>
 <h2 id="2d-or-not-2d">2D or not 2D</h2>
 <p>So as you may know from the old project, SS14 uses prerendered 3D sprites for humans.
 This means that we have a 3D model, but the client never touches it.
 The model gets rendered with all the items, clothes, etc&hellip; and saved as images into the resource pack.
-All these images are loaded together. The theoretical result being that it's much less demanding on the client because it's still a 2D sprite, but we can make animations and such easily!</p>
-<p><strong>Except it's not so simple.</strong>
+All these images are loaded together. The theoretical result being that it&rsquo;s much less demanding on the client because it&rsquo;s still a 2D sprite, but we can make animations and such easily!</p>
+<p><strong>Except it&rsquo;s not so simple.</strong>
 Prerendered 3D has its style but unless you want to produce very high resolution sprites, it looks much better to just do the 3D rendering in engine on the spot, especially for us when not everything would be 3D.
 As such, we set out to make the rendering engine be capable of 3D too, which Silver is still working on.
 Then an interesting dilemma was raised: how much pixels per tile, how much tiles view, what resolution do we target the client at?</p>
 <p>The problem with 2D pixel art games is that scaling <em>sucks</em>. You either blur everything to hell, or you get incredibly annoying and ugly artifacts from the nearest neighbor algorithm.
-Neither are exactly nice and it's one of those things we want to fix when we're free from BYOND.
-Now why isn't this an issue in say, Terraria? Well, Terraria has the advantage that view size isn't that important. Games like this can get away with changing view size based on resolution to maintain consistency.
+Neither are exactly nice and it&rsquo;s one of those things we want to fix when we&rsquo;re free from BYOND.
+Now why isn&rsquo;t this an issue in say, Terraria? Well, Terraria has the advantage that view size isn&rsquo;t that important. Games like this can get away with changing view size based on resolution to maintain consistency.
 Sadly this is SS13 and view size has to be consistent, but <em>can change mid game, for example genetic powers</em>. You want to accomodate 1080p resolutions, and keep the art style consistent and without horrible blur or scaling artifacts.
-Oh it's <strong>impossible</strong>.</p>
-<p>What can you do then? <strong>full 3D</strong>. We're not talking high quality model 3D like an AAA game though, just simple easy 3D models, like this:</p>
+Oh it&rsquo;s <strong>impossible</strong>.</p>
+<p>What can you do then? <strong>full 3D</strong>. We&rsquo;re not talking high quality model 3D like an AAA game though, just simple easy 3D models, like this:</p>
 <center>![Simple, low poly models](/images/post/17_08_17-low-poly-3d-example.png)</center>
 <p><strong>HOWEVER:</strong> we will put great effort into keeping it possible to use 2D sprites at an engine level. So if you want to fork the <em>content repo</em> and make an all 2D codebase, go ahead!</p>
 <p>3D has more advantages than scaling though. It would allow us to make rotation a possibility, and probably make multi-z a lot less of a hassle too.</p>
-<p>We're still experimenting with the practicality of making 3D models, art style, tooling, etc&hellip; <strong>The game will stay top down</strong>, this is only a visual change. Seriously don't freak out I know this is a big decision and highly controversial. If it seriously doesn't work we'll revert to 2D and have our scaling artifacts instead.</p>
+<p>We&rsquo;re still experimenting with the practicality of making 3D models, art style, tooling, etc&hellip; <strong>The game will stay top down</strong>, this is only a visual change. Seriously don&rsquo;t freak out I know this is a big decision and highly controversial. If it seriously doesn&rsquo;t work we&rsquo;ll revert to 2D and have our scaling artifacts instead.</p>
 <h2 id="robusting-the-sfml">Robusting the SFML</h2>
 <p>As you may know if you read the previous reports, SFML is&hellip; <a href="/images/post/17_08_17-sfml-macos-segfault.png">yeah&hellip; about that&hellip;</a></p>
-<p>The good news is that SFML is <em>mostly</em> stable on MacOS. Silver allegedly develops on Arch Linux but otherwise I don't think any developers use Linux so I'm unsure how things are there.
-However, that's not the point of this (relatively too small) section of the progress report! Silver has been continuing work on making Robust Engine, our rendering backend. It's not yet ready for a move, but we just finished a refactor to get rid of a ton of SFML vector primitives so it should make transitions easier. SFML's crappy vectors didn't even allow you to get the <em>length</em> of them, and they even stack overflow on equality checks in certain unknown cases.</p>
+<p>The good news is that SFML is <em>mostly</em> stable on MacOS. Silver allegedly develops on Arch Linux but otherwise I don&rsquo;t think any developers use Linux so I&rsquo;m unsure how things are there.
+However, that&rsquo;s not the point of this (relatively too small) section of the progress report! Silver has been continuing work on making Robust Engine, our rendering backend. It&rsquo;s not yet ready for a move, but we just finished a refactor to get rid of a ton of SFML vector primitives so it should make transitions easier. SFML&rsquo;s crappy vectors didn&rsquo;t even allow you to get the <em>length</em> of them, and they even stack overflow on equality checks in certain unknown cases.</p>
 <p>The point is, there is hope, and SS14 mostly works cross platform right now (to our knowledge). At the very least all the fundamentals to make writing content possible is there.</p>
 <h2 id="designing-the-game-not-the-engine">Designing the Game, not the Engine</h2>
 <p>As stated before, the goal of SS14 is not only to rid ourselves of BYOND, but also to fix the actual game design tainted by BYOND.
-While there is something to be said about bikeshedding here, our game designer Urist McDorf (yes, that's his online name) doesn't have anything better to do anyways, so he decided to design some systems like power and interaction, which we're gonna need sooner rather than later now that the content repo is set up.</p>
-<p>If you want to read the design docs he's written, they can be found <a href="https://goo.gl/bnk4qo">here</a>. Discussion is welcome, but note that <strong>these are not final</strong>. It's his design, it does not necessarily reflect the way SS14 will be going.</p>
+While there is something to be said about bikeshedding here, our game designer Urist McDorf (yes, that&rsquo;s his online name) doesn&rsquo;t have anything better to do anyways, so he decided to design some systems like power and interaction, which we&rsquo;re gonna need sooner rather than later now that the content repo is set up.</p>
+<p>If you want to read the design docs he&rsquo;s written, they can be found <a href="https://goo.gl/bnk4qo">here</a>. Discussion is welcome, but note that <strong>these are not final</strong>. It&rsquo;s his design, it does not necessarily reflect the way SS14 will be going.</p>
 <h2 id="automatic-nightly-builds">Automatic Nightly Builds</h2>
-<p>Because we have the content repo set up now, we'll soon be writing actual content. To make progress more obvious for the average Joe who doesn't want to read these damn reports (by the way this one is <em>really</em> long), we will set up automatic builds of the client and server for download. Just download the client and server, start both and hit connect and you'll have your poorly lit room where you can hopefully do more than just bumping into the walls and that table. We have the build scripts for this written down, and the builds work on both MacOS and Windows (Linux client untested), but we're still working on hosting them automatically somewhere. We'll make an independent announcement when it's done in the next couple days.</p>
+<p>Because we have the content repo set up now, we&rsquo;ll soon be writing actual content. To make progress more obvious for the average Joe who doesn&rsquo;t want to read these damn reports (by the way this one is <em>really</em> long), we will set up automatic builds of the client and server for download. Just download the client and server, start both and hit connect and you&rsquo;ll have your poorly lit room where you can hopefully do more than just bumping into the walls and that table. We have the build scripts for this written down, and the builds work on both MacOS and Windows (Linux client untested), but we&rsquo;re still working on hosting them automatically somewhere. We&rsquo;ll make an independent announcement when it&rsquo;s done in the next couple days.</p>
 
 	
 	<hr />

@@ -87,10 +87,10 @@
 <li><strong>Shader support!</strong> Each layer of a sprite component can have its own shader applied, which means you can do some fun stuff!</li>
 </ol>
 <h3 id="shaders">Shaders</h3>
-<p>So you might've heard the word &ldquo;shader&rdquo; used as a fancy way to say <em>dude fancy graphics.</em> Which yes, is one of the many things they're used for. BYOND never really supported this, only giving you specific presets like color matrices and 512's simple filters. Luckily, Godot was not desiged at the turn of the millenium, so we can write our own <em>fancy graphics!</em></p>
+<p>So you might&rsquo;ve heard the word &ldquo;shader&rdquo; used as a fancy way to say <em>dude fancy graphics.</em> Which yes, is one of the many things they&rsquo;re used for. BYOND never really supported this, only giving you specific presets like color matrices and 512&rsquo;s simple filters. Luckily, Godot was not desiged at the turn of the millenium, so we can write our own <em>fancy graphics!</em></p>
 <p>The first example is allowing specific layers to be exempt from lighting. This is an amazing graphical detail, which makes things like computers look <em>incredible:</em></p>
 <p><img src="/images/post/pr_7/unlit_materials.png" alt=""></p>
-<p>This effect is nigh-impossible to do correctly in BYOND. SS13 codebases like Paradise have attempted this, but due to layering you'll always get issues when somebody moves on <em>top</em> of the computer. There may be some hacky way to get it to work perfectly, but it'd be so much effort I'm not bothering to try it.</p>
+<p>This effect is nigh-impossible to do correctly in BYOND. SS13 codebases like Paradise have attempted this, but due to layering you&rsquo;ll always get issues when somebody moves on <em>top</em> of the computer. There may be some hacky way to get it to work perfectly, but it&rsquo;d be so much effort I&rsquo;m not bothering to try it.</p>
 <p><a href="https://youtu.be/ouyzMwC5iEE?t=6m46s">This was actually already an idea of the original remake crew, a whole <strong>6 years ago.</strong></a> So I’m glad to finally see it in action properly.</p>
 <p>Now&hellip;</p>
 <p><img src="/images/post/pr_7/sing.png" width=720 /></p>
@@ -115,9 +115,9 @@
 <p>Cluster reworked the inventory system and it now has some basic GUI and stuff like slots. Definitely not winning any awards but we gotta start somewhere.</p>
 <p><img src="/images/post/pr_7/inventories.png" alt=""></p>
 <h2 id="power-clusterfack--pjb">Power (Clusterfack + PJB)</h2>
-<p>We have a power system now! It took an iteration or two, but we're quite happy where it's at now. We got batteries, consumers, APCs, generators, &hellip; The system is intelligent about power usage, and Watts/Joules are correctly defined.</p>
-<p>A big difference from SS13's system is that energy drain is handled by the <em>power network,</em> not the invidual machines. You see, in SS13, each machine told the powernet &ldquo;hey I took 200 energy (no, there's no unit specified, Bay probably did by now but not traditionally) this tick&rdquo;. First of all, this was prone as hell to race conditions and network drain is completely unpredictabble. Secondly, &ldquo;an amount of energy&rdquo; isn't even how energy <em>works.</em> Realistically, when a machine turns on it increases its power usage for that duration. For giant power hogs like a teleporter, you'd have giant capacitor banks and superconducting wire capable of discharging their energy in a fraction of a second to power some sci-fi machinery.</p>
-<p>Visualization for the power system exists, but it's not great. Lights turn on and off, the rest you'll have to check through a debug tool.</p>
+<p>We have a power system now! It took an iteration or two, but we&rsquo;re quite happy where it&rsquo;s at now. We got batteries, consumers, APCs, generators, &hellip; The system is intelligent about power usage, and Watts/Joules are correctly defined.</p>
+<p>A big difference from SS13&rsquo;s system is that energy drain is handled by the <em>power network,</em> not the invidual machines. You see, in SS13, each machine told the powernet &ldquo;hey I took 200 energy (no, there&rsquo;s no unit specified, Bay probably did by now but not traditionally) this tick&rdquo;. First of all, this was prone as hell to race conditions and network drain is completely unpredictabble. Secondly, &ldquo;an amount of energy&rdquo; isn&rsquo;t even how energy <em>works.</em> Realistically, when a machine turns on it increases its power usage for that duration. For giant power hogs like a teleporter, you&rsquo;d have giant capacitor banks and superconducting wire capable of discharging their energy in a fraction of a second to power some sci-fi machinery.</p>
+<p>Visualization for the power system exists, but it&rsquo;s not great. Lights turn on and off, the rest you&rsquo;ll have to check through a debug tool.</p>
 <h2 id="entity-netcode-optimizations-pjb">Entity Netcode Optimizations (PJB)</h2>
 <p>So the “main” netcode for entities is made up of two parts: game state and messages.
 Messages are simple: they’re one-off messages sent between server and client, potentially related to an entity. Stuff like the client saying “I want to switch my hand to left”.</p>
@@ -127,11 +127,11 @@ Messages are simple: they’re one-off messages sent between server and client, 
 <p>Nope! It’s 50 kB of data and that times 60 (netcode runs at 60 Hz) would be 3 god damn MB/s. That’s way too much. So we need to compress this! Quite simple! We know that the client has the last iteration, so we just used a C# port of a <a href="https://github.com/mendsley/bsdiff">binary diffing algorithm</a>! Genius!</p>
 <p>Oh great my CPU is on fire now.</p>
 <p>So yes, the previous netcode was extremely slow and inefficient. It worked but the performance was so bad I couldn’t even get a smooth 60 FPS on my 4.2 GHz quad core Windows PC. On my iMac I was lucky to hit 45.</p>
-<p>To temporarily bandage it, my idea was to use P/Invoke instead of a C# library for the diffing. After struggling for 5 minutes to get the C code to even compile, <a href="https://github.com/space-wizards/bsdiff-rs">I ported the diffing algorithm to Rust</a>, because screw C. Honestly the port to C was a better idea in the long run anyways, because I had to write a bunch of wrapper code, including bzip2 (which I'd also have to get compiling..) Native languages like Rust or C don't have a garbage collector and are just much faster, so this helped relieve <em>some</em> stress.</p>
+<p>To temporarily bandage it, my idea was to use P/Invoke instead of a C# library for the diffing. After struggling for 5 minutes to get the C code to even compile, <a href="https://github.com/space-wizards/bsdiff-rs">I ported the diffing algorithm to Rust</a>, because screw C. Honestly the port to C was a better idea in the long run anyways, because I had to write a bunch of wrapper code, including bzip2 (which I&rsquo;d also have to get compiling..) Native languages like Rust or C don&rsquo;t have a garbage collector and are just much faster, so this helped relieve <em>some</em> stress.</p>
 <p>It was still pretty awful though, <a href="https://github.com/space-wizards/space-station-14/pull/586">so I finally went and changed the diffing system</a>. We now are actually aware when an entity needs to be updated on the client. The result? Client CPU usage on my mac was halved. Server CPU usage dropped by a factor of 6. Movement also feels significantly smoother now.</p>
 <p>There are still many things to do. Client bubbling, bandwidth optimizations, client side prediction, &hellip;</p>
 <p>But hey, I’m happy for now:</p>
-<p><img src="/images/post/pr_7/6_clients.png" width=1024 /></p>
+<p><img src="/images/post/pr_7/6_clients.png" width=1024 /></video></p>
 <p>And this was the server:</p>
 <p><img src="/images/post/pr_7/6_client_server_cpu.png" alt=""></p>
 <h2 id="a-thing-clusterfack">A Thing (Clusterfack)</h2>
