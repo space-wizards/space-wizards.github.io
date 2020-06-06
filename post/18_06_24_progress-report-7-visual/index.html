@@ -49,12 +49,20 @@
 						<img id="logo-long" src="/images/newer.svg" height="100" />
 					</a>
 				</header>
-				<div id="navlinks">
-					<a class="navlink" href="/about/">About</a><br />
-					<a class="navlink" href="/about/nightlies/">Play</a><br />
-					<a class="navlink" href="/about/faq/">FAQ</a><br />
-					
+				<div class="navlinks">
+					<a class="navlink" href="/about/">About</a>
+					<a class="navlink" href="/about/nightlies/">Play!</a>
+					<a class="navlink" href="/about/faq/">FAQ</a>
+					<a class="navlink" href="/about/media/">Media</a>
+					<a class="navlink" href="/about/contact/">Contact</a>
 				</div>
+			</nav>
+			<nav id="upper-links-container">
+			    <div><a href="https://discord.gg/t2jac3p"><img class="discord" src="/images/logos/discord.svg" height="20"> <span class="upper-link-text">Discord</span></a></div>
+				<div><a href="https://github.com/space-wizards"><img class="github" src="/images/logos/github.svg" height="18"> <span class="upper-link-text">GitHub</span></a></div>
+				<div><a href="https://hackmd.io/@ss14/docs"><img class="hackmd" src="/images/logos/hackmd.svg" height="24"> <span class="upper-link-text">Documentation</span></a></div>
+				<div><a href="https://store.steampowered.com/app/1255460/Space_Station_14/"><img class="steam" src="/images/logos/steam.svg" height="18"> <span class="upper-link-text">Steam<sup class="trademark-top">®</sup></span></a></li></div>
+				<div><a href="/index.xml"><img class="rss" src="/images/logos/RSS.svg" height="18"> <span class="upper-link-text">RSS</span></a></div>
 			</nav>
 			<main>
 
@@ -72,6 +80,23 @@
 		by
 		<span class="author">PJB3005</span>
 	</span>
+
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="https://spacestation14.io/post/18_06_24_progress-report-7-visual/#the-sprite-component-refactor-pjb">The Sprite Component Refactor (PJB)</a>
+      <ul>
+        <li><a href="https://spacestation14.io/post/18_06_24_progress-report-7-visual/#shaders">Shaders</a></li>
+      </ul>
+    </li>
+    <li><a href="https://spacestation14.io/post/18_06_24_progress-report-7-visual/#outlines-pjb">Outlines (PJB)</a></li>
+    <li><a href="https://spacestation14.io/post/18_06_24_progress-report-7-visual/#an-actual-map-pjb">An Actual Map (PJB)</a></li>
+    <li><a href="https://spacestation14.io/post/18_06_24_progress-report-7-visual/#linux--mac-builds-up-pjb">Linux &amp; Mac Builds Up (PJB)</a></li>
+    <li><a href="https://spacestation14.io/post/18_06_24_progress-report-7-visual/#inventories-clusterfack">Inventories (Clusterfack)</a></li>
+    <li><a href="https://spacestation14.io/post/18_06_24_progress-report-7-visual/#power-clusterfack--pjb">Power (Clusterfack + PJB)</a></li>
+    <li><a href="https://spacestation14.io/post/18_06_24_progress-report-7-visual/#entity-netcode-optimizations-pjb">Entity Netcode Optimizations (PJB)</a></li>
+    <li><a href="https://spacestation14.io/post/18_06_24_progress-report-7-visual/#a-thing-clusterfack">A Thing (Clusterfack)</a></li>
+  </ul>
+</nav> 
 	<p>Fancy graphics and less fancy menus.</p>
 <h2 id="the-sprite-component-refactor-pjb">The Sprite Component Refactor (PJB)</h2>
 <p>So when you want an entity to render on the map, you need a component that gives it a sprite. You’d think this is pretty simple, but this is how many sprite component variants there were in the main engine:</p>
@@ -142,18 +167,21 @@ Messages are simple: they’re one-off messages sent between server and client, 
 <p><img src="/images/post/pr_7/6_client_server_cpu.png" alt=""></p>
 <h2 id="a-thing-clusterfack">A Thing (Clusterfack)</h2>
 <p><img src="/images/post/pr_7/3d.png" alt=""></p>
-
+	
 	
 </article>
 
 			</main>
 			<footer class="bottom-links">
 				<ul>
-					<li><a href="https://discord.gg/T5EejNS">Discord</a></li>
-					<li><a href="https://github.com/space-wizards">GitHub</a></li>
-					<li><a href="/about/nightlies">Automatic Builds</a></li>
-					<li><a href="https://reddit.com/r/ss14">Subreddit</a></li>
-					<li><a href="/index.xml">RSS</a></li>
+					<li><a href="https://discord.gg/t2jac3p" title="Discord"><img class="discord" src="/images/logos/discord.svg" height="22"></a></li>
+					<li><a href="https://github.com/space-wizards" title="Github"><img class="github" src="/images/logos/github.svg" height="20"></a></li>
+					<li><a href="https://hackmd.io/@ss14/docs" title="Documentation"><img class="hackmd" src="/images/logos/hackmd.svg" height="30"></a></li>
+					<li><a href="https://store.steampowered.com/app/1255460/Space_Station_14/" title="® Steam"><img class="steam" src="/images/logos/steam.svg" height="20"></a></li>
+					<li><a href="/about/contact/#email" title="Email"><img class="email" src="/images/logos/email.svg" height="18"><small class="trademark-bottom">®</small></a></li>
+					<li><a href="/index.xml" title="RSS"><img class="rss" src="/images/logos/RSS.svg" height="22"></a></li>
+					<li><a href="/about/contact/#IRC" title="IRC"><img class="IRC" src="/images/logos/irc.svg" height="16"></a></li>
+					<li><a href="https://redit.com/r/ss14" title="Subreddit"><img class="reddit" src="/images/logos/r.svg" height="25"></a></li>
 				</ul>
 			</footer>
 		</div>

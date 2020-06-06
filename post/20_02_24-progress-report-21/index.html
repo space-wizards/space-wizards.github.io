@@ -49,12 +49,20 @@
 						<img id="logo-long" src="/images/newer.svg" height="100" />
 					</a>
 				</header>
-				<div id="navlinks">
-					<a class="navlink" href="/about/">About</a><br />
-					<a class="navlink" href="/about/nightlies/">Play</a><br />
-					<a class="navlink" href="/about/faq/">FAQ</a><br />
-					
+				<div class="navlinks">
+					<a class="navlink" href="/about/">About</a>
+					<a class="navlink" href="/about/nightlies/">Play!</a>
+					<a class="navlink" href="/about/faq/">FAQ</a>
+					<a class="navlink" href="/about/media/">Media</a>
+					<a class="navlink" href="/about/contact/">Contact</a>
 				</div>
+			</nav>
+			<nav id="upper-links-container">
+			    <div><a href="https://discord.gg/t2jac3p"><img class="discord" src="/images/logos/discord.svg" height="20"> <span class="upper-link-text">Discord</span></a></div>
+				<div><a href="https://github.com/space-wizards"><img class="github" src="/images/logos/github.svg" height="18"> <span class="upper-link-text">GitHub</span></a></div>
+				<div><a href="https://hackmd.io/@ss14/docs"><img class="hackmd" src="/images/logos/hackmd.svg" height="24"> <span class="upper-link-text">Documentation</span></a></div>
+				<div><a href="https://store.steampowered.com/app/1255460/Space_Station_14/"><img class="steam" src="/images/logos/steam.svg" height="18"> <span class="upper-link-text">Steam<sup class="trademark-top">®</sup></span></a></li></div>
+				<div><a href="/index.xml"><img class="rss" src="/images/logos/RSS.svg" height="18"> <span class="upper-link-text">RSS</span></a></div>
 			</nav>
 			<main>
 
@@ -72,6 +80,29 @@
 		by
 		<span class="author">Many people on Discord</span>
 	</span>
+
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="https://spacestation14.io/post/20_02_24-progress-report-21/#summary">Summary</a></li>
+    <li><a href="https://spacestation14.io/post/20_02_24-progress-report-21/#colonial-marines-stress-test">Colonial Marines stress-test</a></li>
+    <li><a href="https://spacestation14.io/post/20_02_24-progress-report-21/#shadows--fov">Shadows &amp; FOV</a></li>
+    <li><a href="https://spacestation14.io/post/20_02_24-progress-report-21/#explosions-throw-stuff-contributed-by-injazz">Explosions throw stuff (contributed by Injazz)</a></li>
+    <li><a href="https://spacestation14.io/post/20_02_24-progress-report-21/#jobs-have-been-filled-out-contributed-by-ike709">Jobs have been filled out (contributed by ike709)</a></li>
+    <li><a href="https://spacestation14.io/post/20_02_24-progress-report-21/#tg-id-cards-contributed-by-ajcm">TG ID cards (contributed by AJCM)</a></li>
+    <li><a href="https://spacestation14.io/post/20_02_24-progress-report-21/#tutorial-has-a-new-coat-of-paint-contributed-by-moneyl">Tutorial has a new coat of paint. (contributed by Moneyl)</a></li>
+    <li><a href="https://spacestation14.io/post/20_02_24-progress-report-21/#chemistry-improvements-contributed-by-moneyl">Chemistry improvements (contributed by Moneyl)</a></li>
+    <li><a href="https://spacestation14.io/post/20_02_24-progress-report-21/#the-combat-mode-control-issue-has-been-solved">The combat mode control issue has been solved</a></li>
+    <li><a href="https://spacestation14.io/post/20_02_24-progress-report-21/#click-to-rotate-contributed-by-spacemaniac">Click to rotate (contributed by SpaceManiac)</a></li>
+    <li><a href="https://spacestation14.io/post/20_02_24-progress-report-21/#pen--paper-contributed-by-zth--">Pen &amp; Paper (contributed by Zth&ndash;)</a></li>
+    <li><a href="https://spacestation14.io/post/20_02_24-progress-report-21/#introducing-hackmd-as-a-public-dev-wiki">Introducing HackMD as a public dev wiki</a></li>
+    <li><a href="https://spacestation14.io/post/20_02_24-progress-report-21/#steam-update">Steam update</a></li>
+    <li><a href="https://spacestation14.io/post/20_02_24-progress-report-21/#cm-stress-test-the-technical-problems">CM stress test: the technical problems</a></li>
+    <li><a href="https://spacestation14.io/post/20_02_24-progress-report-21/#netcode-optimizations">Netcode optimizations</a></li>
+    <li><a href="https://spacestation14.io/post/20_02_24-progress-report-21/#collision-performance-improvements-contributed-by-tyler-in">Collision performance improvements (contributed by Tyler-IN).</a></li>
+    <li><a href="https://spacestation14.io/post/20_02_24-progress-report-21/#considering-a-robust-film-maker">Considering a &ldquo;Robust Film Maker&rdquo;</a></li>
+    <li><a href="https://spacestation14.io/post/20_02_24-progress-report-21/#contributors-this-month">Contributors this month</a></li>
+  </ul>
+</nav> 
 	<p>We have big news for everyone who enjoys slaying meat sacks as a xenomorph, futilely hiding in a locker as a survivor, or being eaten alive as a marine&hellip;</p>
 <h2 id="summary">Summary</h2>
 <p><a href="https://cm-ss13.com/forums/">The Colonial Marines SS13 server</a> dev team is planning on transitioning their codebase to the SS14 engine! They ran a stress-test on an SS14 server, and their results surpassed many expectations. They&rsquo;re planning another test very soon, and some of their devs are already up to speed and contributing to the project.
@@ -197,7 +228,7 @@ CM has the largest playerbase in SS13, with an average server population of 200 
 <p>Because getting every minor bug fix and such into the progress report can be kinda hard, I just want to list off all the contributors we&rsquo;ve had this month (GitHub usernames):</p>
 <p>4dplanner, acvzy, Acruid, AJCM-git, DamianX, ike709, Injazz, Moneyl, PJB3005, ProfanedBane, py01, Quantomicus, Qustinnus, renodubois, ShadowCommander, SpaceManiac, Tyler-IN, Unusualcrow, Zth&ndash;, Zumorica</p>
 <p>And of course special thanks to many of the people hanging out on Discord and GitHub providing feedback, bug reports and other things. Kinda hard to track though.</p>
-
+	
 	
 	<hr />
 	<footer>
@@ -209,11 +240,14 @@ CM has the largest playerbase in SS13, with an average server population of 200 
 			</main>
 			<footer class="bottom-links">
 				<ul>
-					<li><a href="https://discord.gg/T5EejNS">Discord</a></li>
-					<li><a href="https://github.com/space-wizards">GitHub</a></li>
-					<li><a href="/about/nightlies">Automatic Builds</a></li>
-					<li><a href="https://reddit.com/r/ss14">Subreddit</a></li>
-					<li><a href="/index.xml">RSS</a></li>
+					<li><a href="https://discord.gg/t2jac3p" title="Discord"><img class="discord" src="/images/logos/discord.svg" height="22"></a></li>
+					<li><a href="https://github.com/space-wizards" title="Github"><img class="github" src="/images/logos/github.svg" height="20"></a></li>
+					<li><a href="https://hackmd.io/@ss14/docs" title="Documentation"><img class="hackmd" src="/images/logos/hackmd.svg" height="30"></a></li>
+					<li><a href="https://store.steampowered.com/app/1255460/Space_Station_14/" title="® Steam"><img class="steam" src="/images/logos/steam.svg" height="20"></a></li>
+					<li><a href="/about/contact/#email" title="Email"><img class="email" src="/images/logos/email.svg" height="18"><small class="trademark-bottom">®</small></a></li>
+					<li><a href="/index.xml" title="RSS"><img class="rss" src="/images/logos/RSS.svg" height="22"></a></li>
+					<li><a href="/about/contact/#IRC" title="IRC"><img class="IRC" src="/images/logos/irc.svg" height="16"></a></li>
+					<li><a href="https://redit.com/r/ss14" title="Subreddit"><img class="reddit" src="/images/logos/r.svg" height="25"></a></li>
 				</ul>
 			</footer>
 		</div>

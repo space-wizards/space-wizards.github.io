@@ -49,12 +49,20 @@
 						<img id="logo-long" src="/images/newer.svg" height="100" />
 					</a>
 				</header>
-				<div id="navlinks">
-					<a class="navlink" href="/about/">About</a><br />
-					<a class="navlink" href="/about/nightlies/">Play</a><br />
-					<a class="navlink" href="/about/faq/">FAQ</a><br />
-					
+				<div class="navlinks">
+					<a class="navlink" href="/about/">About</a>
+					<a class="navlink" href="/about/nightlies/">Play!</a>
+					<a class="navlink" href="/about/faq/">FAQ</a>
+					<a class="navlink" href="/about/media/">Media</a>
+					<a class="navlink" href="/about/contact/">Contact</a>
 				</div>
+			</nav>
+			<nav id="upper-links-container">
+			    <div><a href="https://discord.gg/t2jac3p"><img class="discord" src="/images/logos/discord.svg" height="20"> <span class="upper-link-text">Discord</span></a></div>
+				<div><a href="https://github.com/space-wizards"><img class="github" src="/images/logos/github.svg" height="18"> <span class="upper-link-text">GitHub</span></a></div>
+				<div><a href="https://hackmd.io/@ss14/docs"><img class="hackmd" src="/images/logos/hackmd.svg" height="24"> <span class="upper-link-text">Documentation</span></a></div>
+				<div><a href="https://store.steampowered.com/app/1255460/Space_Station_14/"><img class="steam" src="/images/logos/steam.svg" height="18"> <span class="upper-link-text">Steam<sup class="trademark-top">®</sup></span></a></li></div>
+				<div><a href="/index.xml"><img class="rss" src="/images/logos/RSS.svg" height="18"> <span class="upper-link-text">RSS</span></a></div>
 			</nav>
 			<main>
 
@@ -72,6 +80,28 @@
 		by
 		<span class="author">PJB3005</span>
 	</span>
+
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="https://spacestation14.io/post/19_10_22_progress-report-19/#combat-work">Combat Work</a>
+      <ul>
+        <li><a href="https://spacestation14.io/post/19_10_22_progress-report-19/#attack-animations">Attack Animations</a></li>
+        <li><a href="https://spacestation14.io/post/19_10_22_progress-report-19/#combat-mode-aka-intents-v2">Combat Mode (AKA, Intents v2)</a></li>
+      </ul>
+    </li>
+    <li><a href="https://spacestation14.io/post/19_10_22_progress-report-19/#hacking--access-contributed-by-damianx">Hacking &amp; Access (Contributed by DamianX)</a></li>
+    <li><a href="https://spacestation14.io/post/19_10_22_progress-report-19/#redesigned-ui-theme">Redesigned UI Theme</a></li>
+    <li><a href="https://spacestation14.io/post/19_10_22_progress-report-19/#basic-chemistry-contributed-by-moneyl--acruid">Basic Chemistry (Contributed by moneyl &amp; Acruid)</a></li>
+    <li><a href="https://spacestation14.io/post/19_10_22_progress-report-19/#importing-sprites-from-ss13">Importing sprites from SS13.</a></li>
+    <li><a href="https://spacestation14.io/post/19_10_22_progress-report-19/#very-basic-research-contributed-by-zumorica">Very Basic Research (Contributed by Zumorica)</a></li>
+    <li><a href="https://spacestation14.io/post/19_10_22_progress-report-19/#more-clothes-contributed-by-metalgearsloth">More Clothes (Contributed by metalgearsloth)</a></li>
+    <li><a href="https://spacestation14.io/post/19_10_22_progress-report-19/#map-extensions">Map Extensions</a></li>
+    <li><a href="https://spacestation14.io/post/19_10_22_progress-report-19/#more-effort-into-examine-tooltips">More Effort Into Examine Tooltips</a></li>
+    <li><a href="https://spacestation14.io/post/19_10_22_progress-report-19/#some-fancy-ui-animations">Some Fancy UI Animations</a></li>
+    <li><a href="https://spacestation14.io/post/19_10_22_progress-report-19/#wip-midi-input-contributed-by-zumorica">WiP: MIDI Input (Contributed by Zumorica)</a></li>
+    <li><a href="https://spacestation14.io/post/19_10_22_progress-report-19/#a-note-on-macos-support">A Note On MacOS Support.</a></li>
+  </ul>
+</nav> 
 	<p>Kept you waiting, huh?</p>
 <p>Yeah it probably would&rsquo;ve been better to actually release a progress report in september. This one is absolutely huge now. Oops.</p>
 <h2 id="combat-work">Combat Work</h2>
@@ -236,7 +266,7 @@ Really, the most significant thing intents do is change the behavior for unarmed
 <p>The short version is, <strong>Apple is gonna make it impossible for us to publish the game for macOS without paying them $100 a year.</strong></p>
 <p><strong>We are not paying Apple $100 a year.</strong> We can publish Windows and Linux versions with zero hassle from any operating system. <strong>Apple wants us to pay <em>them</em> for the privilege of developing for <em>their</em> platform.</strong> And also to do it on macOS, on their overpriced Apple hardware, with their tooling.</p>
 <p>Also, since I&rsquo;ve seen some game devs complain about the 32 bit support drop: We literally don&rsquo;t care about that, we weren&rsquo;t supporting 32 bit in the first place.</p>
-
+	
 	
 	<hr />
 	<footer>
@@ -248,11 +278,14 @@ Really, the most significant thing intents do is change the behavior for unarmed
 			</main>
 			<footer class="bottom-links">
 				<ul>
-					<li><a href="https://discord.gg/T5EejNS">Discord</a></li>
-					<li><a href="https://github.com/space-wizards">GitHub</a></li>
-					<li><a href="/about/nightlies">Automatic Builds</a></li>
-					<li><a href="https://reddit.com/r/ss14">Subreddit</a></li>
-					<li><a href="/index.xml">RSS</a></li>
+					<li><a href="https://discord.gg/t2jac3p" title="Discord"><img class="discord" src="/images/logos/discord.svg" height="22"></a></li>
+					<li><a href="https://github.com/space-wizards" title="Github"><img class="github" src="/images/logos/github.svg" height="20"></a></li>
+					<li><a href="https://hackmd.io/@ss14/docs" title="Documentation"><img class="hackmd" src="/images/logos/hackmd.svg" height="30"></a></li>
+					<li><a href="https://store.steampowered.com/app/1255460/Space_Station_14/" title="® Steam"><img class="steam" src="/images/logos/steam.svg" height="20"></a></li>
+					<li><a href="/about/contact/#email" title="Email"><img class="email" src="/images/logos/email.svg" height="18"><small class="trademark-bottom">®</small></a></li>
+					<li><a href="/index.xml" title="RSS"><img class="rss" src="/images/logos/RSS.svg" height="22"></a></li>
+					<li><a href="/about/contact/#IRC" title="IRC"><img class="IRC" src="/images/logos/irc.svg" height="16"></a></li>
+					<li><a href="https://redit.com/r/ss14" title="Subreddit"><img class="reddit" src="/images/logos/r.svg" height="25"></a></li>
 				</ul>
 			</footer>
 		</div>

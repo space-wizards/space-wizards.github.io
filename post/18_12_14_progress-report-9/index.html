@@ -49,12 +49,20 @@
 						<img id="logo-long" src="/images/newer.svg" height="100" />
 					</a>
 				</header>
-				<div id="navlinks">
-					<a class="navlink" href="/about/">About</a><br />
-					<a class="navlink" href="/about/nightlies/">Play</a><br />
-					<a class="navlink" href="/about/faq/">FAQ</a><br />
-					
+				<div class="navlinks">
+					<a class="navlink" href="/about/">About</a>
+					<a class="navlink" href="/about/nightlies/">Play!</a>
+					<a class="navlink" href="/about/faq/">FAQ</a>
+					<a class="navlink" href="/about/media/">Media</a>
+					<a class="navlink" href="/about/contact/">Contact</a>
 				</div>
+			</nav>
+			<nav id="upper-links-container">
+			    <div><a href="https://discord.gg/t2jac3p"><img class="discord" src="/images/logos/discord.svg" height="20"> <span class="upper-link-text">Discord</span></a></div>
+				<div><a href="https://github.com/space-wizards"><img class="github" src="/images/logos/github.svg" height="18"> <span class="upper-link-text">GitHub</span></a></div>
+				<div><a href="https://hackmd.io/@ss14/docs"><img class="hackmd" src="/images/logos/hackmd.svg" height="24"> <span class="upper-link-text">Documentation</span></a></div>
+				<div><a href="https://store.steampowered.com/app/1255460/Space_Station_14/"><img class="steam" src="/images/logos/steam.svg" height="18"> <span class="upper-link-text">Steam<sup class="trademark-top">®</sup></span></a></li></div>
+				<div><a href="/index.xml"><img class="rss" src="/images/logos/RSS.svg" height="18"> <span class="upper-link-text">RSS</span></a></div>
 			</nav>
 			<main>
 
@@ -72,6 +80,24 @@
 		by
 		<span class="author">PJB3005, Digitalis, Clusterfack &amp; Acruid</span>
 	</span>
+
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="https://spacestation14.io/post/18_12_14_progress-report-9/#work-on-mobcode">Work on Mobcode</a>
+      <ul>
+        <li><a href="https://spacestation14.io/post/18_12_14_progress-report-9/#the-future">The Future</a></li>
+      </ul>
+    </li>
+    <li><a href="https://spacestation14.io/post/18_12_14_progress-report-9/#verbs">Verbs</a></li>
+    <li><a href="https://spacestation14.io/post/18_12_14_progress-report-9/#notifications--chat-usage">Notifications &amp; Chat Usage</a></li>
+    <li><a href="https://spacestation14.io/post/18_12_14_progress-report-9/#parallax">Parallax</a></li>
+    <li><a href="https://spacestation14.io/post/18_12_14_progress-report-9/#the-lobby--rounds">The Lobby &amp; Rounds</a></li>
+    <li><a href="https://spacestation14.io/post/18_12_14_progress-report-9/#fun-with-guns">Fun With Guns</a></li>
+    <li><a href="https://spacestation14.io/post/18_12_14_progress-report-9/#throwing">Throwing</a></li>
+    <li><a href="https://spacestation14.io/post/18_12_14_progress-report-9/#world-storage">World Storage</a></li>
+    <li><a href="https://spacestation14.io/post/18_12_14_progress-report-9/#ipv6-networking-support">IPv6 Networking Support</a></li>
+  </ul>
+</nav> 
 	<p>Yeah, we really don&rsquo;t have anything to say here, outside of &ldquo;look at all these features!&rdquo;</p>
 <h2 id="work-on-mobcode">Work on Mobcode</h2>
 <p>As any SS13 coder can tell you, ourselves included, mob code is a bloody mess. The best thing we can do to avoid creating the same mess in our project is write modular, configurable mob components.</p>
@@ -121,7 +147,7 @@
 <p><video src="/video/18_12_14-storage.mp4" controls></video></p>
 <h2 id="ipv6-networking-support">IPv6 Networking Support</h2>
 <p>Just a minor thing: the netcode now transparently supports IPv6. Yay! If you don&rsquo;t know what that means then whatever. If you do then you&rsquo;ll realize that it really does not matter. It was fun to implement though.</p>
-
+	
 	
 	<hr />
 	<footer>
@@ -133,11 +159,14 @@
 			</main>
 			<footer class="bottom-links">
 				<ul>
-					<li><a href="https://discord.gg/T5EejNS">Discord</a></li>
-					<li><a href="https://github.com/space-wizards">GitHub</a></li>
-					<li><a href="/about/nightlies">Automatic Builds</a></li>
-					<li><a href="https://reddit.com/r/ss14">Subreddit</a></li>
-					<li><a href="/index.xml">RSS</a></li>
+					<li><a href="https://discord.gg/t2jac3p" title="Discord"><img class="discord" src="/images/logos/discord.svg" height="22"></a></li>
+					<li><a href="https://github.com/space-wizards" title="Github"><img class="github" src="/images/logos/github.svg" height="20"></a></li>
+					<li><a href="https://hackmd.io/@ss14/docs" title="Documentation"><img class="hackmd" src="/images/logos/hackmd.svg" height="30"></a></li>
+					<li><a href="https://store.steampowered.com/app/1255460/Space_Station_14/" title="® Steam"><img class="steam" src="/images/logos/steam.svg" height="20"></a></li>
+					<li><a href="/about/contact/#email" title="Email"><img class="email" src="/images/logos/email.svg" height="18"><small class="trademark-bottom">®</small></a></li>
+					<li><a href="/index.xml" title="RSS"><img class="rss" src="/images/logos/RSS.svg" height="22"></a></li>
+					<li><a href="/about/contact/#IRC" title="IRC"><img class="IRC" src="/images/logos/irc.svg" height="16"></a></li>
+					<li><a href="https://redit.com/r/ss14" title="Subreddit"><img class="reddit" src="/images/logos/r.svg" height="25"></a></li>
 				</ul>
 			</footer>
 		</div>

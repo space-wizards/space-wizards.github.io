@@ -49,12 +49,20 @@
 						<img id="logo-long" src="/images/newer.svg" height="100" />
 					</a>
 				</header>
-				<div id="navlinks">
-					<a class="navlink" href="/about/">About</a><br />
-					<a class="navlink" href="/about/nightlies/">Play</a><br />
-					<a class="navlink" href="/about/faq/">FAQ</a><br />
-					
+				<div class="navlinks">
+					<a class="navlink" href="/about/">About</a>
+					<a class="navlink" href="/about/nightlies/">Play!</a>
+					<a class="navlink" href="/about/faq/">FAQ</a>
+					<a class="navlink" href="/about/media/">Media</a>
+					<a class="navlink" href="/about/contact/">Contact</a>
 				</div>
+			</nav>
+			<nav id="upper-links-container">
+			    <div><a href="https://discord.gg/t2jac3p"><img class="discord" src="/images/logos/discord.svg" height="20"> <span class="upper-link-text">Discord</span></a></div>
+				<div><a href="https://github.com/space-wizards"><img class="github" src="/images/logos/github.svg" height="18"> <span class="upper-link-text">GitHub</span></a></div>
+				<div><a href="https://hackmd.io/@ss14/docs"><img class="hackmd" src="/images/logos/hackmd.svg" height="24"> <span class="upper-link-text">Documentation</span></a></div>
+				<div><a href="https://store.steampowered.com/app/1255460/Space_Station_14/"><img class="steam" src="/images/logos/steam.svg" height="18"> <span class="upper-link-text">Steam<sup class="trademark-top">®</sup></span></a></li></div>
+				<div><a href="/index.xml"><img class="rss" src="/images/logos/RSS.svg" height="18"> <span class="upper-link-text">RSS</span></a></div>
 			</nav>
 			<main>
 
@@ -72,6 +80,20 @@
 		by
 		<span class="author">PJB3005</span>
 	</span>
+
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="https://spacestation14.io/post/19_02_20_progress-report-10/#another-rendering-engine-change">Another Rendering Engine Change</a>
+      <ul>
+        <li><a href="https://spacestation14.io/post/19_02_20_progress-report-10/#godots-performance">Godot&rsquo;s performance</a></li>
+        <li><a href="https://spacestation14.io/post/19_02_20_progress-report-10/#was-godot-a-mistake">Was Godot a mistake?</a></li>
+        <li><a href="https://spacestation14.io/post/19_02_20_progress-report-10/#what-about-3d">What about 3D?</a></li>
+        <li><a href="https://spacestation14.io/post/19_02_20_progress-report-10/#what-about-ui">What about UI?</a></li>
+        <li><a href="https://spacestation14.io/post/19_02_20_progress-report-10/#introducing-clyde">Introducing Clyde</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav> 
 	<p>Yeah I honestly have nothing to say for myself. You have the right to laugh.</p>
 <h2 id="another-rendering-engine-change">Another Rendering Engine Change</h2>
 <p>Hahahah. Yep it&rsquo;s happening. We&rsquo;re creating another rendering engine. Laugh all you want, you have the right to and I can&rsquo;t blame you at this point, but I&rsquo;m still going through with this and do believe this is the best way forward. To be clear, right now the code still works on Godot, the new renderer is optional.</p>
@@ -105,7 +127,7 @@ Now as it turns out, if you&rsquo;ve got a few thousand objects to render, GPU d
 <p>I mean, it works really. Performance is also already significantly better than Godot. I get about 2.5x FPS on iGPU comparing with unlit Godot. And there&rsquo;s already a lot of room for optimizations that I&rsquo;m too lazy to make currently.</p>
 <p>Of course I still have to implement things like lighting, but hey, it&rsquo;s getting there.</p>
 <p><img src="/images/post/pr_10/clyde_screenshot.png" alt="Here&rsquo;s a screenshot of Clyde"></p>
-
+	
 	
 	<hr />
 	<footer>
@@ -117,11 +139,14 @@ Now as it turns out, if you&rsquo;ve got a few thousand objects to render, GPU d
 			</main>
 			<footer class="bottom-links">
 				<ul>
-					<li><a href="https://discord.gg/T5EejNS">Discord</a></li>
-					<li><a href="https://github.com/space-wizards">GitHub</a></li>
-					<li><a href="/about/nightlies">Automatic Builds</a></li>
-					<li><a href="https://reddit.com/r/ss14">Subreddit</a></li>
-					<li><a href="/index.xml">RSS</a></li>
+					<li><a href="https://discord.gg/t2jac3p" title="Discord"><img class="discord" src="/images/logos/discord.svg" height="22"></a></li>
+					<li><a href="https://github.com/space-wizards" title="Github"><img class="github" src="/images/logos/github.svg" height="20"></a></li>
+					<li><a href="https://hackmd.io/@ss14/docs" title="Documentation"><img class="hackmd" src="/images/logos/hackmd.svg" height="30"></a></li>
+					<li><a href="https://store.steampowered.com/app/1255460/Space_Station_14/" title="® Steam"><img class="steam" src="/images/logos/steam.svg" height="20"></a></li>
+					<li><a href="/about/contact/#email" title="Email"><img class="email" src="/images/logos/email.svg" height="18"><small class="trademark-bottom">®</small></a></li>
+					<li><a href="/index.xml" title="RSS"><img class="rss" src="/images/logos/RSS.svg" height="22"></a></li>
+					<li><a href="/about/contact/#IRC" title="IRC"><img class="IRC" src="/images/logos/irc.svg" height="16"></a></li>
+					<li><a href="https://redit.com/r/ss14" title="Subreddit"><img class="reddit" src="/images/logos/r.svg" height="25"></a></li>
 				</ul>
 			</footer>
 		</div>

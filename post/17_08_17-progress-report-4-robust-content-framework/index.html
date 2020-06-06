@@ -49,12 +49,20 @@
 						<img id="logo-long" src="/images/newer.svg" height="100" />
 					</a>
 				</header>
-				<div id="navlinks">
-					<a class="navlink" href="/about/">About</a><br />
-					<a class="navlink" href="/about/nightlies/">Play</a><br />
-					<a class="navlink" href="/about/faq/">FAQ</a><br />
-					
+				<div class="navlinks">
+					<a class="navlink" href="/about/">About</a>
+					<a class="navlink" href="/about/nightlies/">Play!</a>
+					<a class="navlink" href="/about/faq/">FAQ</a>
+					<a class="navlink" href="/about/media/">Media</a>
+					<a class="navlink" href="/about/contact/">Contact</a>
 				</div>
+			</nav>
+			<nav id="upper-links-container">
+			    <div><a href="https://discord.gg/t2jac3p"><img class="discord" src="/images/logos/discord.svg" height="20"> <span class="upper-link-text">Discord</span></a></div>
+				<div><a href="https://github.com/space-wizards"><img class="github" src="/images/logos/github.svg" height="18"> <span class="upper-link-text">GitHub</span></a></div>
+				<div><a href="https://hackmd.io/@ss14/docs"><img class="hackmd" src="/images/logos/hackmd.svg" height="24"> <span class="upper-link-text">Documentation</span></a></div>
+				<div><a href="https://store.steampowered.com/app/1255460/Space_Station_14/"><img class="steam" src="/images/logos/steam.svg" height="18"> <span class="upper-link-text">Steam<sup class="trademark-top">®</sup></span></a></li></div>
+				<div><a href="/index.xml"><img class="rss" src="/images/logos/RSS.svg" height="18"> <span class="upper-link-text">RSS</span></a></div>
 			</nav>
 			<main>
 
@@ -72,6 +80,16 @@
 		by
 		<span class="author">PJB3005</span>
 	</span>
+
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="https://spacestation14.io/post/17_08_17-progress-report-4-robust-content-framework/#the-content-repo">The Content Repo</a></li>
+    <li><a href="https://spacestation14.io/post/17_08_17-progress-report-4-robust-content-framework/#2d-or-not-2d">2D or not 2D</a></li>
+    <li><a href="https://spacestation14.io/post/17_08_17-progress-report-4-robust-content-framework/#robusting-the-sfml">Robusting the SFML</a></li>
+    <li><a href="https://spacestation14.io/post/17_08_17-progress-report-4-robust-content-framework/#designing-the-game-not-the-engine">Designing the Game, not the Engine</a></li>
+    <li><a href="https://spacestation14.io/post/17_08_17-progress-report-4-robust-content-framework/#automatic-nightly-builds">Automatic Nightly Builds</a></li>
+  </ul>
+</nav> 
 	<p>It&rsquo;s been a couple weeks since the last progress report, and lots has happened since then. Refactors, setting up the content repo, and more!</p>
 <p>So here&rsquo;s a fun bit of trivia, when we started the project to revive SS14, the project was at 45,000 lines of code. That was the middle of May. We&rsquo;re now a few months later, and the we&rsquo;re at 37,000 lines! <a href="https://sonarcloud.io/project/activity?custom_metrics=ncloc&amp;graph=custom&amp;id=ss14">Here&rsquo;s a chart if you want to see it for yourself.</a></p>
 <p>The original developers did not have a very modular idea for the project. Everything in one big project and writing the game and engine as one. A workable approach to game development for most projects. Sadly, SS13 is not one of
@@ -170,7 +188,7 @@ While there is something to be said about bikeshedding here, our game designer U
 <p>If you want to read the design docs he&rsquo;s written, they can be found <a href="https://goo.gl/bnk4qo">here</a>. Discussion is welcome, but note that <strong>these are not final</strong>. It&rsquo;s his design, it does not necessarily reflect the way SS14 will be going.</p>
 <h2 id="automatic-nightly-builds">Automatic Nightly Builds</h2>
 <p>Because we have the content repo set up now, we&rsquo;ll soon be writing actual content. To make progress more obvious for the average Joe who doesn&rsquo;t want to read these damn reports (by the way this one is <em>really</em> long), we will set up automatic builds of the client and server for download. Just download the client and server, start both and hit connect and you&rsquo;ll have your poorly lit room where you can hopefully do more than just bumping into the walls and that table. We have the build scripts for this written down, and the builds work on both MacOS and Windows (Linux client untested), but we&rsquo;re still working on hosting them automatically somewhere. We&rsquo;ll make an independent announcement when it&rsquo;s done in the next couple days.</p>
-
+	
 	
 	<hr />
 	<footer>
@@ -182,11 +200,14 @@ While there is something to be said about bikeshedding here, our game designer U
 			</main>
 			<footer class="bottom-links">
 				<ul>
-					<li><a href="https://discord.gg/T5EejNS">Discord</a></li>
-					<li><a href="https://github.com/space-wizards">GitHub</a></li>
-					<li><a href="/about/nightlies">Automatic Builds</a></li>
-					<li><a href="https://reddit.com/r/ss14">Subreddit</a></li>
-					<li><a href="/index.xml">RSS</a></li>
+					<li><a href="https://discord.gg/t2jac3p" title="Discord"><img class="discord" src="/images/logos/discord.svg" height="22"></a></li>
+					<li><a href="https://github.com/space-wizards" title="Github"><img class="github" src="/images/logos/github.svg" height="20"></a></li>
+					<li><a href="https://hackmd.io/@ss14/docs" title="Documentation"><img class="hackmd" src="/images/logos/hackmd.svg" height="30"></a></li>
+					<li><a href="https://store.steampowered.com/app/1255460/Space_Station_14/" title="® Steam"><img class="steam" src="/images/logos/steam.svg" height="20"></a></li>
+					<li><a href="/about/contact/#email" title="Email"><img class="email" src="/images/logos/email.svg" height="18"><small class="trademark-bottom">®</small></a></li>
+					<li><a href="/index.xml" title="RSS"><img class="rss" src="/images/logos/RSS.svg" height="22"></a></li>
+					<li><a href="/about/contact/#IRC" title="IRC"><img class="IRC" src="/images/logos/irc.svg" height="16"></a></li>
+					<li><a href="https://redit.com/r/ss14" title="Subreddit"><img class="reddit" src="/images/logos/r.svg" height="25"></a></li>
 				</ul>
 			</footer>
 		</div>

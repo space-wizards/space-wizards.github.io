@@ -49,12 +49,20 @@
 						<img id="logo-long" src="/images/newer.svg" height="100" />
 					</a>
 				</header>
-				<div id="navlinks">
-					<a class="navlink" href="/about/">About</a><br />
-					<a class="navlink" href="/about/nightlies/">Play</a><br />
-					<a class="navlink" href="/about/faq/">FAQ</a><br />
-					
+				<div class="navlinks">
+					<a class="navlink" href="/about/">About</a>
+					<a class="navlink" href="/about/nightlies/">Play!</a>
+					<a class="navlink" href="/about/faq/">FAQ</a>
+					<a class="navlink" href="/about/media/">Media</a>
+					<a class="navlink" href="/about/contact/">Contact</a>
 				</div>
+			</nav>
+			<nav id="upper-links-container">
+			    <div><a href="https://discord.gg/t2jac3p"><img class="discord" src="/images/logos/discord.svg" height="20"> <span class="upper-link-text">Discord</span></a></div>
+				<div><a href="https://github.com/space-wizards"><img class="github" src="/images/logos/github.svg" height="18"> <span class="upper-link-text">GitHub</span></a></div>
+				<div><a href="https://hackmd.io/@ss14/docs"><img class="hackmd" src="/images/logos/hackmd.svg" height="24"> <span class="upper-link-text">Documentation</span></a></div>
+				<div><a href="https://store.steampowered.com/app/1255460/Space_Station_14/"><img class="steam" src="/images/logos/steam.svg" height="18"> <span class="upper-link-text">Steam<sup class="trademark-top">®</sup></span></a></li></div>
+				<div><a href="/index.xml"><img class="rss" src="/images/logos/RSS.svg" height="18"> <span class="upper-link-text">RSS</span></a></div>
 			</nav>
 			<main>
 
@@ -72,6 +80,34 @@
 		by
 		<span class="author">PJB3005</span>
 	</span>
+
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="https://spacestation14.io/post/20_01_24-progress-report-20/#contributions-welcome">Contributions welcome!</a></li>
+    <li><a href="https://spacestation14.io/post/20_01_24-progress-report-20/#item-status">Item status</a>
+      <ul>
+        <li><a href="https://spacestation14.io/post/20_01_24-progress-report-20/#cooldown-status">Cooldown status</a></li>
+      </ul>
+    </li>
+    <li><a href="https://spacestation14.io/post/20_01_24-progress-report-20/#player-preferences-slots-jobs-contributed-by-damianx--zeltehonor">Player preferences, slots, jobs (contributed by DamianX &amp; ZelteHonor)</a></li>
+    <li><a href="https://spacestation14.io/post/20_01_24-progress-report-20/#new-launcher">New launcher</a></li>
+    <li><a href="https://spacestation14.io/post/20_01_24-progress-report-20/#icon--logo-switch">Icon &amp; logo switch</a></li>
+    <li><a href="https://spacestation14.io/post/20_01_24-progress-report-20/#outlines-change-color-when-in-range">Outlines change color when in range</a></li>
+    <li><a href="https://spacestation14.io/post/20_01_24-progress-report-20/#more-sprite-importing-contributed-by-metalgearsloth">More sprite importing (Contributed by metalgearsloth)</a></li>
+    <li><a href="https://spacestation14.io/post/20_01_24-progress-report-20/#hunger--thirst-contributed-by-metalgearsloth">Hunger &amp; Thirst (Contributed by metalgearsloth)</a></li>
+    <li><a href="https://spacestation14.io/post/20_01_24-progress-report-20/#basic-cargo-system-contributed-by-shadowcommander">Basic cargo system (Contributed by ShadowCommander)</a></li>
+    <li><a href="https://spacestation14.io/post/20_01_24-progress-report-20/#windows">Windows!</a></li>
+    <li><a href="https://spacestation14.io/post/20_01_24-progress-report-20/#to-autoplay-video-or-not-to-autoplay-video">To autoplay video or not to autoplay video.</a></li>
+    <li><a href="https://spacestation14.io/post/20_01_24-progress-report-20/#planning-for-a-steam-release">Planning for a Steam release</a></li>
+    <li><a href="https://spacestation14.io/post/20_01_24-progress-report-20/#the-technical-details">The technical details</a>
+      <ul>
+        <li><a href="https://spacestation14.io/post/20_01_24-progress-report-20/#the-move-to-net-core">The move to .NET Core</a></li>
+        <li><a href="https://spacestation14.io/post/20_01_24-progress-report-20/#make-sprite-animations-direction-independent">Make sprite animations direction-independent</a></li>
+        <li><a href="https://spacestation14.io/post/20_01_24-progress-report-20/#grid-entities-contributed-by-acruid">Grid entities (Contributed by Acruid)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav> 
 	<p>Writing progress reports is hard. Usually it isn&rsquo;t even writing the progress report itself, it&rsquo;s making the content we&rsquo;ve added presentable.</p>
 <p>So I <em>started</em> writing this progress report with the intent of getting it published around christmas. That then turned to &ldquo;finish it around new year, with the new year&rsquo;s resolution being actually getting something done on time&rdquo;. Failed that too.</p>
 <p>Obviously we still have a ton of great work from various contributors done in the last 3 months. Why did it take 3 months? Because I keep getting distracted with coding things <em>while</em> writing the progress report! Cue another couple days of coding something / cleaning something up when I said on Discord I would &ldquo;write the progress report&rdquo;.</p>
@@ -158,7 +194,7 @@
 <p><img src="/images/post/pr_20/icon_bad.svg" alt=""></p>
 <p>Honestly though, nobody was really warm on it but I also could&rsquo;t think of a better alternative.</p>
 <p>Luckily, <strong>unusualcrow</strong> came up with the current icon, and it looks great:</p>
-<p><img src="/images/icon.svg" alt=""></p>
+<p><img src="/images/icon.png" alt=""></p>
 <p>This is the icon we will be using from now on for stuff like window icons, the websites favicon (in your tab bar) and so on.</p>
 <h2 id="outlines-change-color-when-in-range">Outlines change color when in range</h2>
 <p>This is a pretty minor change. You can now see based on the outline whether you&rsquo;re in interaction range!</p>
@@ -234,7 +270,7 @@
 <p>This is now gone and they&rsquo;re full blown entities. This allowed us to do stuff like this practically overnight:</p>
 <p><video src="/video/20_01_24-moving-shuttle.mp4" controls></video></p>
 <p>As you can clearly tell I did not put too much effort into recording this. But hey, this is the &ldquo;thanks for getting this far&rdquo; reward for people who read the entire progress report. So  thank you!</p>
-
+	
 	
 	<hr />
 	<footer>
@@ -246,11 +282,14 @@
 			</main>
 			<footer class="bottom-links">
 				<ul>
-					<li><a href="https://discord.gg/T5EejNS">Discord</a></li>
-					<li><a href="https://github.com/space-wizards">GitHub</a></li>
-					<li><a href="/about/nightlies">Automatic Builds</a></li>
-					<li><a href="https://reddit.com/r/ss14">Subreddit</a></li>
-					<li><a href="/index.xml">RSS</a></li>
+					<li><a href="https://discord.gg/t2jac3p" title="Discord"><img class="discord" src="/images/logos/discord.svg" height="22"></a></li>
+					<li><a href="https://github.com/space-wizards" title="Github"><img class="github" src="/images/logos/github.svg" height="20"></a></li>
+					<li><a href="https://hackmd.io/@ss14/docs" title="Documentation"><img class="hackmd" src="/images/logos/hackmd.svg" height="30"></a></li>
+					<li><a href="https://store.steampowered.com/app/1255460/Space_Station_14/" title="® Steam"><img class="steam" src="/images/logos/steam.svg" height="20"></a></li>
+					<li><a href="/about/contact/#email" title="Email"><img class="email" src="/images/logos/email.svg" height="18"><small class="trademark-bottom">®</small></a></li>
+					<li><a href="/index.xml" title="RSS"><img class="rss" src="/images/logos/RSS.svg" height="22"></a></li>
+					<li><a href="/about/contact/#IRC" title="IRC"><img class="IRC" src="/images/logos/irc.svg" height="16"></a></li>
+					<li><a href="https://redit.com/r/ss14" title="Subreddit"><img class="reddit" src="/images/logos/r.svg" height="25"></a></li>
 				</ul>
 			</footer>
 		</div>

@@ -3,17 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://spacestation14.io/</loc>
+    <lastmod>2020-05-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://spacestation14.io/about/contact/</loc>
+    <lastmod>2020-05-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://spacestation14.io/about/media/</loc>
+    <lastmod>2020-05-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://spacestation14.io/post/</loc>
     <lastmod>2020-02-24T00:00:00+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://spacestation14.io/post/20_02_24-progress-report-21/</loc>
-    <lastmod>2020-02-24T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://spacestation14.io/</loc>
     <lastmod>2020-02-24T00:00:00+01:00</lastmod>
   </url>
   

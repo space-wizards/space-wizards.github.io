@@ -49,12 +49,20 @@
 						<img id="logo-long" src="/images/newer.svg" height="100" />
 					</a>
 				</header>
-				<div id="navlinks">
-					<a class="navlink" href="/about/">About</a><br />
-					<a class="navlink" href="/about/nightlies/">Play</a><br />
-					<a class="navlink" href="/about/faq/">FAQ</a><br />
-					
+				<div class="navlinks">
+					<a class="navlink" href="/about/">About</a>
+					<a class="navlink" href="/about/nightlies/">Play!</a>
+					<a class="navlink" href="/about/faq/">FAQ</a>
+					<a class="navlink" href="/about/media/">Media</a>
+					<a class="navlink" href="/about/contact/">Contact</a>
 				</div>
+			</nav>
+			<nav id="upper-links-container">
+			    <div><a href="https://discord.gg/t2jac3p"><img class="discord" src="/images/logos/discord.svg" height="20"> <span class="upper-link-text">Discord</span></a></div>
+				<div><a href="https://github.com/space-wizards"><img class="github" src="/images/logos/github.svg" height="18"> <span class="upper-link-text">GitHub</span></a></div>
+				<div><a href="https://hackmd.io/@ss14/docs"><img class="hackmd" src="/images/logos/hackmd.svg" height="24"> <span class="upper-link-text">Documentation</span></a></div>
+				<div><a href="https://store.steampowered.com/app/1255460/Space_Station_14/"><img class="steam" src="/images/logos/steam.svg" height="18"> <span class="upper-link-text">Steam<sup class="trademark-top">®</sup></span></a></li></div>
+				<div><a href="/index.xml"><img class="rss" src="/images/logos/RSS.svg" height="18"> <span class="upper-link-text">RSS</span></a></div>
 			</nav>
 			<main>
 
@@ -72,6 +80,14 @@
 		by
 		<span class="author">PJB3005</span>
 	</span>
+
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="https://spacestation14.io/post/19_06_07_progress-report-16/#kaboom-contributed-by-injazz">Kaboom (Contributed by Injazz)</a></li>
+    <li><a href="https://spacestation14.io/post/19_06_07_progress-report-16/#interaction-rework">Interaction Rework</a></li>
+    <li><a href="https://spacestation14.io/post/19_06_07_progress-report-16/#outlines">Outlines!</a></li>
+  </ul>
+</nav> 
 	<p>As it turns out, <em>re-imagining</em> SS13 is a bit harder than simply <em>re-making</em> it. Not that that deters us.</p>
 <h2 id="kaboom-contributed-by-injazz">Kaboom (Contributed by Injazz)</h2>
 <p><video src="/video/19_07_07-boom.webm" controls></video></p>
@@ -87,7 +103,7 @@
 <p>If you went and actually tried to download SS14 (you should!), you&rsquo;ll probably have noticed that outlines for the entity under your mouse were.. pretty broken.</p>
 <p>Drawing these outlines is actually a lot more annoying than it may look at first sight. The outline has to consider the <em>entire</em> entity, not just be ran layer-by-layer (which is what was happening before). Graphics APIs only really allow you to draw layer by layer though. This is a solved problem of course, just draw the entity into its own framebuffer and then apply the outline to <em>that</em>. While I cannot speak for an engine like Unity, I can already tell you there is just no sane way to implement this in Godot without <em>many</em> hacks. I&rsquo;m quite glad we dropped Godot, because it was <em>relatively</em> simple to implement this in our own renderer.</p>
 <p>Outlines are looking pretty fancy now. They&rsquo;re not perfect (could use some better contrast in light areas), but now that&rsquo;s just some GLSL shader code away, instead of massive renderer reworks. If somebody&rsquo;s feeling brave, it should be quite easy to improve!</p>
-
+	
 	
 	<hr />
 	<footer>
@@ -99,11 +115,14 @@
 			</main>
 			<footer class="bottom-links">
 				<ul>
-					<li><a href="https://discord.gg/T5EejNS">Discord</a></li>
-					<li><a href="https://github.com/space-wizards">GitHub</a></li>
-					<li><a href="/about/nightlies">Automatic Builds</a></li>
-					<li><a href="https://reddit.com/r/ss14">Subreddit</a></li>
-					<li><a href="/index.xml">RSS</a></li>
+					<li><a href="https://discord.gg/t2jac3p" title="Discord"><img class="discord" src="/images/logos/discord.svg" height="22"></a></li>
+					<li><a href="https://github.com/space-wizards" title="Github"><img class="github" src="/images/logos/github.svg" height="20"></a></li>
+					<li><a href="https://hackmd.io/@ss14/docs" title="Documentation"><img class="hackmd" src="/images/logos/hackmd.svg" height="30"></a></li>
+					<li><a href="https://store.steampowered.com/app/1255460/Space_Station_14/" title="® Steam"><img class="steam" src="/images/logos/steam.svg" height="20"></a></li>
+					<li><a href="/about/contact/#email" title="Email"><img class="email" src="/images/logos/email.svg" height="18"><small class="trademark-bottom">®</small></a></li>
+					<li><a href="/index.xml" title="RSS"><img class="rss" src="/images/logos/RSS.svg" height="22"></a></li>
+					<li><a href="/about/contact/#IRC" title="IRC"><img class="IRC" src="/images/logos/irc.svg" height="16"></a></li>
+					<li><a href="https://redit.com/r/ss14" title="Subreddit"><img class="reddit" src="/images/logos/r.svg" height="25"></a></li>
 				</ul>
 			</footer>
 		</div>

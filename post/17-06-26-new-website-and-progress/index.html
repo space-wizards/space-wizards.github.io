@@ -49,12 +49,20 @@
 						<img id="logo-long" src="/images/newer.svg" height="100" />
 					</a>
 				</header>
-				<div id="navlinks">
-					<a class="navlink" href="/about/">About</a><br />
-					<a class="navlink" href="/about/nightlies/">Play</a><br />
-					<a class="navlink" href="/about/faq/">FAQ</a><br />
-					
+				<div class="navlinks">
+					<a class="navlink" href="/about/">About</a>
+					<a class="navlink" href="/about/nightlies/">Play!</a>
+					<a class="navlink" href="/about/faq/">FAQ</a>
+					<a class="navlink" href="/about/media/">Media</a>
+					<a class="navlink" href="/about/contact/">Contact</a>
 				</div>
+			</nav>
+			<nav id="upper-links-container">
+			    <div><a href="https://discord.gg/t2jac3p"><img class="discord" src="/images/logos/discord.svg" height="20"> <span class="upper-link-text">Discord</span></a></div>
+				<div><a href="https://github.com/space-wizards"><img class="github" src="/images/logos/github.svg" height="18"> <span class="upper-link-text">GitHub</span></a></div>
+				<div><a href="https://hackmd.io/@ss14/docs"><img class="hackmd" src="/images/logos/hackmd.svg" height="24"> <span class="upper-link-text">Documentation</span></a></div>
+				<div><a href="https://store.steampowered.com/app/1255460/Space_Station_14/"><img class="steam" src="/images/logos/steam.svg" height="18"> <span class="upper-link-text">Steam<sup class="trademark-top">®</sup></span></a></li></div>
+				<div><a href="/index.xml"><img class="rss" src="/images/logos/RSS.svg" height="18"> <span class="upper-link-text">RSS</span></a></div>
 			</nav>
 			<main>
 
@@ -72,6 +80,12 @@
 		by
 		<span class="author">PJB3005</span>
 	</span>
+
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="https://spacestation14.io/post/17-06-26-new-website-and-progress/#progress">Progress!</a></li>
+  </ul>
+</nav> 
 	<p>You&rsquo;re reading this on the new website for SS14! After <a href="https://i.imgur.com/Q3cUg29.gif">lots of hard work with CSS</a>, the website is ready to recieve progress reports and other news.</p>
 <p>The website is hosted entirely from GitHub pages, which means it&rsquo;s fast, reliable <!--Citation Needed, GitHub goes down more than I'd like to. --> and secure, with zero cost to us (except for designing and writing it). It&rsquo;s completely static server side, and generated with <a href="https://gohugo.io">Hugo</a>, an excellent tool for making static sites like this. Adding a page is as simple as making a new markdown file with title, and date and building it. Easy as that!</p>
 <p>The code for the website can be found <a href="https://github.com/space-wizards/space-wizards.github.io-content">here</a>. Which is also where commits will go for new blog posts.</p>
@@ -103,7 +117,7 @@
 <li><code>SS14.Shared</code></li>
 </ul>
 <p>Hooray for clean up!</p>
-<p>And that&rsquo;s just the biggest elephant in the room! We&rsquo;re fixing systems, discussing design targets, documented the code that&rsquo;s undocumented. We&rsquo;re working on setting up a proper project management board to allow us to easily delegate tasks and go &ldquo;here&rsquo;s a list of things we can work on right now. Pick something you like!&quot;. This is still a bit off, but when it&rsquo;s done it&rsquo;ll be in the next progress report I guarantee you. This project management board will be extremely helpful to allow us to make these progress reports more easily in the future, too!</p>
+<p>And that&rsquo;s just the biggest elephant in the room! We&rsquo;re fixing systems, discussing design targets, documented the code that&rsquo;s undocumented. We&rsquo;re working on setting up a proper project management board to allow us to easily delegate tasks and go &ldquo;here&rsquo;s a list of things we can work on right now. Pick something you like!&rdquo;. This is still a bit off, but when it&rsquo;s done it&rsquo;ll be in the next progress report I guarantee you. This project management board will be extremely helpful to allow us to make these progress reports more easily in the future, too!</p>
 <p>So for more stuff to report:</p>
 <ul>
 <li>Sood has been working on IPv6 networking and updating the years out of date version of Lidgren.Network in our code. Sadly Lidgren isn&rsquo;t being updated anymore, but it&rsquo;s still highly reliable. We are talking about moving to an alternative, LiteNetLib, as a very long term goal, because of obvious maintenance issues with Lidgren (IPv6 support is through an unmerged old PR on the Lidgren repo.)</li>
@@ -119,7 +133,7 @@
 </ul>
 <p>However picking a fine line between these and other PRs is kind of hard, so if you want to see every PR merged recently, <a href="https://github.com/space-wizards/space-station-14/issues?utf8=%E2%9C%93&amp;q=is%3Amerged%20">here you go</a>.</p>
 <p><strong>I can assure you: SS14 is not dead. And we&rsquo;re gonna finish this.</strong></p>
-
+	
 	
 	<hr />
 	<footer>
@@ -131,11 +145,14 @@
 			</main>
 			<footer class="bottom-links">
 				<ul>
-					<li><a href="https://discord.gg/T5EejNS">Discord</a></li>
-					<li><a href="https://github.com/space-wizards">GitHub</a></li>
-					<li><a href="/about/nightlies">Automatic Builds</a></li>
-					<li><a href="https://reddit.com/r/ss14">Subreddit</a></li>
-					<li><a href="/index.xml">RSS</a></li>
+					<li><a href="https://discord.gg/t2jac3p" title="Discord"><img class="discord" src="/images/logos/discord.svg" height="22"></a></li>
+					<li><a href="https://github.com/space-wizards" title="Github"><img class="github" src="/images/logos/github.svg" height="20"></a></li>
+					<li><a href="https://hackmd.io/@ss14/docs" title="Documentation"><img class="hackmd" src="/images/logos/hackmd.svg" height="30"></a></li>
+					<li><a href="https://store.steampowered.com/app/1255460/Space_Station_14/" title="® Steam"><img class="steam" src="/images/logos/steam.svg" height="20"></a></li>
+					<li><a href="/about/contact/#email" title="Email"><img class="email" src="/images/logos/email.svg" height="18"><small class="trademark-bottom">®</small></a></li>
+					<li><a href="/index.xml" title="RSS"><img class="rss" src="/images/logos/RSS.svg" height="22"></a></li>
+					<li><a href="/about/contact/#IRC" title="IRC"><img class="IRC" src="/images/logos/irc.svg" height="16"></a></li>
+					<li><a href="https://redit.com/r/ss14" title="Subreddit"><img class="reddit" src="/images/logos/r.svg" height="25"></a></li>
 				</ul>
 			</footer>
 		</div>
