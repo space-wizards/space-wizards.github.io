@@ -128,7 +128,7 @@
 <h2 id="movement-prediction-aka-lag-b-gone">Movement Prediction AKA Lag-B-Gone</h2>
 <p><em>Contributed by PJB</em></p>
 <p>Movement prediction is now in. That means you will experience 0 lag when moving around the station, even if the server is on the other side of the planet. This even works with lower server tickrates thanks to sub-tick input handling.</p>
-<p><strong>I would post a video here, but that wouldn&rsquo;t do it justice. Join one of our servers and experience it yourself. It&rsquo;s glorious.</strong></p>
+<p><strong>While I will post a video here, the impact of this feature doesn&rsquo;t communicate that well over one. Join one of our servers and experience it yourself. It’s glorious.</strong></p>
 <p><video src="/video/pr_23/prediction.mp4" autoplay muted loop playsinline></video></p>
 <p>It still needs a lot of work, of course. If you try to move through doors you will notice some jumping due to how the system works. These issues will be ironed out over time but some effort is needed to move the code to shared and have it fully supporting reconciliation (the doors use timer callbacks right now which are completely incompatible with netcode&hellip;)</p>
 <p>In the future, far more interactions, ranging from stuff like inventory manipulation to most machines, would ideally be predicted. This will be work but it&rsquo;s very possible, especially with more experience working with the systems.</p>
