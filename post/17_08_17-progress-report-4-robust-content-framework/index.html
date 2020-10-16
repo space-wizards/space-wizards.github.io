@@ -109,23 +109,23 @@ How do we pull this off? Glad you asked!</p>
 <p>What you are seeing here (other than my mouse cursor, apologies) is the first example of the content repo in use. It&rsquo;s a crude &ldquo;disco ball&rdquo;, the color just changing with a hue shift over time. The code was terrible because I was in a hurry and there were various limitations in the engine that I&rsquo;ve since fixed (couldn&rsquo;t even load sprites from content, joy!), but here&rsquo;s a more cleaned up version of the code. Note that the engine isn&rsquo;t there <em>yet</em>, there&rsquo;s still a bunch of refactors ahead, but this is generally what we want to have:</p>
 <p>YAML entity prototype:</p>
 <div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># This is an entity prototype.</span><span class="w">
-</span><span class="w"></span>- <span class="k">type</span><span class="p">:</span><span class="w"> </span>entity<span class="w">
-</span><span class="w">  </span><span class="k">id</span><span class="p">:</span><span class="w"> </span>discoball<span class="w">
-</span><span class="w">  </span><span class="k">name</span><span class="p">:</span><span class="w"> </span>Disco<span class="w"> </span>Ball<span class="w">
+</span><span class="w"></span>- <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">entity</span><span class="w">
+</span><span class="w">  </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l">discoball</span><span class="w">
+</span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Disco Ball</span><span class="w">
 </span><span class="w">  </span><span class="c"># Declare which C# class the entity will be.</span><span class="w">
 </span><span class="w">  </span><span class="c"># This contains the logic in the next snippet.</span><span class="w">
-</span><span class="w">  </span><span class="k">class</span><span class="p">:</span><span class="w"> </span>Content.Client.Prototypes.DiscoBall<span class="w">
+</span><span class="w">  </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l">Content.Client.Prototypes.DiscoBall</span><span class="w">
 </span><span class="w">  </span><span class="c"># Declare components: what the entity can do.</span><span class="w">
-</span><span class="w">  </span><span class="k">components</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span>- <span class="k">type</span><span class="p">:</span><span class="w"> </span>Transform<span class="w">
-</span><span class="w">  </span>- <span class="k">type</span><span class="p">:</span><span class="w"> </span>Clickable<span class="w">
-</span><span class="w">  </span>- <span class="k">type</span><span class="p">:</span><span class="w"> </span>Sprite<span class="w">
-</span><span class="w">    </span><span class="k">sprites</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span>- discoball<span class="w">
+</span><span class="w">  </span><span class="nt">components</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span>- <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">Transform</span><span class="w">
+</span><span class="w">  </span>- <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">Clickable</span><span class="w">
+</span><span class="w">  </span>- <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">Sprite</span><span class="w">
+</span><span class="w">    </span><span class="nt">sprites</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="l">discoball</span><span class="w">
 </span><span class="w">
 </span><span class="w">    </span><span class="c"># This entity has a light.</span><span class="w">
 </span><span class="w">    </span><span class="c"># The color is changed by the C# code.</span><span class="w">
-</span><span class="w">  </span>- <span class="k">type</span><span class="p">:</span><span class="w"> </span>PointLight<span class="w">
+</span><span class="w">  </span>- <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">PointLight</span><span class="w">
 </span></code></pre></div><p>And for the C# code:</p>
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">using</span> <span class="nn">OpenTK</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">SS14.Client.GameObjects</span><span class="p">;</span>
