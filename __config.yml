@@ -1,1 +1,1 @@
-include: [".well-known", ".nojekyll"]
+include: ["static/", "static/.well-known/", ".nojekyll", "static/.nojekyll"]
