@@ -1,0 +1,8 @@
+staticDir = ["static"]
+
+[languages]
+  [languages.en]
+    baseURL = "https://spacestation14.io"
+    languageName = "English"
+    title = "Space Station 14"
+    weight = 1
