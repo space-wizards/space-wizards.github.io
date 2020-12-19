@@ -166,5 +166,9 @@
     <loc>https://spacestation14.io/about/</loc>
     <lastmod>2017-06-25T00:00:00+00:00</lastmod>
   </url>
-  
+	
+	<url>
+		<loc>https://spacestation14.io/.well-known/cf-2fa-verify.txt</loc>
+		<lastmod>2017-06-25T00:00:00+00:00</lastmod>
+	</url>
 </urlset>
