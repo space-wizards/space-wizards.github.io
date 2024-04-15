@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { ensureOk } from "./util.js";
-const HubApiUrl = "https://central.spacestation14.io/hub/";
+const HubApiUrl = "https://hub.spacestation14.com/";
 export function getServerList() {
     return __awaiter(this, void 0, void 0, function* () {
         let response = yield fetch(`${HubApiUrl}api/servers`);
