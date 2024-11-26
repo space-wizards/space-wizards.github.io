@@ -10,6 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 import { createApp } from "./vue/petite-vue.es.js";
 import { whenReady } from "./util.js";
 import { getServerList } from "./hub_api.js";
+import { fetchChangelog } from "./changelog.js";
 let SELECTED_GALLERY_IMG;
 let SELECTED_THUMB;
 let GALLERY_IMGS = {};
@@ -108,4 +109,5 @@ function setupServerList() {
 whenReady(() => {
     setupGallery();
     setupServerList();
+    fetchChangelog();
 });
