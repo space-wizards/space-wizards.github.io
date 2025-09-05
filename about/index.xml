@@ -1,5 +1,84 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Abouts on Space Station 14</title><link>https://spacestation14.com/about/</link><description>Recent content in Abouts on Space Station 14</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 31 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://spacestation14.com/about/index.xml" rel="self" type="application/rss+xml"/><item><title>Privacy policy</title><link>https://spacestation14.com/about/privacy/</link><pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate><guid>https://spacestation14.com/about/privacy/</guid><description>Privacy Policy This document will outline how we, Space Wizards Federation, collect and handle your data. Here are the first-party services we manage for Space Station 14 (SS14), covered by this privacy policy:
-SS14 Authentication Hub Manages your SS14 account and is used by the official launcher whenever you play on servers. Wizard&amp;rsquo;s Den SS14 servers Official game servers (named &amp;ldquo;Wizard&amp;rsquo;s Den&amp;rdquo;) ran by us. Only relevant if you actually connect and play on these servers.</description></item><item><title>Frequently Asked Questions</title><link>https://spacestation14.com/about/faq/</link><pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate><guid>https://spacestation14.com/about/faq/</guid><description>Frequently Asked Questions Links These are the official Space Wizards domains:
-robusttoolbox.io, spacestation14.io, spacestation14.com, ss14.io Any other domain is not affiliated with us.
-Space Station 14 Downloads Steam Game Wiki Official Forums Socials Patreon (Finances) Lemmy Discord Mastodon Twitter Development GitHub Organization Game Repository Engine Repository Documentation RSIEdit Official Servers The official servers are called &amp;ldquo;Wizard&amp;rsquo;s Den&amp;rdquo; on the launcher/hub. If you&amp;rsquo;ve been banned in any of them, you may appeal your ban here.</description></item><item><title>Contact</title><link>https://spacestation14.com/about/contact/</link><pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate><guid>https://spacestation14.com/about/contact/</guid><description>You can contact us via: Discord Lemmy Forum Emailtelecommunications@spacestation14.com</description></item><item><title>Downloads</title><link>https://spacestation14.com/about/download/</link><pubDate>Fri, 13 Apr 2018 00:00:00 +0000</pubDate><guid>https://spacestation14.com/about/download/</guid><description>System Requirements Every Platform: Minimum 64-bit CPU &amp;amp; OS Memory: 2GB Ram Graphics: OpenGL 3.3 or greater Storage: 512MB disk space Recommended 64-bit CPU &amp;amp; OS Memory: 4GB Ram Graphics: OpenGL 3.3 or greater Storage: 1GB disk space Windows: Windows 10 1607 or above VC++ 2015 Redistributable Linux: OpenAL Freetype macOS: Monterey (12) or greater FAQ What about 32-bit support? 32-bit (x86) is not supported. All modern CPUs are 64-bit, there is no reason for us to continue supporting 32-bit.</description></item><item><title>About Space Station 14</title><link>https://spacestation14.com/about/about/</link><pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate><guid>https://spacestation14.com/about/about/</guid><description>What is Space Station 14? Space Station 14 is inspired by the cult classic SS13 and tells the story of an ordinary shift on a space station gone wrong. Immerse yourself into your role, tinker with detailed systems, and survive the chaos in this round-based multiplayer role playing game.
-Your custom character can spawn as one of dozens of crew and enemy jobs, ranging from engineer to captain, or even a traitor, each with its own unique gear.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Abouts on Space Station 14</title><link>https://spacestation14.com/about/</link><description>Recent content in Abouts on Space Station 14</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 31 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://spacestation14.com/about/index.xml" rel="self" type="application/rss+xml"/><item><title>Privacy policy</title><link>https://spacestation14.com/about/privacy/</link><pubDate>Tue, 31 Dec 2024 00:00:00 +0000</pubDate><guid>https://spacestation14.com/about/privacy/</guid><description>&lt;h1 id="privacy-policy"&gt;Privacy Policy&lt;/h1&gt;
+&lt;p&gt;This document will outline how we, Space Wizards Federation, collect and handle your data. Here are the first-party services we manage for Space Station 14 (SS14), covered by this privacy policy:&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;SS14 Authentication Hub&lt;/dt&gt;
+&lt;dd&gt;Manages your SS14 account and is used by the official launcher whenever you play on servers.&lt;/dd&gt;
+&lt;dt&gt;Wizard&amp;rsquo;s Den SS14 servers&lt;/dt&gt;
+&lt;dd&gt;Official game servers (named &amp;ldquo;Wizard&amp;rsquo;s Den&amp;rdquo;) ran by us. Only relevant if you actually connect and play on these servers.&lt;/dd&gt;
+&lt;dt&gt;&lt;a href="https://forum.spacestation14.com/"&gt;SS14 Forums&lt;/a&gt;&lt;/dt&gt;
+&lt;dd&gt;Official forums for SS14. Only relevant if you connect to these forums.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h2 id="authentication-hub-privacy-policy"&gt;Authentication Hub Privacy Policy&lt;/h2&gt;
+&lt;p&gt;This section of the privacy policy applies if you use our official SS14 authentication server and/or launcher.&lt;/p&gt;</description></item><item><title>Frequently Asked Questions</title><link>https://spacestation14.com/about/faq/</link><pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate><guid>https://spacestation14.com/about/faq/</guid><description>&lt;h1 id="frequently-asked-questions"&gt;Frequently Asked Questions&lt;/h1&gt;
+&lt;h3 id="links"&gt;Links&lt;/h3&gt;
+&lt;p&gt;These are the official Space Wizards domains:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;	robusttoolbox.io, spacestation14.io, spacestation14.com, ss14.io
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Any other domain is not affiliated with us.&lt;/p&gt;
+&lt;h4 id="space-station-14"&gt;Space Station 14&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://spacestation14.com/about/nightlies/"&gt;Downloads&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://store.steampowered.com/app/1255460/Space_Station_14/"&gt;Steam&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://wiki.spacestation14.com"&gt;Game Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://forum.spacestation14.com"&gt;Official Forums&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="socials"&gt;Socials&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.patreon.com/spacestation14"&gt;Patreon&lt;/a&gt; (&lt;a href="https://docs.google.com/spreadsheets/d/1_EIs2myVyatmbuPxkhwvgIGzQ543v4LewhbDivJdV_o/edit?usp=sharing"&gt;Finances&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lemmy.spacestation14.com"&gt;Lemmy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://discord.ss14.io"&gt;Discord&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://mastodon.gamedev.place/@spacestation14"&gt;Mastodon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/space_station14"&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="development"&gt;Development&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/space-wizards"&gt;GitHub Organization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/space-wizards/space-station-14"&gt;Game Repository&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/space-wizards/RobustToolbox"&gt;Engine Repository&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.spacestation14.com"&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/space-wizards/RSIEdit"&gt;RSIEdit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="official-servers"&gt;Official Servers&lt;/h3&gt;
+&lt;p&gt;The official servers are called &amp;ldquo;Wizard&amp;rsquo;s Den&amp;rdquo; on the launcher/hub.
+If you&amp;rsquo;ve been banned in any of them, you may appeal your ban &lt;a href="https://forum.spacestation14.com/w/ban-appeal"&gt;here&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Contact</title><link>https://spacestation14.com/about/contact/</link><pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate><guid>https://spacestation14.com/about/contact/</guid><description>&lt;h2 id="you-can-contact-us-via"&gt;You can contact us via:&lt;/h2&gt;
+&lt;hr&gt;&lt;/hr&gt;
+&lt;div class="contact"&gt;&lt;a href="https://discord.ss14.io/"&gt;Discord&lt;/a&gt;&lt;/div&gt;
+&lt;div class="contact"&gt;&lt;a href="https://lemmy.spacestation14.com"&gt;Lemmy&lt;/a&gt;&lt;/div&gt;
+&lt;div class="contact"&gt;&lt;a href="https://forum.spacestation14.io/"&gt;Forum&lt;/a&gt;&lt;/div&gt;
+&lt;hr&gt;&lt;/hr&gt;
+&lt;div id="email" class="contact"&gt;&lt;div&gt;Email&lt;/div&gt;&lt;div&gt;&lt;code&gt;telecommunications@spacestation14.com&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr&gt;&lt;/hr&gt;</description></item><item><title>Downloads</title><link>https://spacestation14.com/about/download/</link><pubDate>Fri, 13 Apr 2018 00:00:00 +0000</pubDate><guid>https://spacestation14.com/about/download/</guid><description>&lt;h2 id="system-requirements"&gt;System Requirements&lt;/h2&gt;
+&lt;h3 id="every-platform"&gt;Every Platform:&lt;/h3&gt;
+&lt;h4 id="minimum"&gt;Minimum&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;64-bit CPU &amp;amp; OS&lt;/li&gt;
+&lt;li&gt;Memory: 2GB Ram&lt;/li&gt;
+&lt;li&gt;Graphics: OpenGL 3.3 or greater&lt;/li&gt;
+&lt;li&gt;Storage: 512MB disk space&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="recommended"&gt;Recommended&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;64-bit CPU &amp;amp; OS&lt;/li&gt;
+&lt;li&gt;Memory: 4GB Ram&lt;/li&gt;
+&lt;li&gt;Graphics: OpenGL 3.3 or greater&lt;/li&gt;
+&lt;li&gt;Storage: 1GB disk space&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="windows"&gt;Windows:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows 10 1607 or above&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://aka.ms/vs/16/release/vc_redist.x64.exe"&gt;VC++ 2015 Redistributable&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="linux"&gt;Linux:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;OpenAL&lt;/li&gt;
+&lt;li&gt;Freetype&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="macos"&gt;macOS:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Monterey (12) or greater&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="faq"&gt;FAQ&lt;/h2&gt;
+&lt;h4 id="what-about-32-bit-support"&gt;What about 32-bit support?&lt;/h4&gt;
+&lt;p&gt;32-bit (x86) is not supported. All modern CPUs are 64-bit, there is no reason for us to continue supporting 32-bit.&lt;/p&gt;</description></item><item><title>About Space Station 14</title><link>https://spacestation14.com/about/about/</link><pubDate>Sun, 25 Jun 2017 00:00:00 +0000</pubDate><guid>https://spacestation14.com/about/about/</guid><description>&lt;h1 id="what-is-space-station-14"&gt;What is Space Station 14?&lt;/h1&gt;
+&lt;p&gt;Space Station 14 is inspired by the cult classic SS13 and tells the story of an ordinary shift on a space station gone wrong. Immerse yourself into your role, tinker with detailed systems, and survive the chaos in this round-based multiplayer role playing game.&lt;/p&gt;
+&lt;p&gt;Your custom character can spawn as one of dozens of crew and enemy jobs, ranging from engineer to captain, or even a traitor, each with its own unique gear. Your duties guide you through rich interactions with complex mechanics, whether you&amp;rsquo;re managing your inventory, setting up the reactor, or flushing yourself down the disposal tubes.&lt;/p&gt;</description></item></channel></rss>

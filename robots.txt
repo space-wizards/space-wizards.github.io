@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://spacestation14.com/sitemap.xml
